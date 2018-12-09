@@ -11,7 +11,7 @@ entity MEM_WB is
 		enable	: in std_logic; 
  
 		data_mem_in  : in std_logic_vector (31 downto 0); 
-		wb_in_sig 	 : in std_logic (1 downto 0);
+		wb_in_sig 	 : in std_logic_vector (1 downto 0);
 		alu_result_in: in std_logic_vector (31 downto 0);
 		write_reg_in : in std_logic_vector (4 downto 0);
 		
