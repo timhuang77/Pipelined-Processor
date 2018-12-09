@@ -60,12 +60,12 @@ begin
 	for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
 			(clk, rst, wb_in_sig, , d, enable, wb_in_sig_temp);
-	end generate wb_out_sigs;
+	end generate;
 	
 	for i in 0 to 4 generate 
 		write_reg_sigs : dffr_a port map 
 			(clk, rst, load, , write_reg_in(i), enable, write_reg_temp(i));
-	end generate write_reg_sigs;
+	end generate;
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
 		(clk, rst, load, "00000000000000000000000000000000", data_mem_in, enable, data_mem_out);
