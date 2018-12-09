@@ -6,7 +6,7 @@ use work.eecs361_gates.all;
 entity sign_ext is
 	port (
 		x	: in std_logic_vector(15 downto 0);
-		z	: out std_logic_vector(29 downto 0)
+		z	: out std_logic_vector(31 downto 0)
 	);
 end entity sign_ext;
 
@@ -18,7 +18,7 @@ begin
 		z(i) <= x(i);	--Pass-thru of existing bits
 	end generate;
 	
-	upper_half : for i in 16 to 29 generate
+	upper_half : for i in 16 to 31 generate
 		z(i) <= x(15);	--Sign-extend MSB
 	end generate;
 	
