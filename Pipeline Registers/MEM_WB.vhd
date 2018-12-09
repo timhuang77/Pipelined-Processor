@@ -12,13 +12,13 @@ entity MEM_WB is
  
 		data_mem_in  : in std_logic_vector (31 downto 0); 
 		wb_in_sig 	 : in std_logic (1 downto 0);
-		ex_mem_in	 : in std_logic_vector (31 downto 0);
+		alu_result_in: in std_logic_vector (31 downto 0);
 		write_reg_in : in std_logic_vector (4 downto 0);
 		
 		data_mem_out  : out std_logic_vector (31 downto 0); 
 		wb_out_sig1   : out std_logic;
 		wb_out_sig2   : out std_logic; 
-		mem_wb_out	  : out std _logic_vector (31 downto 0);
+		alu_result_out: out std _logic_vector (31 downto 0);
 		write_reg_out : out std_logic_vector (4 downto 0)
 	);
 end MEM_WB;
@@ -70,6 +70,6 @@ begin
 	dffr_a_32bit_1 : dffr_a_32bit port map
 		(clk, rst, load, "00000000000000000000000000000000", data_mem_in, enable, data_mem_out);
     dffr_a_32bit_2 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", ex_mem_in, enable, mem_wb_out);
+		(clk, rst, load, "00000000000000000000000000000000", alu_result_in, enable, alu_result_out);
 	
 end structural;
