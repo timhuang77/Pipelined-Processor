@@ -43,9 +43,14 @@ constant const_four : std_logic_vector(31 downto 0) := "000000000000000000000000
 signal pc_signal : std_logic_vector(31 downto 0);
 
 begin
+	--PC component
 	pc_map  : pc_32 port map(clk, pc_in, pc_signal);
-	add_4 : adder_32 port map(a => pc_signal, b => const_four, pc_
-	sram_port_map : sram
+	
+	--Adder 32-bit in IFU
+	add_4 : adder_32 port map(a => pc_signal, b => const_four, pc_out);
+	
+	--Instruction Memory
+	instr_memory : sram
 		generic map(mem_file => mem_file) 
 		port map(
 			cs => '1', --always select
@@ -55,4 +60,6 @@ begin
 			din => "00000000000000000000000000000000", --doesn't matter, does not read
 			dout => instr_out
 		);
+		
+		
 end architecture structural;

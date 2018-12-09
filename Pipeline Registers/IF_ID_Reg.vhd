@@ -37,6 +37,7 @@ begin
 			d => pc_in(i),
 			enable => '1',
 			q => pc_out(i)
+		);
 	end generate;
 	
 	gen_instr_reg : for i in 0 to 31 generate
@@ -48,8 +49,8 @@ begin
 			d => instr_in(i),
 			enable => '1',
 			q => instr_out(i)
+		);
 	end generate;
-	
 	
 
 
