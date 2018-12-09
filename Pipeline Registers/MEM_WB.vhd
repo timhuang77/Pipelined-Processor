@@ -19,7 +19,7 @@ entity MEM_WB is
 		wb_out_sig1   : out std_logic;
 		wb_out_sig2   : out std_logic; 
 		mem_wb_out	  : out std _logic_vector (31 downto 0);
-		write_reg_out : out std_logic_vector (4 downto 0); 
+		write_reg_out : out std_logic_vector (4 downto 0)
 	);
 end MEM_WB;
 
@@ -65,7 +65,7 @@ begin
 	for i in 0 to 4 generate 
 		write_reg_sigs : dffr_a port map 
 			(clk, rst, load, , write_reg_in(i), enable, write_reg_temp(i));
-	end generate wb_out_sigs;
+	end generate write_reg_sigs;
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
 		(clk, rst, load, "00000000000000000000000000000000", data_mem_in, enable, data_mem_out);
