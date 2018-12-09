@@ -27,7 +27,7 @@ entity EX_MEM is
 		alu_result_out    : out std_logic_vector (31 downto 0);	
 		bus_b_out		  : out std_logic_vector (31 downto 0);
 		write_reg_out 	  : out std_logic_vector (4 downto 0);
-	);
+	)
 end EX_MEM;
 
 architecture structural of EX_MEM is 
