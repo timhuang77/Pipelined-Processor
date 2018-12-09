@@ -38,16 +38,16 @@ architecture structural of MEM_WB is
 	end component;
 	
 	component dffr_a_32bit is
-      	  port (
-	    	clk	   : in  std_logic;
-        	arst   : in  std_logic;
-        	aload  : in  std_logic;
-        	adata  : in  std_logic_vector(31 downto 0);
-	    	d	: in  std_logic_vector(31 downto 0);
-        	enable : in  std_logic;
-	    	q	   : out std_logic_vector(31 downto 0)
-      	  );
-    	end component;
+      port (
+	    clk	   : in  std_logic;
+        arst   : in  std_logic;
+        aload  : in  std_logic;
+        adata  : in  std_logic_vector(31 downto 0);
+	    d	   : in  std_logic_vector(31 downto 0);
+        enable : in  std_logic;
+	    q	   : out std_logic_vector(31 downto 0)
+      );
+    end component;
 
 	signal wb_out_sig_temp : std_logic_vector (1 downto 0);
 	signal write_reg_temp  : std_logic_vector (4 downto 0);
@@ -69,7 +69,7 @@ begin
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
 		(clk, rst, load, "00000000000000000000000000000000", data_mem_in, enable, data_mem_out);
-   	dffr_a_32bit_2 : dffr_a_32bit port map
+    dffr_a_32bit_2 : dffr_a_32bit port map
 		(clk, rst, load, "00000000000000000000000000000000", ex_mem_in, enable, mem_wb_out);
 	
 end structural;
