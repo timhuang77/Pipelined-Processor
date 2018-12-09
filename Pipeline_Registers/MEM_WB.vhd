@@ -59,7 +59,7 @@ begin
 	
 	for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
-			(clk, rst, load, "0", wb_in_sig(i), enable, wb_in_sig_temp(i));
+			(clk, rst, load, "0", wb_in_sig(i), enable, wb_out_sig_temp(i));
 	end generate;
 	
 	for i in 0 to 4 generate 
