@@ -27,15 +27,16 @@ architecture structural of IF_ID_Reg is
 	-- instr_reg : std_logic_vector(31 downto 0);
 	
 begin
+	--Implement 2 registers
 	gen_pc_reg : for i in 0 to 31 generate
 		dff_pc : dffr_a port map (
 			clk	=> clk,
 			arst => arst,
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
-			d => pc_in,
+			d => pc_in(i),
 			enable => '1',
-			q => pc_out
+			q => pc_out(i)
 	end generate;
 	
 	gen_instr_reg : for i in 0 to 31 generate
@@ -44,9 +45,9 @@ begin
 			arst => arst,
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
-			d => instr_in,
+			d => instr_in(i),
 			enable => '1',
-			q => instr_out
+			q => instr_out(i)
 	end generate;
 	
 
