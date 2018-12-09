@@ -18,7 +18,7 @@ entity MEM_WB is
 		data_mem_out  : out std_logic_vector (31 downto 0); 
 		wb_out_sig1   : out std_logic;
 		wb_out_sig2   : out std_logic; 
-		alu_result_out: out std _logic_vector (31 downto 0);
+		alu_result_out: out std_logic_vector (31 downto 0);
 		write_reg_out : out std_logic_vector (4 downto 0)
 	);
 end MEM_WB;
