@@ -38,7 +38,7 @@ end entity ID_EX_Reg;
 architecture structural of ID_EX_Reg is
 begin
 
--- WB
+-- WB (2-bits)
 	gen_WB_reg : for i in 0 to 1 generate
 		dff_WB : dffr_a port map(
 			clk => clk,
@@ -51,7 +51,7 @@ begin
 		);
 	end generate;
 	
--- MEM
+-- MEM (5-bits)
 	gen_MEM_reg : for i in 0 to 4 generate
 		dff_MEM : dffr_a port map(
 			clk => clk,
@@ -64,7 +64,7 @@ begin
 		);
 	end generate;
 	
--- EX
+-- EX (4-bits - branch into separate control signals)
 	control_ex1 : dffr_a port map(
 			clk => clk,
 			arst => arst,
@@ -144,7 +144,7 @@ begin
 		);
 	end generate;
 
--- sign ext
+-- sign ext (32 bits)
 	gen_sign_ext_reg : for i in 0 to 31 generate
 		dff_sign_ext : dffr_a port map (
 			clk	=> clk,
@@ -156,7 +156,7 @@ begin
 			q => out_sign_ext(i)
 		);
 	end generate;
-
+--shamt ext (32 bits)
 	gen_shamt_ext_reg : for i in 0 to 31 generate
 		dff_shamt_ext : dffr_a port map (
 			clk	=> clk,
