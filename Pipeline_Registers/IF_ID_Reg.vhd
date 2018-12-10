@@ -14,7 +14,7 @@ entity IF_ID_Reg is
 		
 		--Outputs
 		instr_out : out std_logic_vector(31 downto 0); 
-		pc_out : out std_logic_vector(31 downto 0);
+		pc_out : out std_logic_vector(31 downto 0)
 	);
 end entity IF_ID_Reg;
 
