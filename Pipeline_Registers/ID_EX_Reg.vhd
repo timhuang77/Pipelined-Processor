@@ -50,7 +50,7 @@ begin
 			arst => arst,
 			aload => aload,
 			adata => '0',
-			d => control_wb(i)
+			d => control_wb(i),
 			enable => '1',
 			q => control_wb_out(i)
 		);
@@ -63,49 +63,49 @@ begin
 			arst => arst,
 			aload => aload,
 			adata => '0',
-			d => control_mem(i)
+			d => control_mem(i),
 			enable => '1',
 			q => control_mem_out(i)
 		);
 	end generate;
 	
 -- EX
-	dff_EX_ALUSrc : dffr_a port map(
+	control_ex1 : dffr_a port map(
 			clk => clk,
 			arst => arst,
 			aload => aload,
 			adata => '0',
-			d => control_ex(0)
+			d => control_ex(0),
 			enable => '1',
 			q => ALUSrc
 	);
 	
-	dff_EX_ALUOp_1 : dffr_a port map(
+	control_ex2 : dffr_a port map(
 			clk => clk,
 			arst => arst,
 			aload => aload,
 			adata => '0',
-			d => control_ex(1)
+			d => control_ex(1),
 			enable => '1',
 			q => ALUOp(0)
 	);
 
-	dff_EX_ALUOp_2 : dffr_a port map(
+	control_ex3 : dffr_a port map(
 			clk => clk,
 			arst => arst,
 			aload => aload,
 			adata => '0',
-			d => control_ex(2)
+			d => control_ex(2),
 			enable => '1',
 			q => ALUOp(1)
 	);
 	
-	dff_EX_RegDst : dffr_a port map(
+	control_ex4 : dffr_a port map(
 			clk => clk,
 			arst => arst,
 			aload => aload,
 			adata => '0',
-			d => control_ex(3)
+			d => control_ex(3),
 			enable => '1',
 			q => RegDst
 	);
