@@ -10,7 +10,7 @@ port (
 		if_id_Rs, if_id_Rt, id_ex_Rt : in std_logic_vector(4 downto 0); 
 		id_ex_MemRd : in std_logic;
 		
-		PCWrite, if_id_write, mux_select : out std_logic;
+		PCWrite, if_id_write, mux_select : out std_logic
 		);
 end hazard_unit;
   
