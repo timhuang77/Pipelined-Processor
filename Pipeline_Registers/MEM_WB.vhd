@@ -53,18 +53,18 @@ architecture structural of MEM_WB is
 	signal write_reg_temp  : std_logic_vector (4 downto 0);
 	
 begin
-	wb_out_sig1 <= wb_out_sig1_temp(0);
-	wb_out_sig2 <= wb_out_sig2_temp(1);
+	wb_out_sig1 <= wb_out_sig_temp(0);
+	wb_out_sig2 <= wb_out_sig_temp(1);
 	write_reg_out <= write_reg_temp;
 	
-	for i in 0 to 1 generate 
+	generate_wb : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
-			(clk, rst, load, "0", wb_in_sig(i), enable, wb_out_sig_temp(i));
+			(clk, rst, load, '0', wb_in_sig(i), enable, wb_out_sig_temp(i));
 	end generate;
 	
-	for i in 0 to 4 generate 
+	generate_wr : for i in 0 to 4 generate 
 		write_reg_sigs : dffr_a port map 
-			(clk, rst, load, "0", write_reg_in(i), enable, write_reg_temp(i));
+			(clk, rst, load, '0', write_reg_in(i), enable, write_reg_temp(i));
 	end generate;
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
