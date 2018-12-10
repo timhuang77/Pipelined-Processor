@@ -3,15 +3,14 @@ use IEEE.std_logic_1164.all;
 
 use work.eecs361_gates.all;
 
-entity sign_ext is
+entity unsign_ext_32 is
 	port (
 		x	: in std_logic_vector(15 downto 0);
 		z	: out std_logic_vector(31 downto 0)
 	);
-end entity sign_ext;
+end entity unsign_ext_32;
 
-architecture structural of sign_ext is
-	signal MSB_and_sel : std_logic;
+architecture structural of unsign_ext_32 is
 
 begin
 	lower_half : for i in 0 to 15 generate
@@ -19,7 +18,7 @@ begin
 	end generate;
 	
 	upper_half : for i in 16 to 31 generate
-		z(i) <= x(15);	--Sign-extend MSB
+		z(i) <= '0';
 	end generate;
 	
 end architecture structural;
