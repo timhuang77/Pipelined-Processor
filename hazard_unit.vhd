@@ -39,7 +39,7 @@ architecture struct of hazard_unit is
     );
   end component;
   
-  entity compare_5 is
+  component compare_5 is
     port (
         x   : in std_logic_vector (4 downto 0);
         y	: in std_logic_vector (4 downto 0);
