@@ -8,7 +8,7 @@ entity branch_detector is
 
 end entity branch_detector is 
 	port(
-		be_flag, bne_flag, bgtz_flag : in std_logic;
+		beq_flag, bneq_flag, bgtz_flag : in std_logic;
 		zero_flag, gtz_flag : in std_logic;
 		PC_Src_out : out std_logic;
 	);
@@ -29,8 +29,8 @@ architecture structural of branch_detector is
 	
 begin
 	not_zero_gate : not_gate port map(zero_flag, not_zero_flag);
-	AND_branch_zero : and_gate port map(be_flag, zero_flag, branch_and_zero_signal);
-	AND_branch_nz : and_gate port map(bne_flag, not_zero_flag, branch_and_nz_signal);
+	AND_branch_zero : and_gate port map(beq_flag, zero_flag, branch_and_zero_signal);
+	AND_branch_nz : and_gate port map(bneq_flag, not_zero_flag, branch_and_nz_signal);
 	AND_branch_gtz : and_gate port map(bgtz_flag, gtz_flag, branch_and_gtz_signal);
 	or_branch_flags : or3_gate port map(branch_and_zero_signal, branch_and_nz_signal, branch_and_gtz_signal, PC_Src_out);
 

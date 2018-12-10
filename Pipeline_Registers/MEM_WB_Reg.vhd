@@ -15,7 +15,7 @@ entity MEM_WB_Reg is
 		rw_in : in std_logic_vector (4 downto 0);
 		
 		data_mem_out  : out std_logic_vector (31 downto 0); 
-		control_wb_in : in std_logic_vector(1 downto 0);
+		control_wb_out : in std_logic_vector(1 downto 0);
 		alu_result_out: out std_logic_vector (31 downto 0);
 		rw_out : out std_logic_vector (4 downto 0)
 	);
@@ -55,7 +55,7 @@ begin
 	
 	generate_wb : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
-			(clk, arst, aload, '0', control_wb(i), '1', control_wb_in(i));
+			(clk, arst, aload, '0', control_wb_in(i), '1', control_wb_out(i));
 	end generate;
 	
 	generate_wr : for i in 0 to 4 generate 

@@ -19,15 +19,8 @@ entity ID_EX_Reg is
       		--control_mem(4): MemWrite
 		control_ex	: in std_logic_vector(3 downto 0);
 		
-		pc_in		: in std_logic_vector(31 downto 0);
-		
-		read_data1	: in std_logic_vector(31 downto 0);
-		read_data2	: in std_logic_vector(31 downto 0);
-		
-		sign_ext	: in std_logic_vector(31 downto 0);
-		
-		instruct_1	: in std_logic_vector(4 downto 0);
-		instruct_2	: in std_logic_vector(4 downto 0);
+		pc_in, read_data1, read_data2, sign_ext, shamt_ext	: in std_logic_vector(31 downto 0);
+		instruct_1, instruct_2	: in std_logic_vector(4 downto 0);
 		
 		--outputs
 		control_wb_out	: out std_logic_vector(1 downto 0);
@@ -36,13 +29,9 @@ entity ID_EX_Reg is
 		ALUOp			: out std_logic_vector(1 downto 0);
 		RegDst			: out std_logic;
 		
-		pc_out 			: out std_logic_vector(31 downto 0);
-		bus_a			: out std_logic_vector(31 downto 0);
-		bus_b			: out std_logic_vector(31 downto 0);
-		out_sign_ext	: out std_logic_vector(31 downto 0);
+		pc_out, bus_a, bus_b, out_sign_ext, out_shamt_ext	: out std_logic_vector(31 downto 0);
 		
-		out_instruct1	: out std_logic_vector(4 downto 0);
-		out_instruct2	: out std_logic_vector(4 downto 0)
+		out_instruct1, out_instruct2	: out std_logic_vector(4 downto 0)
 	);
 end entity ID_EX_Reg;
 
@@ -168,6 +157,18 @@ begin
 		);
 	end generate;
 
+	gen_shamt_ext_reg : for i in 0 to 31 generate
+		dff_shamt_ext : dffr_a port map (
+			clk	=> clk,
+			arst => arst,
+			aload => aload,
+			adata => '0', --reset will initialize register with 0
+			d => shamt_ext(i),
+			enable => '1',
+			q => out_shamt_ext(i)
+		);
+	end generate;
+	
 -- instruct 1
 	gen_instruct_1_reg : for i in 0 to 4 generate
 		dff_instruct_1 : dffr_a port map (

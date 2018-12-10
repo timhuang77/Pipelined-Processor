@@ -43,8 +43,11 @@ constant const_four : std_logic_vector(31 downto 0) := "000000000000000000000000
 signal pc_signal : std_logic_vector(31 downto 0);
 
 begin
+	--RST Initializer (Mux)
+	PC_in_or_init : mux_n generic map(30) port map(rst, pc_in, start_PC_addr, PC_in_or_rst);
+	
 	--PC component
-	pc_map  : pc_32 port map(clk, pc_in, pc_signal);
+	pc_map  : pc_32 port map(clk, PC_in_or_rst, pc_signal);
 	
 	--Adder 32-bit in IFU
 	add_4 : adder_32 port map(pc_signal, const_four, pc_out);
