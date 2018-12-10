@@ -2,7 +2,6 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
-use work.pipeline_reg_package.all;
 
 entity compare_5 is
   port (
@@ -39,7 +38,7 @@ begin
   -- if any of bits is 1 then it is not equal -- 
 	gen_compare : for i in 0 to 5 generate
       begin
-        xor_gates : xor port map(x_temp, y_temp, result_temp);
+        xor_gates : xor_gate port map(x_temp(i), y_temp(i), result_temp(i));
       end generate;
     
     zero_detect : zero_detect_6 port map(result_temp, z);
