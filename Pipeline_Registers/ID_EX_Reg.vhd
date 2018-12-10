@@ -1,3 +1,4 @@
+-- ID/EX
 library IEEE;
 use IEEE.std_logic_1164.all;
 use work.eecs361_gates.all;
@@ -10,7 +11,12 @@ entity ID_EX_Reg is
 		arst, aload	: in std_logic;
 		
 		control_wb	: in std_logic_vector(1 downto 0);
-		control_mem	: in std_logic_vector(2 downto 0);
+		control_mem	: in std_logic_vector(4 downto 0);
+      		--control_mem(0): beq
+      		--control_mem(1): bneq
+      		--control_mem(2): bgtz
+      		--control_mem(3): MemRead
+      		--control_mem(4): MemWrite
 		control_ex	: in std_logic_vector(3 downto 0);
 		
 		pc_in		: in std_logic_vector(31 downto 0);
@@ -25,7 +31,7 @@ entity ID_EX_Reg is
 		
 		--outputs
 		control_wb_out	: out std_logic_vector(1 downto 0);
-		control_mem_out	: out std_logic_vector(2 downto 0);
+		control_mem_out	: out std_logic_vector(4 downto 0);
 		ALUSrc			: out std_logic;
 		ALUOp			: out std_logic_vector(1 downto 0);
 		RegDst			: out std_logic;
@@ -57,7 +63,7 @@ begin
 	end generate;
 	
 -- MEM
-	gen_MEM_reg : for i in 0 to 2 generate
+	gen_MEM_reg : for i in 0 to 4 generate
 		dff_MEM : dffr_a port map(
 			clk => clk,
 			arst => arst,

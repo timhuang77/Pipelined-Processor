@@ -5,13 +5,15 @@ use work.eecs361.all;
 
 entity EX_MEM_Reg is 
 	port(
-		clk 	: in std_logic;
-		rst		: in std_logic;
-		load	: in std_logic;
-		enable	: in std_logic; 
+		clk, rst, load, enable	: in std_logic; 
  
 		wb_in_sig 	 	: in std_logic_vector (1 downto 0);
-		mem_ctrl_in_sig : in std_logic_vector (2 downto 0); 
+		control_mem_in	: in std_logic_vector (4 downto 0); 
+      		--control_mem(0): beq
+      		--control_mem(1): bneq
+      		--control_mem(2): bgtz
+      		--control_mem(3): MemRead
+      		--control_mem(4): MemWrite
 		pc_in_sig		: in std_logic_vector (31 downto 0);
 		alu_zero_in		: in std_logic;
 		alu_result_in   : in std_logic_vector (31 downto 0);
@@ -19,9 +21,9 @@ entity EX_MEM_Reg is
 		write_reg_in 	: in std_logic_vector (4 downto 0);
 		
 		wb_out_sig	 	  : out std_logic_vector (1 downto 0);
-		mem_ctrl_out_sig1 : out std_logic;
-		mem_ctrl_out_sig2 : out std_logic;
-		mem_ctrl_out_sig3 : out std_logic;
+      	
+      	--control_mem signals
+		beq_flag, bneq_flag, bgtz_flag, MemRead, MemWrite : out std_logic;
 		pc_out_sig		  : out std_logic_vector (31 downto 0); 
 		alu_zero_out	  : out std_logic;
 		alu_result_out    : out std_logic_vector (31 downto 0);	
@@ -57,7 +59,7 @@ architecture structural of EX_MEM_Reg is
     end component;
 
 	signal wb_out_sig_temp	 	: std_logic_vector (1 downto 0);
-	signal mem_ctrl_in_sig_temp : std_logic_vector (2 downto 0); 
+	signal control_mem_in_temp : std_logic_vector (4 downto 0); 
 	signal pc_out_sig_temp		: std_logic_vector (31 downto 0); 
 	signal alu_zero_out_temp	: std_logic;
 	signal alu_result_out_temp  : std_logic_vector (31 downto 0);	
@@ -65,9 +67,12 @@ architecture structural of EX_MEM_Reg is
 	signal write_reg_out_temp 	: std_logic_vector (4 downto 0);
 	
 begin
-	mem_ctrl_out_sig1 <= mem_ctrl_in_sig_temp(0);
-	mem_ctrl_out_sig2 <= mem_ctrl_in_sig_temp(1);
-	mem_ctrl_out_sig3 <= mem_ctrl_in_sig_temp(2);
+	be_flag <= control_mem_in_temp(0);
+	bne_flag <= control_mem_in_temp(1);
+	bgtz_flag <= control_mem_in_temp(2);
+	MemRead <= control_mem_in_temp(3);
+	MemWrite <= control_mem_in_temp(4);
+
 	wb_out_sig 		  <= wb_out_sig_temp;
 	pc_out_sig 		  <= pc_out_sig_temp;
 	alu_zero_out 	  <= alu_zero_out_temp;
@@ -80,9 +85,9 @@ begin
 			(clk, rst, load, '0', wb_in_sig(i), enable, wb_out_sig_temp(i));
 	end generate;
 	
-	generate_mem_ctrl : for i in 0 to 2 generate 
+	generate_mem_ctrl : for i in 0 to 4 generate 
 		mem_ctrl_sigs : dffr_a port map 
-			(clk, rst, load, '0', mem_ctrl_in_sig(i), enable, mem_ctrl_in_sig_temp(i));
+			(clk, rst, load, '0', control_mem_in(i), enable, control_mem_in_temp(i));
 	end generate;
 	
 	generate_wr : for i in 0 to 4 generate 
