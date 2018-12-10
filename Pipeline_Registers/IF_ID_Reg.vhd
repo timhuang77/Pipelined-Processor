@@ -8,6 +8,7 @@ entity IF_ID_Reg is
 		--Inputs
 		clk : in std_logic;
 		arst, aload : in std_logic;
+		if_id_enable : in std_logic;
 			--async reset will initialize register with 0
 		instr_in : in std_logic_vector(31 downto 0);
 		pc_in : in std_logic_vector(31 downto 0);
@@ -35,7 +36,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => pc_in(i),
-			enable => '1',
+			enable => if_id_enable,
 			q => pc_out(i)
 		);
 	end generate;
@@ -47,7 +48,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => instr_in(i),
-			enable => '1',
+			enable => if_id_enable,
 			q => instr_out(i)
 		);
 	end generate;
