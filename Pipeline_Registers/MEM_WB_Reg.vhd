@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
 
-entity MEM_WB is 
+entity MEM_WB_Reg is 
 	port(
 		clk 	: in std_logic;
 		rst		: in std_logic;
@@ -21,9 +21,9 @@ entity MEM_WB is
 		alu_result_out: out std_logic_vector (31 downto 0);
 		write_reg_out : out std_logic_vector (4 downto 0)
 	);
-end MEM_WB;
+end MEM_WB_Reg;
 
-architecture structural of MEM_WB is 
+architecture structural of MEM_WB_Reg is 
 
 	component dffr_a is
 	  port (

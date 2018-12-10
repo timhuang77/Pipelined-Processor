@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
 
-entity EX_MEM is 
+entity EX_MEM_Reg is 
 	port(
 		clk 	: in std_logic;
 		rst		: in std_logic;
@@ -28,9 +28,9 @@ entity EX_MEM is
 		bus_b_out		  : out std_logic_vector (31 downto 0);
 		write_reg_out 	  : out std_logic_vector (4 downto 0)
 	);
-end EX_MEM;
+end EX_MEM_Reg;
 
-architecture structural of EX_MEM is 
+architecture structural of EX_MEM_Reg is 
 
 	component dffr_a is
 	  port (
