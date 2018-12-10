@@ -45,7 +45,7 @@ architecture struct of hazard_unit is
         y	: in std_logic_vector (4 downto 0);
         z   : out std_logic
     );
-  end compare_5;
+  end component;
   
 -- 6 bits for zero detect --   
 signal if_id_Rs_temp, if_id_Rt_temp, id_ex_Rt_temp : std_logic_vector(4 downto 0);
