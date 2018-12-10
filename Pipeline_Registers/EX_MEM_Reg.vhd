@@ -5,7 +5,7 @@ use work.eecs361.all;
 
 entity EX_MEM_Reg is 
 	port(
-		clk, rst, load, enable	: in std_logic; 
+		clk, arst, aload, enable	: in std_logic; 
  
 		wb_in_sig 	 	: in std_logic_vector (1 downto 0);
 		control_mem_in	: in std_logic_vector (4 downto 0); 
@@ -82,27 +82,27 @@ begin
 	
 	generate_wb1 : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
-			(clk, rst, load, '0', wb_in_sig(i), enable, wb_out_sig_temp(i));
+			(clk, arst, aload, '0', wb_in_sig(i), enable, wb_out_sig_temp(i));
 	end generate;
 	
 	generate_mem_ctrl : for i in 0 to 4 generate 
 		mem_ctrl_sigs : dffr_a port map 
-			(clk, rst, load, '0', control_mem_in(i), enable, control_mem_in_temp(i));
+			(clk, arst, aload, '0', control_mem_in(i), enable, control_mem_in_temp(i));
 	end generate;
 	
 	generate_wr : for i in 0 to 4 generate 
 		write_reg_sigs : dffr_a port map 
-			(clk, rst, load, '0', write_reg_in(i), enable, write_reg_out_temp(i));
+			(clk, arst, aload, '0', write_reg_in(i), enable, write_reg_out_temp(i));
 	end generate;
 	
 	alu_zero_out_temp <= alu_zero_in;
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", pc_in_sig, enable, pc_out_sig_temp);
+		(clk, arst, aload, "00000000000000000000000000000000", pc_in_sig, enable, pc_out_sig_temp);
 
 	dffr_a_32bit_2 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", alu_result_in, enable, alu_result_out_temp);
+		(clk, arst, aload, "00000000000000000000000000000000", alu_result_in, enable, alu_result_out_temp);
 
 	dffr_a_32bit_3 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", bus_b_in, enable, bus_b_out_temp);	
+		(clk, arst, aload, "00000000000000000000000000000000", bus_b_in, enable, bus_b_out_temp);	
 end structural;
