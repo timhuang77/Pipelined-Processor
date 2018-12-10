@@ -15,7 +15,7 @@ architecture behavioral of forwarding_unit_tb is
 			ID_EX_Rs, ID_EX_Rt, EX_MEM_Rd, MEM_WB_Rd : in std_logic_vector(4 downto 0);
 			EX_MEM_RegWr, MEM_WB_RegWr : in std_logic;
 			--outputs
-			forwardA, forwardB : out std_logic_vector(1 downto 0);
+			forwardA, forwardB : out std_logic_vector(1 downto 0)
 		);
 	end component forwarding_unit;
 	
@@ -51,5 +51,6 @@ begin
 		ID_EX_Rs <= "00000";
 		ID_EX_Rt <= "00010";
 		wait for 20 ns;
+		wait;
 	end process;
 end architecture behavioral;
