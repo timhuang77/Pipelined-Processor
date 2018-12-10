@@ -5,30 +5,32 @@ use work.eecs361.all;
 
 entity EX_MEM_Reg is 
 	port(
-		clk, rst, load, enable	: in std_logic; 
+		clk, rst, aload	: in std_logic; 
  
-		wb_in_sig 	 	: in std_logic_vector (1 downto 0);
+		control_wb_in 	 	: in std_logic_vector (1 downto 0);
+			--control_wb(0) : MemToReg
+			--control_wb(1) : RegWrite
 		control_mem_in	: in std_logic_vector (4 downto 0); 
       		--control_mem(0): beq
       		--control_mem(1): bneq
       		--control_mem(2): bgtz
       		--control_mem(3): MemRead
       		--control_mem(4): MemWrite
-		pc_in_sig		: in std_logic_vector (31 downto 0);
-		alu_zero_in		: in std_logic;
+		pc_in		: in std_logic_vector (31 downto 0);
+		zero_flag_in		: in std_logic;
 		alu_result_in   : in std_logic_vector (31 downto 0);
 		bus_b_in		: in std_logic_vector (31 downto 0);
-		write_reg_in 	: in std_logic_vector (4 downto 0);
+		rw_in 			: in std_logic_vector (4 downto 0);
 		
-		wb_out_sig	 	  : out std_logic_vector (1 downto 0);
+		control_wb_out	: out std_logic_vector (1 downto 0);
       	
       	--control_mem signals
-		beq_flag, bneq_flag, bgtz_flag, MemRead, MemWrite : out std_logic;
-		pc_out_sig		  : out std_logic_vector (31 downto 0); 
-		alu_zero_out	  : out std_logic;
-		alu_result_out    : out std_logic_vector (31 downto 0);	
-		bus_b_out		  : out std_logic_vector (31 downto 0);
-		write_reg_out 	  : out std_logic_vector (4 downto 0)
+		beq_flag, bneq_flag, bgtz_flag, MemRead, MemWrite, zero_flag_out : out std_logic;
+		
+		pc_out		: out std_logic_vector (31 downto 0); 
+		alu_result_out  : out std_logic_vector (31 downto 0);	
+		bus_b_out		: out std_logic_vector (31 downto 0);
+		rw_out 	  		: out std_logic_vector (4 downto 0)
 	);
 end EX_MEM_Reg;
 
@@ -67,42 +69,44 @@ architecture structural of EX_MEM_Reg is
 	signal write_reg_out_temp 	: std_logic_vector (4 downto 0);
 	
 begin
+	--Splitting into separate MEM control signals
 	be_flag <= control_mem_in_temp(0);
 	bne_flag <= control_mem_in_temp(1);
 	bgtz_flag <= control_mem_in_temp(2);
 	MemRead <= control_mem_in_temp(3);
 	MemWrite <= control_mem_in_temp(4);
 
-	wb_out_sig 		  <= wb_out_sig_temp;
-	pc_out_sig 		  <= pc_out_sig_temp;
 	alu_zero_out 	  <= alu_zero_out_temp;
-	alu_result_out 	  <= alu_result_out_temp;
-	bus_b_out 		  <= bus_b_out_temp;	
-	write_reg_out 	  <= write_reg_out_temp;
 	
 	generate_wb1 : for i in 0 to 1 generate 
-		wb_out_sigs : dffr_a port map 
-			(clk, rst, load, '0', wb_in_sig(i), enable, wb_out_sig_temp(i));
+		wb_out_sigs : dffr_a port map(
+			clk => clk, 
+			arst => rst, 
+			aload => aload, 
+			adata => '0',
+			d => control_wb_in(i), 
+			enable => '1', 
+			q => control_wb_out(i)
+		);
 	end generate;
 	
 	generate_mem_ctrl : for i in 0 to 4 generate 
 		mem_ctrl_sigs : dffr_a port map 
-			(clk, rst, load, '0', control_mem_in(i), enable, control_mem_in_temp(i));
+			(clk, rst, aload, '0', control_mem_in(i), '1', control_mem_in_temp(i));
 	end generate;
 	
 	generate_wr : for i in 0 to 4 generate 
-		write_reg_sigs : dffr_a port map 
-			(clk, rst, load, '0', write_reg_in(i), enable, write_reg_out_temp(i));
+		write_reg_sigs : dffr_a port map (clk, rst, aload, '0', rw_in(i), '1', rw_out(i));
 	end generate;
 	
-	alu_zero_out_temp <= alu_zero_in;
+	dffr_a_zero_flag : dffr_a port map(clk, rst, aload, '0', zero_flag_in, '1', zero_flag_out);
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", pc_in_sig, enable, pc_out_sig_temp);
+		(clk, rst, aload, "00000000000000000000000000000000", pc_in, '1', pc_out);
 
 	dffr_a_32bit_2 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", alu_result_in, enable, alu_result_out_temp);
+		(clk, rst, aload, "00000000000000000000000000000000", alu_result_in, '1', alu_result_out);
 
 	dffr_a_32bit_3 : dffr_a_32bit port map
-		(clk, rst, load, "00000000000000000000000000000000", bus_b_in, enable, bus_b_out_temp);	
+		(clk, rst, aload, "00000000000000000000000000000000", bus_b_in, '1', bus_b_out);	
 end structural;
