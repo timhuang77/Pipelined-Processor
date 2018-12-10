@@ -75,19 +75,19 @@ begin
 	bus_b_out 		  <= bus_b_out_temp;	
 	write_reg_out 	  <= write_reg_out_temp;
 	
-	for i in 0 to 1 generate 
+	generate_wb1 : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
-			(clk, rst, load, "0", wb_in_sig(i), enable, wb_out_sig_temp(i));
+			(clk, rst, load, '0', wb_in_sig(i), enable, wb_out_sig_temp(i));
 	end generate;
 	
-	for i in 0 to 2 generate 
+	generate_mem_ctrl : for i in 0 to 2 generate 
 		mem_ctrl_sigs : dffr_a port map 
-			(clk, rst, load, "0", mem_ctrl_in_sig(i), enable, mem_ctrl_in_sig_temp(i));
+			(clk, rst, load, '0', mem_ctrl_in_sig(i), enable, mem_ctrl_in_sig_temp(i));
 	end generate;
 	
-	for i in 0 to 4 generate 
+	generate_wr : for i in 0 to 4 generate 
 		write_reg_sigs : dffr_a port map 
-			(clk, rst, load, "0", write_reg_in(i), enable, write_reg_out_temp(i));
+			(clk, rst, load, '0', write_reg_in(i), enable, write_reg_out_temp(i));
 	end generate;
 	
 	alu_zero_out_temp <= alu_zero_in;
