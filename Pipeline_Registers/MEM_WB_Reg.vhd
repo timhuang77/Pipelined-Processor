@@ -15,7 +15,7 @@ entity MEM_WB_Reg is
 		rw_in : in std_logic_vector (4 downto 0);
 		
 		data_mem_out  : out std_logic_vector (31 downto 0); 
-		control_wb_out : in std_logic_vector(1 downto 0);
+		control_wb_out : out std_logic_vector(1 downto 0);
 		alu_result_out: out std_logic_vector (31 downto 0);
 		rw_out : out std_logic_vector (4 downto 0)
 	);
@@ -46,12 +46,8 @@ architecture structural of MEM_WB_Reg is
 	    q	   : out std_logic_vector(31 downto 0)
       );
     end component;
-
-	signal wb_out_sig_temp : std_logic_vector (1 downto 0);
-	signal write_reg_temp  : std_logic_vector (4 downto 0);
 	
 begin
-	write_reg_out <= write_reg_temp;
 	
 	generate_wb : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map 
