@@ -7,10 +7,8 @@ entity IFU_multicycle is
 	generic (mem_file: string);
 	port(
 		clk, rst	: in std_logic;
-
+		pc_enable	: in std_logic; 
 		pc_in		: in std_logic_vector(31 downto 0);
-
-		
 		pc_out		: out std_logic_vector(31 downto 0);
 		instr_out	: out std_logic_vector(31 downto 0)
 	);
@@ -19,6 +17,7 @@ end entity IFU_multicycle;
 architecture structural of IFU_multicycle is
 	component pc_32 is
 		port(clk : in std_logic; 
+				pc_enable : in std_logic; 
 				d   : in std_logic_vector(31 downto 0); 
 				q   : out std_logic_vector(31 downto 0)
 			  );
@@ -47,7 +46,7 @@ begin
 	PC_in_or_init : mux_n generic map(30) port map(rst, pc_in, start_PC_addr, PC_in_or_rst);
 	
 	--PC component
-	pc_map  : pc_32 port map(clk, PC_in_or_rst, pc_signal);
+	pc_map  : pc_32 port map(clk, pc_enable, PC_in_or_rst, pc_signal);
 	
 	--Adder 32-bit in IFU
 	add_4 : adder_32 port map(pc_signal, const_four, pc_out);
