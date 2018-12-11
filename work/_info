@@ -23,9 +23,9 @@ V]V0J`LC^m?JEYTPKkMI<<3
 !s100 iBgkh=c0`bOl>4c]o^JXA1
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1544485744
+Z9 !s110 1544569145
 !i10b 1
-Z10 !s108 1544485744.000000
+Z10 !s108 1544569145.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add.vhd|
 Z12 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add.vhd|
 !i113 1
@@ -43,7 +43,7 @@ VN8Uj7N0JLPifo9HF]cX:I1
 !s100 Cc:MOV4NV46[Wn3>W9aC^2
 R8
 32
-Z15 !s110 1544485745
+R9
 !i10b 1
 R10
 R11
@@ -58,17 +58,17 @@ R2
 R3
 R4
 R5
-Z16 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd
-Z17 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd
+Z15 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd
+Z16 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd
 l0
 L6
 V0dff03RPQCN:?gk]g?]l22
 !s100 RVE[;IR_fH]D31SiHBSTD3
 R8
 32
-R15
+Z17 !s110 1544569142
 !i10b 1
-Z18 !s108 1544485745.000000
+Z18 !s108 1544569142.000000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd|
 Z20 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd|
 !i113 1
@@ -86,7 +86,7 @@ VTae1BMMRCgGJ<hbf=UWUD1
 !s100 RG8=cN[6HQPb4KZUZ?W6>0
 R8
 32
-R15
+R17
 !i10b 1
 R18
 R19
@@ -107,11 +107,11 @@ VbXHAkBTzB4lm]__7[:C>L2
 !s100 9CT9HA8TlAUJ2:LBGQB3U2
 R8
 32
-Z24 !s110 1544485747
+R9
 !i10b 1
-Z25 !s108 1544485747.000000
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/adder_32.vhd|
-Z27 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/adder_32.vhd|
+R10
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/adder_32.vhd|
+Z25 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/adder_32.vhd|
 !i113 1
 R13
 R14
@@ -125,11 +125,11 @@ V__717YJP0KYF>kNbGkc_P0
 !s100 ZVOU1b?bIC`S[2:Gg?B8Q0
 R8
 32
-R24
+R9
 !i10b 1
+R10
+R24
 R25
-R26
-R27
 !i113 1
 R13
 R14
@@ -140,19 +140,19 @@ R2
 R3
 R4
 R5
-Z28 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd
-Z29 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd
+Z26 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd
+Z27 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd
 l0
 L6
 VFDWVEQDoezY4WzRTHXKH33
 !s100 6C3CHmgE4UcP;b<:5;MT<3
 R8
 32
-R15
+R17
 !i10b 1
 R18
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd|
-Z31 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd|
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd|
+Z29 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd|
 !i113 1
 R13
 R14
@@ -168,11 +168,11 @@ Vc@n`KaZSCGE_R>6S128;A3
 !s100 =KKa6fTeiWg5`V9FeeNPg0
 R8
 32
-R15
+R17
 !i10b 1
 R18
-R30
-R31
+R28
+R29
 !i113 1
 R13
 R14
@@ -182,19 +182,19 @@ R2
 R3
 R4
 R5
-Z32 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd
-Z33 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd
+Z30 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd
+Z31 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd
 l0
 L5
 V?<L3XWC0Rj_OV`b=Y0c002
 !s100 NC3UNjh562MZW63B=JA4n0
 R8
 32
-R15
+R17
 !i10b 1
 R18
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd|
-Z35 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd|
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd|
+Z33 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu32_tb.vhd|
 !i113 1
 R13
 R14
@@ -209,11 +209,11 @@ VPGHjHE6S6XMQUY<W<`d]H0
 !s100 NzYzgd=3iUDcF[Z7HbQ7?3
 R8
 32
-R15
+R17
 !i10b 1
 R18
-R34
-R35
+R32
+R33
 !i113 1
 R13
 R14
@@ -224,19 +224,19 @@ R2
 R3
 R4
 R5
-Z36 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd
-Z37 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd
+Z34 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd
+Z35 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd
 l0
 L6
 V3>[F2JQoPj5M_gGLb;4:Y0
 !s100 E0_;emU7R_WdI<Y_cl?E80
 R8
 32
-R15
+R17
 !i10b 1
 R18
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd|
-Z39 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd|
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd|
+Z37 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu1.vhd|
 !i113 1
 R13
 R14
@@ -252,11 +252,11 @@ VIU9;W3YT;AZEbS:OIm5]Z0
 !s100 EY:TRe:aGTF7KM?@oGA?n2
 R8
 32
-R15
+R17
 !i10b 1
 R18
-R38
-R39
+R36
+R37
 !i113 1
 R13
 R14
@@ -266,19 +266,19 @@ R2
 R3
 R4
 R5
-Z40 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd
-Z41 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd
+Z38 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd
+Z39 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd
 l0
 L5
 V^;;n_MUhCJXUoBQ5ZJf]j0
 !s100 ]]U<c1ZB6gE<G5hEGaN@30
 R8
 32
-R15
+R17
 !i10b 1
 R18
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd|
-Z43 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd|
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd|
+Z41 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu_tb.vhd|
 !i113 1
 R13
 R14
@@ -293,34 +293,34 @@ Vki?EH?m6H0G1C9D]Q;e9X2
 !s100 ^L4>V8JW?:iY[F=K:J9KB0
 R8
 32
-R15
+R17
 !i10b 1
 R18
-R42
-R43
+R40
+R41
 !i113 1
 R13
 R14
 Eand3_gate
-Z44 w1544488824
+Z42 w1544491789
 R1
 R2
 R3
 R4
 R5
-Z45 8W:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd
-Z46 FW:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd
+Z43 8W:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd
+Z44 FW:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd
 l0
 L6
 V_]P=:c<1=cC19oKDV:U[_0
 !s100 PVeV;78g8^Xjb_Vm]`HUX1
 R8
 32
-Z47 !s110 1544489618
+Z45 !s110 1544569146
 !i10b 1
-Z48 !s108 1544489618.000000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd|
-Z50 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd|
+R10
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd|
+Z47 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/and3_gate.vhd|
 !i113 1
 R13
 R14
@@ -336,34 +336,34 @@ V?i:b[1Ko>iX9lJZzKR46D3
 !s100 67mYo1>VHY7zmjU9F7Q7K2
 R8
 32
-R47
+R45
 !i10b 1
-R48
-R49
-R50
+R10
+R46
+R47
 !i113 1
 R13
 R14
 Eand_6_to_1
-Z51 w1543370732
+Z48 w1543370732
 R1
 R2
 R3
 R4
 R5
-Z52 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd
-Z53 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd
+Z49 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd
+Z50 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd
 l0
 L6
 VfKmCJ0zb6IobCfOkS5To^0
 !s100 F>zma^V;POGWg>d1bFIKG2
 R8
 32
-Z54 !s110 1544485746
+Z51 !s110 1544485746
 !i10b 1
-Z55 !s108 1544485746.000000
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd|
-Z57 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd|
+Z52 !s108 1544485746.000000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd|
+Z54 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd|
 !i113 1
 R13
 R14
@@ -379,33 +379,33 @@ Vh=IadzHzBATCc_;T5Z0F@3
 !s100 FOC7l<`gfkz^k56lOaD:i1
 R8
 32
-R54
+R51
 !i10b 1
-R55
-R56
-R57
+R52
+R53
+R54
 !i113 1
 R13
 R14
 Eand_8_to_1
-R51
+R48
 R2
 R3
 R4
 R5
-Z58 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd
-Z59 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd
+Z55 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd
+Z56 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd
 l0
 L5
 VcNGAlGmdW`9@62VG^VdMB2
 !s100 Bl_eBE]T:?k8Y21eThZVl3
 R8
 32
-R54
+R51
 !i10b 1
-R55
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd|
-Z61 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd|
+R52
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd|
+Z58 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd|
 !i113 1
 R13
 R14
@@ -420,32 +420,32 @@ V^N<gPzUGX:1?S9Q;H`N=41
 !s100 PmhJOfAQL7^<KcGle=aWC1
 R8
 32
-R54
+R51
 !i10b 1
-R55
-R60
-R61
+R52
+R57
+R58
 !i113 1
 R13
 R14
 Eand_gate
-Z62 w1445437091
+Z59 w1445437091
 R3
 R4
 R5
-Z63 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd
-Z64 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd
+Z60 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd
+Z61 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd
 l0
 L5
 VhE_e_Rgm[N3PdZh[V=Az?1
 !s100 9zM?`;meNomBE;big9UG12
 R8
 32
-Z65 !s110 1544483991
+Z62 !s110 1544569136
 !i10b 1
-Z66 !s108 1544483991.000000
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd|
-Z68 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd|
+Z63 !s108 1544569136.000000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd|
+Z65 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate.vhd|
 !i113 1
 R13
 R14
@@ -459,32 +459,32 @@ VC@ldnBQ6jEzl^]@212YPz1
 !s100 Wc2cnMoUL`Rn2T[ECHYDg0
 R8
 32
-R65
+R62
 !i10b 1
-R66
-R67
-R68
+R63
+R64
+R65
 !i113 1
 R13
 R14
 Eand_gate_32
-R62
+R59
 R3
 R4
 R5
-Z69 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd
-Z70 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd
+Z66 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd
+Z67 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd
 l0
 L5
 V;K@lPb^fUn5NRPE9^YUWn1
 !s100 KSRcRaLU>DVF[looI[MAB1
 R8
 32
-R65
+R62
 !i10b 1
-R66
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd|
-Z72 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd|
+R63
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd|
+Z69 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -498,32 +498,32 @@ V_L`Mb12In>DaA6S>F3dR_2
 !s100 7eGi4aE3j0c6RNWj8;hYn2
 R8
 32
-R65
+R62
 !i10b 1
-R66
-R71
-R72
+R63
+R68
+R69
 !i113 1
 R13
 R14
 Eand_gate_n
-R62
+R59
 R3
 R4
 R5
-Z73 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd
-Z74 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd
+Z70 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd
+Z71 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd
 l0
 L5
 V9MR1C1[7b:z414JH]o[Q72
 !s100 BgW1<b848=U4b0Fm5IB4V0
 R8
 32
-R65
+R62
 !i10b 1
-R66
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd|
-Z76 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd|
+R63
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd|
+Z73 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/and_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -537,11 +537,11 @@ VNZceK8zIhSAfFLMf;8WfJ0
 !s100 TlhKh<Ln2>7=AINQTiM_c3
 R8
 32
-R65
+R62
 !i10b 1
-R66
-R75
-R76
+R63
+R72
+R73
 !i113 1
 R13
 R14
@@ -552,19 +552,19 @@ R2
 R3
 R4
 R5
-Z77 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd
-Z78 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd
+Z74 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd
+Z75 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd
 l0
 L6
 V0b[`BjC24_a12Y?6K3LE;3
 !s100 9<55[PARWaNa28?jIPIPD3
 R8
 32
-R54
+Z76 !s110 1544569143
 !i10b 1
 R18
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd|
-Z80 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd|
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd|
+Z78 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/and_n.vhd|
 !i113 1
 R13
 R14
@@ -580,34 +580,34 @@ Vn8hdeK3E036OdS_L2_Sjl2
 !s100 TT@44]P42zIbIKKD^O9Z<3
 R8
 32
-R54
+R76
 !i10b 1
 R18
-R79
-R80
+R77
+R78
 !i113 1
 R13
 R14
 Ecompare_5
-Z81 w1544484161
+Z79 w1544484161
 R1
 R2
 R3
 R4
 R5
-Z82 8W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd
-Z83 FW:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd
+Z80 8W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd
+Z81 FW:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd
 l0
 L6
 VDXZo_E9]]2O9DLYB15]k60
 !s100 WFN;iOU@E1e9a5:BHn0@>0
 R8
 32
-Z84 !s110 1544484168
+R45
 !i10b 1
-Z85 !s108 1544484167.000000
-Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd|
-Z87 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd|
+Z82 !s108 1544569146.000000
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd|
+Z84 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd|
 !i113 1
 R13
 R14
@@ -623,38 +623,38 @@ VQc]J_mC]6WM?62_iA_P<G0
 !s100 4XZ@WA;j<HE`03kaZcHBi0
 R8
 32
-R84
+R45
 !i10b 1
-R85
-R86
-R87
+R82
+R83
+R84
 !i113 1
 R13
 R14
 Edec_n
-R62
-Z88 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R59
+Z85 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R3
 R4
 R5
-Z89 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd
-Z90 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd
+Z86 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd
+Z87 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd
 l0
 L5
 V0a>XSXG3^zhkzX^i4@9Ea1
 !s100 TFYiE@E?[zcS;UYZJZ]e]0
 R8
 32
-R65
+Z88 !s110 1544569137
 !i10b 1
-R66
-Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd|
-Z92 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd|
+Z89 !s108 1544569137.000000
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd|
+Z91 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dec_n.vhd|
 !i113 1
 R13
 R14
 Abehavioral
-R88
+R85
 R3
 R4
 DEx4 work 5 dec_n 0 22 0a>XSXG3^zhkzX^i4@9Ea1
@@ -664,32 +664,32 @@ VaL_C;f4Cnzb@MDAjLf1Ed3
 !s100 55g?PRCWKJcmYh6jzUGZ80
 R8
 32
-R65
+R88
 !i10b 1
-R66
+R89
+R90
 R91
-R92
 !i113 1
 R13
 R14
 Edff
-R62
+R59
 R3
 R4
 R5
-Z93 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd
-Z94 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd
+Z92 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd
+Z93 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd
 l0
 L4
 V?Dl0]I?oihzd6e58lnTeT3
 !s100 6RF6aKO;bLUdc^Uo1TlJA1
 R8
 32
-Z95 !s110 1544483992
+R88
 !i10b 1
-Z96 !s108 1544483992.000000
-Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd|
-Z98 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd|
+R89
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd|
+Z95 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dff.vhd|
 !i113 1
 R13
 R14
@@ -703,32 +703,32 @@ Ve^^=95d6ZUNM<z0RP@Q=G0
 !s100 YQ?Mf61<mPk;FAfQWmbPe2
 R8
 32
-R95
+R88
 !i10b 1
-R96
-R97
-R98
+R89
+R94
+R95
 !i113 1
 R13
 R14
 Edffr
-R62
+R59
 R3
 R4
 R5
-Z99 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd
-Z100 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd
+Z96 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd
+Z97 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd
 l0
 L4
 V]V0nCm<P[hMQe1HJ>dK>m2
 !s100 8^h72ccPiicFMoll6;?B^1
 R8
 32
-R95
+R88
 !i10b 1
-R96
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd|
-Z102 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd|
+R89
+Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd|
+Z99 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd|
 !i113 1
 R13
 R14
@@ -742,32 +742,32 @@ VeUY?8[LZleUS82iiKEe5Y0
 !s100 [jSDjV[;ooEXI1fbj<kQH2
 R8
 32
-R95
+R88
 !i10b 1
-R96
-R101
-R102
+R89
+R98
+R99
 !i113 1
 R13
 R14
 Edffr_a
-Z103 w1544398206
+Z100 w1544398206
 R3
 R4
 R5
-Z104 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd
-Z105 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd
+Z101 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd
+Z102 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd
 l0
 L4
 V4[b^00[Ug:gIIbna]26832
 !s100 Ae06@YlEN>^ZBC[J]R^j?2
 R8
 32
-R24
+R9
 !i10b 1
-R25
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd|
-Z107 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd|
+R10
+Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd|
+Z104 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd|
 !i113 1
 R13
 R14
@@ -781,32 +781,32 @@ V2e``[JLG1V9mIKaN=UMS62
 !s100 18jIoW:5CWgj6bjeXK^2W3
 R8
 32
-R24
+R9
 !i10b 1
-R25
-R106
-R107
+R10
+R103
+R104
 !i113 1
 R13
 R14
 Edffr_a_32bit
-R103
+R100
 R3
 R4
 R5
-Z108 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd
-Z109 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd
+Z105 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd
+Z106 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd
 l0
 L4
 VZEgSif`8z[Ko>PF4?^W2A1
 !s100 5<[ESi3h^7mE<MAHo8anz3
 R8
 32
-Z110 !s110 1544485748
+R9
 !i10b 1
-R25
-Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd|
-Z112 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd|
+R10
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd|
+Z108 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a_32bit.vhd|
 !i113 1
 R13
 R14
@@ -820,11 +820,11 @@ VhIjUC`4KH=72gFM2Qo4k21
 !s100 hSJ04FXA6kSHa3HZz@H>F2
 R8
 32
-R110
+R9
 !i10b 1
-R25
-R111
-R112
+R10
+R107
+R108
 !i113 1
 R13
 R14
@@ -832,7 +832,7 @@ Peecs361
 R2
 R3
 R4
-R62
+R59
 R5
 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361.vhd
 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361.vhd
@@ -842,9 +842,9 @@ V`zcTLlnZVYJj07<6Bb:z[2
 !s100 8=Z1E6VmQF7PkYgUc4XzU2
 R8
 32
-Z113 !s110 1544483986
+R62
 !i10b 1
-Z114 !s108 1544483986.000000
+R63
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361.vhd|
 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361.vhd|
 !i113 1
@@ -853,7 +853,7 @@ R14
 Peecs361_gates
 R3
 R4
-R62
+R59
 R5
 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361_gates.vhd
 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361_gates.vhd
@@ -863,44 +863,147 @@ VG@G3>3naH[gM9iCRR86lk0
 !s100 EFJF``Kkcd:<4LI@jVAPI3
 R8
 32
-R113
+R62
 !i10b 1
-R114
+R63
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361_gates.vhd|
 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/eecs361_gates.vhd|
 !i113 1
 R13
 R14
-Eforwarding_unit
-Z115 w1544489778
+Eex_mem_reg
+w1544413175
 R1
 R2
-Z116 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z117 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R3
 R4
 R5
-Z118 8W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd
-Z119 FW:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd
+8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/EX_MEM_Reg.vhd
+FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/EX_MEM_Reg.vhd
+l0
+L6
+V[UHIU1U`2;R<9H]QmbGLO0
+!s100 c_m6ZL<k0T?B>Mzz<G:i@2
+R8
+32
+Z109 !s110 1544569141
+!i10b 1
+Z110 !s108 1544569141.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/EX_MEM_Reg.vhd|
+!s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/EX_MEM_Reg.vhd|
+!i113 1
+R13
+R14
+Eextender
+Z111 w1543198038
+R2
+R3
+R4
+R5
+Z112 8W:/Northwestern/Fall 2018/EECS 361/Final Project/extender.vhd
+Z113 FW:/Northwestern/Fall 2018/EECS 361/Final Project/extender.vhd
+l0
+L6
+VUOYW<ieolEg];`^<e^;FZ2
+!s100 USeRaCZMJH61UDjV?n?bY3
+R8
+32
+R45
+!i10b 1
+R82
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/extender.vhd|
+Z115 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/extender.vhd|
+!i113 1
+R13
+R14
+Astructural
+R2
+R3
+R4
+DEx4 work 8 extender 0 22 UOYW<ieolEg];`^<e^;FZ2
+l17
+L14
+VOb<6EeSA[oATk8U7?<]I53
+!s100 mVz^]nS0iMzc6@_^1ODMQ0
+R8
+32
+R45
+!i10b 1
+R82
+R114
+R115
+!i113 1
+R13
+R14
+Eextender_tb
+Z116 w1543182377
+R3
+R4
+R5
+Z117 8W:/Northwestern/Fall 2018/EECS 361/Final Project/extender_tb.vhd
+Z118 FW:/Northwestern/Fall 2018/EECS 361/Final Project/extender_tb.vhd
+l0
+L4
+V^cR?_AzGHfTHDTRLohIY^2
+!s100 C8D`lBNNOj;^4mVcAXlHN0
+R8
+32
+R45
+!i10b 1
+R82
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/extender_tb.vhd|
+Z120 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/extender_tb.vhd|
+!i113 1
+R13
+R14
+Astructural
+R3
+R4
+DEx4 work 11 extender_tb 0 22 ^cR?_AzGHfTHDTRLohIY^2
+l21
+L10
+V=AM3hWPd^hObKi8ekYZ>53
+!s100 ]m;T41dim;X5Z``59BhAD3
+R8
+32
+R45
+!i10b 1
+R82
+R119
+R120
+!i113 1
+R13
+R14
+Eforwarding_unit
+Z121 w1544489778
+R1
+R2
+Z122 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z123 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R5
+Z124 8W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd
+Z125 FW:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd
 l0
 L7
 VCl>MJk=l5;8fSg[YU240f0
 !s100 4;9`Al4Dm<Y86=lA>YHM02
 R8
 32
-Z120 !s110 1544489784
+R45
 !i10b 1
-Z121 !s108 1544489783.000000
-Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd|
-Z123 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd|
+R82
+Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd|
+Z127 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd|
 !i113 1
 R13
 R14
 Astructural
 R1
 R2
-R116
-R117
+R122
+R123
 R3
 R4
 DEx4 work 15 forwarding_unit 0 22 Cl>MJk=l5;8fSg[YU240f0
@@ -910,62 +1013,150 @@ Vzi1EK=EKDbNMHm]mED?m:3
 !s100 Bk2beVLFfZ6LL8TKk:BKm0
 R8
 32
-R120
+R45
 !i10b 1
-R121
-R122
-R123
+R82
+R126
+R127
 !i113 1
 R13
 R14
 Eforwarding_unit_tb
-Z124 w1544491638
-R88
-Z125 DPx4 work 19 testbench_functions 0 22 ]P_=2fSS0H8YamHaS?4E62
+Z128 w1544491638
+R85
+Z129 DPx4 work 19 testbench_functions 0 22 ]P_=2fSS0H8YamHaS?4E62
 R1
 R2
-R116
-R117
+R122
+R123
 R3
 R4
 R5
-Z126 8W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd
-Z127 FW:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd
+Z130 8W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd
+Z131 FW:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd
 l0
 L8
 VC?zke0Wh`<5l3e9l]`clI0
 !s100 giCKim3P_bA1NVa@DzQ841
 R8
 32
-Z128 !s110 1544491643
+R45
 !i10b 1
-Z129 !s108 1544491643.000000
-Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd|
-Z131 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd|
+R82
+Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd|
+Z133 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit_tb.vhd|
 !i113 1
 R13
 R14
 Abehavioral
-R88
-R125
+R85
+R129
 R1
 R2
-R116
-R117
+R122
+R123
 R3
 R4
-Z132 DEx4 work 18 forwarding_unit_tb 0 22 C?zke0Wh`<5l3e9l]`clI0
+DEx4 work 18 forwarding_unit_tb 0 22 C?zke0Wh`<5l3e9l]`clI0
 l26
 L11
 V_Q]X5<6oB=?43:@e6PC`90
 !s100 :7DmWmmK9zziKDFd13Bg^3
 R8
 32
-R128
+R45
 !i10b 1
-R129
-R130
-R131
+R82
+R132
+R133
+!i113 1
+R13
+R14
+Egtz_detector
+Z134 w1543374734
+R1
+R2
+R3
+R4
+R5
+Z135 8W:/Northwestern/Fall 2018/EECS 361/Final Project/gtz_detector.vhd
+Z136 FW:/Northwestern/Fall 2018/EECS 361/Final Project/gtz_detector.vhd
+l0
+L6
+VMG9h[bZDlzlEmcD86]nLN2
+!s100 h3F=gjoiHCR2FLIm65k;^3
+R8
+32
+Z137 !s110 1544569147
+!i10b 1
+R82
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/gtz_detector.vhd|
+Z139 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/gtz_detector.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 12 gtz_detector 0 22 MG9h[bZDlzlEmcD86]nLN2
+l25
+L13
+VAH2f>KY?YaghzHVC?``7W2
+!s100 8<Nlh<W?Z4QZU`60aWYfe1
+R8
+32
+R137
+!i10b 1
+R82
+R138
+R139
+!i113 1
+R13
+R14
+Ehazard_unit_tb
+Z140 w1544485339
+Z141 DPx4 work 20 pipeline_reg_package 0 22 4Zg:5GA=GT4jaL672azL81
+R1
+R2
+R3
+R4
+R5
+Z142 8W:/Northwestern/Fall 2018/EECS 361/Final Project/hazard_unit_tb.vhd
+Z143 FW:/Northwestern/Fall 2018/EECS 361/Final Project/hazard_unit_tb.vhd
+l0
+L7
+V3FUYM::mWB9lllbLB=gYF3
+!s100 7RBo05[M]Z76cfHDAoC?Z1
+R8
+32
+R137
+!i10b 1
+Z144 !s108 1544569147.000000
+Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/hazard_unit_tb.vhd|
+Z146 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/hazard_unit_tb.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R141
+R1
+R2
+R3
+R4
+DEx4 work 14 hazard_unit_tb 0 22 3FUYM::mWB9lllbLB=gYF3
+l24
+L10
+VSU8YZm<Y=UJcY4o68Qd7i1
+!s100 SeTY9Z[4iJaM612QD7HVa2
+R8
+32
+R137
+!i10b 1
+R144
+R145
+R146
 !i113 1
 R13
 R14
@@ -984,34 +1175,34 @@ VZ6o@S3]nK0QPVbJ^d7md;1
 !s100 2=]ASX4JzKST=FmH4`8Dn1
 R8
 32
-R24
+Z147 !s110 1544485747
 !i10b 1
-R25
+Z148 !s108 1544485747.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/helper.vhd|
 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/helper.vhd|
 !i113 1
 R13
 R14
 Eid_ex_reg
-Z133 w1544466245
+Z149 w1544493251
 R1
 R2
 R3
 R4
 R5
-Z134 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd
-Z135 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd
+Z150 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd
+Z151 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd
 l0
 L7
-V^dQke5nTAIDMbl8I6>T050
-!s100 8[II1kR]aZI>R@?<:C>:A2
+VXWZ@nDl[[Xh:VB]YQzEKm1
+!s100 `zocHZ]cOIX0lMkhd?:Z]1
 R8
 32
-R110
+R109
 !i10b 1
-Z136 !s108 1544485748.000000
-Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd|
-Z138 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd|
+R110
+Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd|
+Z153 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd|
 !i113 1
 R13
 R14
@@ -1020,41 +1211,41 @@ R1
 R2
 R3
 R4
-DEx4 work 9 id_ex_reg 0 22 ^dQke5nTAIDMbl8I6>T050
+DEx4 work 9 id_ex_reg 0 22 XWZ@nDl[[Xh:VB]YQzEKm1
 l39
 L38
-VT3694Gm0:7>n?VgSORXd[0
-!s100 U54EBY[J5^bAi9iG3LaXl0
+VcZ5=PnJl5H4RSHS8C_C;h1
+!s100 cUUA@D4L?=:Rn8@W>@4CG1
 R8
 32
-R110
+R109
 !i10b 1
-R136
-R137
-R138
+R110
+R152
+R153
 !i113 1
 R13
 R14
 Eif_id_reg
-Z139 w1544481803
+Z154 w1544481803
 R1
 R2
 R3
 R4
 R5
-Z140 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd
-Z141 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd
+Z155 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd
+Z156 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd
 l0
 L6
 VBa_VR1UAm6l`H1X^H8AYP3
 !s100 nOEV4CkDhZLb>SoRYg2j03
 R8
 32
-R110
+R109
 !i10b 1
-R136
-Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd|
-Z143 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd|
+R110
+Z157 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd|
+Z158 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/IF_ID_Reg.vhd|
 !i113 1
 R13
 R14
@@ -1070,40 +1261,40 @@ VJPOkgVTmdV4Ghf4b]GzOc1
 !s100 cDdR7k^OEAE7>4KcXLX;a2
 R8
 32
-R110
+R109
 !i10b 1
-R136
-R142
-R143
+R110
+R157
+R158
 !i113 1
 R13
 R14
 Emain_control
-R51
-Z144 DPx4 work 6 helper 0 22 Z6o@S3]nK0QPVbJ^d7md;1
+R48
+Z159 DPx4 work 6 helper 0 22 Z6o@S3]nK0QPVbJ^d7md;1
 R1
 R2
 R3
 R4
 R5
-Z145 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd
-Z146 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd
+Z160 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd
+Z161 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd
 l0
 L7
 V>k];XOD`I?]CHLb3Rh[Ib2
 !s100 nh_3BS4eJKZ1?o:bO6_bB3
 R8
 32
-R24
+R147
 !i10b 1
-R25
-Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd|
-Z148 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd|
+R148
+Z162 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd|
+Z163 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd|
 !i113 1
 R13
 R14
 Astructural
-R144
+R159
 R1
 R2
 R3
@@ -1115,40 +1306,40 @@ Vf1jfT?EZAA>UUkH2L4JL71
 !s100 JMPlijc=^:CakB8aE=ecO3
 R8
 32
-R24
-!i10b 1
-R25
 R147
+!i10b 1
 R148
+R162
+R163
 !i113 1
 R13
 R14
 Emainctrl_opcode
-R51
-R144
+R48
+R159
 R1
 R2
 R3
 R4
 R5
-Z149 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd
-Z150 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd
+Z164 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd
+Z165 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd
 l0
 L7
 VY?>A`Q1eQC23KX^D_0ai;0
 !s100 `HkVM9LLYi@Me<eWe_ob71
 R8
 32
-R24
+R147
 !i10b 1
-R25
-Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd|
-Z152 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd|
+R148
+Z166 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd|
+Z167 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd|
 !i113 1
 R13
 R14
 Astructural
-R144
+R159
 R1
 R2
 R3
@@ -1160,34 +1351,57 @@ V0iNX17YYQLTTFL;`=hfEO3
 !s100 =RlKf@l@IbY>]UZV]BPV?1
 R8
 32
-R24
+R147
 !i10b 1
-R25
-R151
-R152
+R148
+R166
+R167
+!i113 1
+R13
+R14
+Emem_wb_reg
+w1544414267
+R1
+R2
+R3
+R4
+R5
+8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/MEM_WB_Reg.vhd
+FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/MEM_WB_Reg.vhd
+l0
+L6
+VEbnTT?H5j9=EClk84>z[`3
+!s100 Ic6gTR`Pgg5>b9;TSJa4e0
+R8
+32
+R17
+!i10b 1
+R110
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/MEM_WB_Reg.vhd|
+!s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/MEM_WB_Reg.vhd|
 !i113 1
 R13
 R14
 Emux
-R62
+R59
 R2
 R1
 R3
 R4
 R5
-Z153 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd
-Z154 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd
+Z168 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd
+Z169 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd
 l0
 L5
 V>oJ5U=BnI^`ag0=K]WZKO0
 !s100 R7SGh1UNzgRXkDgUzi0Dn0
 R8
 32
-Z155 !s110 1544483987
+R88
 !i10b 1
-Z156 !s108 1544483987.000000
-Z157 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd|
-Z158 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd|
+R89
+Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd|
+Z171 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux.vhd|
 !i113 1
 R13
 R14
@@ -1203,34 +1417,34 @@ V9e3_f``Qg4GhTA>ag5:8o0
 !s100 TMbaX=C3aUF9Pl?TK_bl20
 R8
 32
-R155
+R88
 !i10b 1
-R156
-R157
-R158
+R89
+R170
+R171
 !i113 1
 R13
 R14
 Emux_32
-R62
+R59
 R2
 R1
 R3
 R4
 R5
-Z159 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd
-Z160 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd
+Z172 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd
+Z173 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd
 l0
 L5
 V;ZJB3@XFiFdGS?g@RF1Vc3
 !s100 ciE_BzZP_7gaALUfNcf3V2
 R8
 32
-R155
+Z174 !s110 1544569138
 !i10b 1
-R156
-Z161 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd|
-Z162 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd|
+R89
+Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd|
+Z176 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd|
 !i113 1
 R13
 R14
@@ -1246,11 +1460,11 @@ V;ZASSMASd=3o_Ld=:eJLS1
 !s100 iiT]gRaJ0BGA@1c7lKGZ;1
 R8
 32
-R155
+R174
 !i10b 1
-R156
-R161
-R162
+R89
+R175
+R176
 !i113 1
 R13
 R14
@@ -1261,19 +1475,19 @@ R2
 R3
 R4
 R5
-Z163 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd
-Z164 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd
+Z177 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd
+Z178 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd
 l0
 L6
 V57nn@ozRePWTjS?@^V[I@2
 !s100 O[bKG9A6aSnmbI4OhE48?0
 R8
 32
-Z165 !s110 1544485743
+R76
 !i10b 1
-Z166 !s108 1544485743.000000
-Z167 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd|
-Z168 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd|
+Z179 !s108 1544569143.000000
+Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd|
+Z181 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_32_to_1.vhd|
 !i113 1
 R13
 R14
@@ -1289,11 +1503,77 @@ V8^3go5S2^?aG_i5>VEcGD3
 !s100 zJ^blWK_TfZJ4eTE`@5<33
 R8
 32
-R165
+R76
 !i10b 1
-R166
-R167
-R168
+R179
+R180
+R181
+!i113 1
+R13
+R14
+Emux_3_to_1
+Z182 w1544488748
+R1
+R2
+R3
+R4
+R5
+Z183 8W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1.vhd
+Z184 FW:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1.vhd
+l0
+L6
+VRjk8jR8lKY[96NIGQjdjR1
+!s100 feK9`2L:<D4hSlCPMih8T3
+R8
+32
+R137
+!i10b 1
+R144
+Z185 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1.vhd|
+Z186 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 10 mux_3_to_1 0 22 Rjk8jR8lKY[96NIGQjdjR1
+l18
+L14
+VI:]WfmjiRn>YFU7>O@zRm3
+!s100 :eUTAYSlj@BNi60k2fJf_3
+R8
+32
+R137
+!i10b 1
+R144
+R185
+R186
+!i113 1
+R13
+R14
+Emux_3_to_1_5bits
+w1544566810
+R1
+R2
+R3
+R4
+R5
+8W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_5bits.vhd
+FW:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_5bits.vhd
+l0
+L6
+VzC8Mjf3GOgR^EYTI:[jA62
+!s100 ]0kY3hHPPLDNTAbiB^bFV2
+R8
+32
+R137
+!i10b 1
+R144
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_5bits.vhd|
+!s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_5bits.vhd|
 !i113 1
 R13
 R14
@@ -1304,19 +1584,19 @@ R2
 R3
 R4
 R5
-Z169 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd
-Z170 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd
+Z187 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd
+Z188 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd
 l0
 L6
 VRQge_4`WE<jk9D3GJNWfl1
 !s100 7JY@=YFH`NTDPR?2]mkjU3
 R8
 32
-R54
+R76
 !i10b 1
-R55
-Z171 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd|
-Z172 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd|
+R179
+Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd|
+Z190 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/mux_8_to_1.vhd|
 !i113 1
 R13
 R14
@@ -1332,32 +1612,32 @@ VlY=EMBF6Q:O=_XSI>UEP;0
 !s100 [XLXQkel904E@HNk5?IKX3
 R8
 32
-R54
+R76
 !i10b 1
-R55
-R171
-R172
+R179
+R189
+R190
 !i113 1
 R13
 R14
 Emux_n
-R62
+R59
 R3
 R4
 R5
-Z173 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd
-Z174 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd
+Z191 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd
+Z192 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd
 l0
 L4
 V;Rg1MaANM2BcjIoIGiMR>3
 !s100 DhH_dWUkhZScmPX0PShL>1
 R8
 32
-R155
+R88
 !i10b 1
-R156
-Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd|
-Z176 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd|
+R89
+Z193 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd|
+Z194 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_n.vhd|
 !i113 1
 R13
 R14
@@ -1371,32 +1651,32 @@ Vdbi;>X`Mj01bMajZB2?643
 !s100 VOPJAGmKhfQ>L9L:P_FXf0
 R8
 32
-R155
+R88
 !i10b 1
-R156
-R175
-R176
+R89
+R193
+R194
 !i113 1
 R13
 R14
 Enand_gate
-R62
+R59
 R3
 R4
 R5
-Z177 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd
-Z178 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd
+Z195 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd
+Z196 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd
 l0
 L5
 V=i<fNcci6gazbNoz7Zo?B0
 !s100 `;YoNjg98=RO3KEUJb?JH2
 R8
 32
-R155
+R174
 !i10b 1
-R156
-Z179 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd|
-Z180 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd|
+Z197 !s108 1544569138.000000
+Z198 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd|
+Z199 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate.vhd|
 !i113 1
 R13
 R14
@@ -1410,32 +1690,32 @@ Vl^zW<z;Pl8NkCT3h`m8f>3
 !s100 DdgXSJTenGYMFNYGk^j2^2
 R8
 32
-R155
+R174
 !i10b 1
-R156
-R179
-R180
+R197
+R198
+R199
 !i113 1
 R13
 R14
 Enand_gate_32
-R62
+R59
 R3
 R4
 R5
-Z181 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd
-Z182 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd
+Z200 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd
+Z201 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd
 l0
 L5
 Vm1GdlgCSaKXEezc1oQ5A53
 !s100 d7`oU3cRhD_iz]OR?aJbM0
 R8
 32
-R155
+R174
 !i10b 1
-R156
-Z183 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd|
-Z184 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd|
+R197
+Z202 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd|
+Z203 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1449,32 +1729,32 @@ V?=O5i19k>6?EO?fWFWmQ33
 !s100 5L7`cY6bRPYMYkmEYAg871
 R8
 32
-Z185 !s110 1544483988
+R174
 !i10b 1
-R156
-R183
-R184
+R197
+R202
+R203
 !i113 1
 R13
 R14
 Enand_gate_n
-R62
+R59
 R3
 R4
 R5
-Z186 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd
-Z187 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd
+Z204 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd
+Z205 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd
 l0
 L5
 VR6;g^V_FPW0;nb=i<dJlI3
 !s100 LMidV?0i^0NCQXjDDfE0j1
 R8
 32
-R185
+R174
 !i10b 1
-Z188 !s108 1544483988.000000
-Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd|
-Z190 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd|
+R197
+Z206 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd|
+Z207 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nand_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1488,32 +1768,32 @@ V`S7jEGJ6CA=AG<0ak5P6D1
 !s100 5mzmEVJ8`Ol]kLAA1ADTS0
 R8
 32
-R185
+R174
 !i10b 1
-R188
-R189
-R190
+R197
+R206
+R207
 !i113 1
 R13
 R14
 Enor_gate
-R62
+R59
 R3
 R4
 R5
-Z191 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd
-Z192 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd
+Z208 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd
+Z209 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd
 l0
 L5
 V0L7S;NMz9_M@NF0N3jjl53
 !s100 Uz[KW04m>JL2N=<Ae_26A3
 R8
 32
-R185
+R174
 !i10b 1
-R188
-Z193 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd|
-Z194 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd|
+R197
+Z210 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd|
+Z211 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate.vhd|
 !i113 1
 R13
 R14
@@ -1527,32 +1807,32 @@ Vg6WmIRLO`^]W8MOk44NQ02
 !s100 kE2E`N:jBl`5f7h@CAkLc3
 R8
 32
-R185
+R174
 !i10b 1
-R188
-R193
-R194
+R197
+R210
+R211
 !i113 1
 R13
 R14
 Enor_gate_32
-R62
+R59
 R3
 R4
 R5
-Z195 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd
-Z196 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd
+Z212 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd
+Z213 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd
 l0
 L5
 VJYT;XbbHkkG9;BF<8bSZ[2
 !s100 3mdJRKLJ_1Z1ih<o1WC>A3
 R8
 32
-R185
+R174
 !i10b 1
-R188
-Z197 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd|
-Z198 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd|
+R197
+Z214 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd|
+Z215 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1566,32 +1846,32 @@ V[3NO3nGH3BHP0aAz4=<U;0
 !s100 4C[N[o;dbNU?^;JAFz8P@0
 R8
 32
-R185
+R174
 !i10b 1
-R188
 R197
-R198
+R214
+R215
 !i113 1
 R13
 R14
 Enor_gate_n
-R62
+R59
 R3
 R4
 R5
-Z199 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd
-Z200 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd
+Z216 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd
+Z217 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd
 l0
 L5
 VjaFJH5UI;Xc1C=l<5c`S^1
 !s100 WOgXHNaOaa3V@ZQR9[dBF2
 R8
 32
-R185
+Z218 !s110 1544569139
 !i10b 1
-R188
-Z201 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd|
-Z202 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd|
+Z219 !s108 1544569139.000000
+Z220 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd|
+Z221 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1605,32 +1885,32 @@ V9dCFzT;RnT>eMXZgOEFXh2
 !s100 LLY;[lESSHQFLXI0BM0Lk2
 R8
 32
-R185
+R218
 !i10b 1
-R188
-R201
-R202
+R219
+R220
+R221
 !i113 1
 R13
 R14
 Enot_gate
-R62
+R59
 R3
 R4
 R5
-Z203 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd
-Z204 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd
+Z222 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd
+Z223 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd
 l0
 L5
 V?REPgFkfC>l7me3_Cm;h]0
 !s100 ZFL^eh?^CT8f=9?@;fY^P1
 R8
 32
-R185
+R218
 !i10b 1
-R188
-Z205 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd|
-Z206 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd|
+R219
+Z224 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd|
+Z225 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate.vhd|
 !i113 1
 R13
 R14
@@ -1644,32 +1924,32 @@ V^N]`_cihjlkgk@GD2ifne3
 !s100 0K4o_`::YhV<`CcAlY38V3
 R8
 32
-R185
+R218
 !i10b 1
-R188
-R205
-R206
+R219
+R224
+R225
 !i113 1
 R13
 R14
 Enot_gate_32
-R62
+R59
 R3
 R4
 R5
-Z207 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd
-Z208 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd
+Z226 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd
+Z227 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd
 l0
 L5
 V5z8ni8e9GEdi_1z[h3[YT3
 !s100 MlQa>L3D?j3YTME?WDA^I3
 R8
 32
-Z209 !s110 1544483989
+R218
 !i10b 1
-R188
-Z210 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd|
-Z211 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd|
+R219
+Z228 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd|
+Z229 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1683,32 +1963,32 @@ VooYb<YVBcg]jka=E1Bz2U2
 !s100 SZ]KSd]7=<``cT7UO3c^32
 R8
 32
-R209
+R218
 !i10b 1
-R188
-R210
-R211
+R219
+R228
+R229
 !i113 1
 R13
 R14
 Enot_gate_n
-R62
+R59
 R3
 R4
 R5
-Z212 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd
-Z213 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd
+Z230 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd
+Z231 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd
 l0
 L5
 VL[_>1Hz4EFXGgW8O0lzPe0
 !s100 IMo29cac8Wo2jk<h1@>Y41
 R8
 32
-R209
+R218
 !i10b 1
-Z214 !s108 1544483989.000000
-Z215 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd|
-Z216 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd|
+R219
+Z232 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd|
+Z233 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1722,32 +2002,161 @@ V^?aa<E?_8@T0dJRWCLiMk2
 !s100 f1R?C4QOI1W16^[L00fF`1
 R8
 32
-R209
+R218
 !i10b 1
-R214
-R215
-R216
+R219
+R232
+R233
+!i113 1
+R13
+R14
+Eor3_gate
+Z234 w1543370963
+R1
+R2
+R3
+R4
+R5
+Z235 8W:/Northwestern/Fall 2018/EECS 361/Final Project/or3_gate.vhd
+Z236 FW:/Northwestern/Fall 2018/EECS 361/Final Project/or3_gate.vhd
+l0
+L6
+V0h[?mgOG><iAX[@JChBUP0
+!s100 _;IF@=C:gjnHZnACOWU>H3
+R8
+32
+Z237 !s110 1544569148
+!i10b 1
+Z238 !s108 1544569148.000000
+Z239 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/or3_gate.vhd|
+Z240 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/or3_gate.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 8 or3_gate 0 22 0h[?mgOG><iAX[@JChBUP0
+l19
+L15
+VA2TLA9:lQD[k7<2IZK1>I3
+!s100 An9<k[kcI>`GUmZ^jQ5?F0
+R8
+32
+R237
+!i10b 1
+R238
+R239
+R240
+!i113 1
+R13
+R14
+Eor_32
+Z241 w1543290714
+R1
+R2
+R3
+R4
+R5
+Z242 8W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32.vhd
+Z243 FW:/Northwestern/Fall 2018/EECS 361/Final Project/or_32.vhd
+l0
+L6
+V=8gdjzV=fz8eMdR6_Z``03
+!s100 ChW9E[II9AIUoa==k:29D0
+R8
+32
+R137
+!i10b 1
+R144
+Z244 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32.vhd|
+Z245 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 5 or_32 0 22 =8gdjzV=fz8eMdR6_Z``03
+l20
+L13
+V8DQ>zEWebIjV4jX^Xz3gQ0
+!s100 `j8>[IiWUkMcHDgXHQJIh0
+R8
+32
+R137
+!i10b 1
+R144
+R244
+R245
+!i113 1
+R13
+R14
+Eor_32_1bit
+Z246 w1543375624
+R1
+R2
+R3
+R4
+R5
+Z247 8W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32_1bit.vhd
+Z248 FW:/Northwestern/Fall 2018/EECS 361/Final Project/or_32_1bit.vhd
+l0
+L6
+VEne64F@NR8D21aCmOEe8o1
+!s100 I9zBiz6dFoaeM:6mllTaY1
+R8
+32
+R237
+!i10b 1
+R144
+Z249 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32_1bit.vhd|
+Z250 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32_1bit.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 10 or_32_1bit 0 22 Ene64F@NR8D21aCmOEe8o1
+l20
+L13
+V3H]Bg7GA_0=NoA^[=]]AX3
+!s100 5K>m;zg?XZ]cz5_S54OGD0
+R8
+32
+R237
+!i10b 1
+R144
+R249
+R250
 !i113 1
 R13
 R14
 Eor_gate
-R62
+R59
 R3
 R4
 R5
-Z217 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd
-Z218 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd
+Z251 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd
+Z252 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd
 l0
 L5
 VO1l5BHjZPQ5?]IFn9;=UE2
 !s100 P4NBKo^c]hz<z`LINQA5?3
 R8
 32
-R209
+R218
 !i10b 1
-R214
-Z219 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd|
-Z220 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd|
+R219
+Z253 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd|
+Z254 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate.vhd|
 !i113 1
 R13
 R14
@@ -1761,32 +2170,32 @@ VU4niXK]Pm[B5X9KH>G;F:1
 !s100 imjaYVkITBGK@1]KZ;:O?1
 R8
 32
-R209
+R218
 !i10b 1
-R214
 R219
-R220
+R253
+R254
 !i113 1
 R13
 R14
 Eor_gate_32
-R62
+R59
 R3
 R4
 R5
-Z221 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd
-Z222 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd
+Z255 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd
+Z256 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd
 l0
 L5
 VR4T`[JT7zTSFAT?fEEf591
 !s100 XkkR6QF?Vl4ZJYEZjo;0l2
 R8
 32
-R209
+R218
 !i10b 1
-R214
-Z223 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd|
-Z224 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd|
+R219
+Z257 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd|
+Z258 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -1800,32 +2209,32 @@ Vm<XLcN8OGfnn6foi[Re=10
 !s100 K:BE?onG;^0[1Z5dkfcRR0
 R8
 32
-R209
+R218
 !i10b 1
-R214
-R223
-R224
+R219
+R257
+R258
 !i113 1
 R13
 R14
 Eor_gate_n
-R62
+R59
 R3
 R4
 R5
-Z225 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd
-Z226 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd
+Z259 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd
+Z260 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd
 l0
 L5
 VhcjC8YfR[BWVL];cJhOKi1
 !s100 Y[01iFT>714d^L[KJ4VM82
 R8
 32
-R209
+R218
 !i10b 1
-R214
-Z227 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd|
-Z228 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd|
+R219
+Z261 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd|
+Z262 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/or_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -1839,11 +2248,11 @@ VJC>ZhgR[jGRkBeQ>4LTHl1
 !s100 X0T0eOJ7Mi7@HZjHoZO6:3
 R8
 32
-R209
+R218
 !i10b 1
-R214
-R227
-R228
+R219
+R261
+R262
 !i113 1
 R13
 R14
@@ -1854,19 +2263,19 @@ R2
 R3
 R4
 R5
-Z229 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd
-Z230 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd
+Z263 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd
+Z264 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd
 l0
 L6
 V8R<6fSMIbed@boS^_zBo`0
 !s100 4oBn7X];iIDzBF2_9lUK?2
 R8
 32
-R165
+R76
 !i10b 1
-R166
-Z231 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd|
-Z232 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd|
+R179
+Z265 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd|
+Z266 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_n.vhd|
 !i113 1
 R13
 R14
@@ -1882,11 +2291,11 @@ V1nazV85gImBJb1ZKBTCfR1
 !s100 KDFLSnZ:16IehVdPEMN=i2
 R8
 32
-R165
+R76
 !i10b 1
-R166
-R231
-R232
+R179
+R265
+R266
 !i113 1
 R13
 R14
@@ -1897,19 +2306,19 @@ R2
 R3
 R4
 R5
-Z233 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd
-Z234 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd
+Z267 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd
+Z268 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd
 l0
 L6
 V_^@]D7J`:42UKRm_J5BkG0
 !s100 jJ@4<OXNc4Pn1K=7gc_JD0
 R8
 32
-R165
+R76
 !i10b 1
-R166
-Z235 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd|
-Z236 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd|
+R179
+Z269 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd|
+Z270 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/or_self.vhd|
 !i113 1
 R13
 R14
@@ -1925,11 +2334,588 @@ V=ZhX>9?fm20@KBhY@[_LV0
 !s100 nlo@dZcROR5S0V[X<[A2=3
 R8
 32
-R165
+R76
 !i10b 1
-R166
-R235
-R236
+R179
+R269
+R270
+!i113 1
+R13
+R14
+Epipeline_cpu
+w1544568396
+R141
+R1
+R2
+R3
+R4
+R5
+8W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd
+FW:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd
+l0
+L7
+VnRn8o`6JG4@3HG1MK2X<52
+!s100 RRgJ[Kd>ePHLZUjRVURKB0
+R8
+32
+R237
+!i10b 1
+R238
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd|
+!s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd|
+!i113 1
+R13
+R14
+Ppipeline_reg_package
+R1
+R2
+R3
+R4
+R154
+R5
+Z271 8W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/pipeline_reg_package.vhd
+Z272 FW:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/pipeline_reg_package.vhd
+l0
+L6
+V4Zg:5GA=GT4jaL672azL81
+!s100 S=m4[oXGBLgab7Uod5ILk1
+R8
+32
+R109
+!i10b 1
+R110
+Z273 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/pipeline_reg_package.vhd|
+Z274 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/pipeline_reg_package.vhd|
+!i113 1
+R13
+R14
+Bbody
+R141
+R1
+R2
+R3
+R4
+l0
+L105
+V2lI:1e9TTWBRdK22j>g<O0
+!s100 ;3`3kQCml;`z]Xg?jSNej1
+R8
+32
+R109
+!i10b 1
+R110
+R273
+R274
+!i113 1
+R13
+R14
+Eprocessor
+Z275 w1543391116
+R1
+R2
+R3
+R4
+R5
+Z276 8W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd
+Z277 FW:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd
+l0
+L7
+VMB62zFf6TMi1TC>;X<jSX2
+!s100 Jb9@@1`7caH?z:hYT6@eQ3
+R8
+32
+R237
+!i10b 1
+R238
+Z278 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd|
+Z279 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd|
+!i113 1
+R13
+R14
+Adatapath
+R1
+R2
+R3
+R4
+DEx4 work 9 processor 0 22 MB62zFf6TMi1TC>;X<jSX2
+l100
+L34
+V=8_Az0`f4R0YE26iAD=QO2
+!s100 FnL:=doK37B54^J]DV]R=1
+R8
+32
+R237
+!i10b 1
+R238
+R278
+R279
+!i113 1
+R13
+R14
+Eprocessor_pkg
+Z280 w1543393370
+R1
+R2
+R3
+R4
+R5
+Z281 8W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg.vhd
+Z282 FW:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg.vhd
+l0
+L7
+VNH^?iXSVB^G?QNgbdCgLh0
+!s100 oIE^NYZFKR=Fb9ce?bzAb0
+R8
+32
+R237
+!i10b 1
+R238
+Z283 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg.vhd|
+Z284 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 13 processor_pkg 0 22 NH^?iXSVB^G?QNgbdCgLh0
+l97
+L16
+VUGBE@CGTU7Al;gajXCM7O3
+!s100 J>KTD?4`8kU1P:z74L^zC0
+R8
+32
+R237
+!i10b 1
+R238
+R283
+R284
+!i113 1
+R13
+R14
+Eprocessor_pkg_tb
+Z285 w1543446736
+R1
+R2
+R3
+R4
+R5
+Z286 8W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg_tb.vhd
+Z287 FW:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg_tb.vhd
+l0
+L7
+VhRz<Y8;=`_Z`Q<lze=_aK1
+!s100 m0<dbLS9F@8mZ8jABKPog0
+R8
+32
+R237
+!i10b 1
+R238
+Z288 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg_tb.vhd|
+Z289 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_pkg_tb.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R1
+R2
+R3
+R4
+DEx4 work 16 processor_pkg_tb 0 22 hRz<Y8;=`_Z`Q<lze=_aK1
+l29
+L13
+V`PELN8BFRU3fFIz54h[Ih0
+!s100 KF:aDBaeBD2R8e]VbQS5W2
+R8
+32
+R237
+!i10b 1
+R238
+R288
+R289
+!i113 1
+R13
+R14
+Eprocessor_tb
+Z290 w1543378708
+R85
+R129
+R3
+R4
+R5
+Z291 8W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_tb.vhd
+Z292 FW:/Northwestern/Fall 2018/EECS 361/Final Project/processor_tb.vhd
+l0
+L5
+VO>2fN3:li=Y3b7L_bH3_N0
+!s100 e;JPM4Z][3O7>B;dJB:5?2
+R8
+32
+Z293 !s110 1544569149
+!i10b 1
+Z294 !s108 1544569149.000000
+Z295 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_tb.vhd|
+Z296 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/processor_tb.vhd|
+!i113 1
+R13
+R14
+Atest_bench
+R85
+R129
+R3
+R4
+DEx4 work 12 processor_tb 0 22 O>2fN3:li=Y3b7L_bH3_N0
+l46
+L8
+Ve]n6<MgNmYJP=6U`<V9Mh2
+!s100 z]mhS=UZceO459TlBm8?43
+R8
+32
+R293
+!i10b 1
+R294
+R295
+R296
+!i113 1
+R13
+R14
+Eregister32_32bits
+Z297 w1543284295
+R1
+R2
+R3
+R4
+R5
+Z298 8W:/Northwestern/Fall 2018/EECS 361/Final Project/register32_32bits.vhd
+Z299 FW:/Northwestern/Fall 2018/EECS 361/Final Project/register32_32bits.vhd
+l0
+L6
+VRB<l=T@a2LI9LGmgHZSiS2
+!s100 ]><?P09b4ZRPTTW2HCaHe0
+R8
+32
+R293
+!i10b 1
+R294
+Z300 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/register32_32bits.vhd|
+Z301 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/register32_32bits.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 17 register32_32bits 0 22 RB<l=T@a2LI9LGmgHZSiS2
+l26
+L15
+V9aea>obLlzbDi_Pbk7j9X1
+!s100 @gM]JCSO:E@ezi12@]J^V0
+R8
+32
+R293
+!i10b 1
+R294
+R300
+R301
+!i113 1
+R13
+R14
+Eregister_32
+Z302 w1543294485
+R1
+R2
+R3
+R4
+R5
+Z303 8W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32.vhd
+Z304 FW:/Northwestern/Fall 2018/EECS 361/Final Project/register_32.vhd
+l0
+L7
+VPa?1f@[Xz3XLUn>4Zh5=`0
+!s100 eY8dM9o<NmG<fn3SGZo302
+R8
+32
+R293
+!i10b 1
+R294
+Z305 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32.vhd|
+Z306 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 11 register_32 0 22 Pa?1f@[Xz3XLUn>4Zh5=`0
+l52
+L17
+Vn1@H><K8AnM=EeOFbI7AN1
+!s100 ]Tn[Z_eN99TF06?NYX?ee3
+R8
+32
+R293
+!i10b 1
+R294
+R305
+R306
+!i113 1
+R13
+R14
+Eregister_32bit
+R116
+R1
+R2
+R3
+R4
+R5
+Z307 8W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32bit.vhd
+Z308 FW:/Northwestern/Fall 2018/EECS 361/Final Project/register_32bit.vhd
+l0
+L6
+V;ZO8HdPNaOLf2?9b@Z^DQ3
+!s100 G@Bo3=JL0TQX4jRbVf;;L1
+R8
+32
+R293
+!i10b 1
+R294
+Z309 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32bit.vhd|
+Z310 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32bit.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 14 register_32bit 0 22 ;ZO8HdPNaOLf2?9b@Z^DQ3
+l16
+L14
+Vk^n=Cng``lPBfF?zaf9W51
+!s100 kb@X2MUH8R^CP2Ued920_0
+R8
+32
+R293
+!i10b 1
+R294
+R309
+R310
+!i113 1
+R13
+R14
+Eregister_32we
+Z311 w1543190379
+R1
+R2
+R3
+R4
+R5
+Z312 8W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32we.vhd
+Z313 FW:/Northwestern/Fall 2018/EECS 361/Final Project/register_32we.vhd
+l0
+L6
+VWJ``F3J[0o>Fk995k_I::0
+!s100 TPdOE[EzNaGXe@z;^Z>7o0
+R8
+32
+R293
+!i10b 1
+R294
+Z314 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32we.vhd|
+Z315 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32we.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 13 register_32we 0 22 WJ``F3J[0o>Fk995k_I::0
+l28
+L14
+V:kD720VVCa=VbhM;ke3`^0
+!s100 :mFTeJ=lnWLIT`jE=V@Xk1
+R8
+32
+R293
+!i10b 1
+R294
+R314
+R315
+!i113 1
+R13
+R14
+Eregister_component
+R311
+R1
+R2
+R3
+R4
+R5
+Z316 8W:/Northwestern/Fall 2018/EECS 361/Final Project/register_component.vhd
+Z317 FW:/Northwestern/Fall 2018/EECS 361/Final Project/register_component.vhd
+l0
+L6
+V07Q?Mi^C_[]jPY4WgQ`SR2
+!s100 IYULW@adFDkBHSEHTH9@32
+R8
+32
+R293
+!i10b 1
+R294
+Z318 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/register_component.vhd|
+Z319 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/register_component.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 18 register_component 0 22 07Q?Mi^C_[]jPY4WgQ`SR2
+l51
+L15
+VkSN0mJGf^UITC6>PBcKJn0
+!s100 gTLSQ]ZP3_^A9E300<0=J2
+R8
+32
+R293
+!i10b 1
+R294
+R318
+R319
+!i113 1
+R13
+R14
+Erepeat_n
+Z320 w1543290786
+R1
+R2
+R3
+R4
+R5
+Z321 8W:/Northwestern/Fall 2018/EECS 361/Final Project/repeat_n.vhd
+Z322 FW:/Northwestern/Fall 2018/EECS 361/Final Project/repeat_n.vhd
+l0
+L6
+VFT7Zh3Qb59QW:IS7nJmHN2
+!s100 KhNFWV2U6B=gICCC]D3og1
+R8
+32
+Z323 !s110 1544569150
+!i10b 1
+R294
+Z324 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/repeat_n.vhd|
+Z325 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/repeat_n.vhd|
+!i113 1
+R13
+R14
+Astructural
+R1
+R2
+R3
+R4
+DEx4 work 8 repeat_n 0 22 FT7Zh3Qb59QW:IS7nJmHN2
+l21
+L16
+VzaZ4aL_USa;bAS<LOJXP`1
+!s100 XLCn76EbFYZD]U2jFDd>Z0
+R8
+32
+R323
+!i10b 1
+R294
+R324
+R325
+!i113 1
+R13
+R14
+Eshift_left_2
+Z326 w1544569321
+R3
+R4
+R5
+Z327 8W:/Northwestern/Fall 2018/EECS 361/Final Project/shift_left_2.vhd
+Z328 FW:/Northwestern/Fall 2018/EECS 361/Final Project/shift_left_2.vhd
+l0
+L4
+VHJiIZA^D27dI`FdODkeZi1
+!s100 9N`ORcQz7M?efKFZ4YdV63
+R8
+32
+Z329 !s110 1544569334
+!i10b 1
+Z330 !s108 1544569334.000000
+Z331 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/shift_left_2.vhd|
+Z332 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/shift_left_2.vhd|
+!i113 1
+R13
+R14
+Astruct
+R3
+R4
+DEx4 work 12 shift_left_2 0 22 HJiIZA^D27dI`FdODkeZi1
+l15
+L11
+VnL_amMb0HWBkVaPE3`;Ga2
+!s100 3=AT]P9PScNVA[j3V>?gz2
+R8
+32
+R329
+!i10b 1
+R330
+R331
+R332
+!i113 1
+R13
+R14
+Esign_ext_32
+Z333 w1544401778
+R2
+R3
+R4
+R5
+Z334 8W:/Northwestern/Fall 2018/EECS 361/Final Project/sign_ext_32.vhd
+Z335 FW:/Northwestern/Fall 2018/EECS 361/Final Project/sign_ext_32.vhd
+l0
+L6
+VAMU3FB>4^b_bRG=h1Yd]?2
+!s100 z_e]3O7WQdnCTC_oboEKQ0
+R8
+32
+R323
+!i10b 1
+Z336 !s108 1544569150.000000
+Z337 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/sign_ext_32.vhd|
+Z338 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/sign_ext_32.vhd|
+!i113 1
+R13
+R14
+Astructural
+R2
+R3
+R4
+DEx4 work 11 sign_ext_32 0 22 AMU3FB>4^b_bRG=h1Yd]?2
+l16
+L13
+V=Oc?C@:[84bC6IWG0lQ?P1
+!s100 Z?RW[=?3Ah`TDNBR@XXQ=0
+R8
+32
+R323
+!i10b 1
+R336
+R337
+R338
 !i113 1
 R13
 R14
@@ -1937,30 +2923,30 @@ Esll32
 R0
 R1
 R2
-R88
+R85
 R3
 R4
 R5
-Z237 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd
-Z238 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd
+Z339 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd
+Z340 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd
 l0
 L7
 V;H?mooXK;8=aTlPjfniiD0
 !s100 [h]9QFJVoY^kRLXU1=[US0
 R8
 32
-R165
+R76
 !i10b 1
-R166
-Z239 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd|
-Z240 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd|
+R179
+Z341 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd|
+Z342 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sll32.vhd|
 !i113 1
 R13
 R14
 Astructural
 R1
 R2
-R88
+R85
 R3
 R4
 DEx4 work 5 sll32 0 22 ;H?mooXK;8=aTlPjfniiD0
@@ -1970,11 +2956,11 @@ V@8jEAM5k3:B:34>6OX0CC2
 !s100 _f6aSh?<6Zl95iL4B[Xj32
 R8
 32
-R165
+R76
 !i10b 1
-R166
-R239
-R240
+R179
+R341
+R342
 !i113 1
 R13
 R14
@@ -1985,19 +2971,19 @@ R2
 R3
 R4
 R5
-Z241 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd
-Z242 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd
+Z343 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd
+Z344 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd
 l0
 L6
 VD5@MHX5`hcI^GNVcL4IWk1
 !s100 a:;[6:fE^z483U[^f@L_50
 R8
 32
-R9
+Z345 !s110 1544569144
 !i10b 1
-R166
-Z243 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd|
-Z244 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd|
+Z346 !s108 1544569144.000000
+Z347 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd|
+Z348 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt32.vhd|
 !i113 1
 R13
 R14
@@ -2013,11 +2999,11 @@ V<hQ26?P=a_TZc[B8FJbkG3
 !s100 cPl5WfzcaM8_TEk<SJdoR3
 R8
 32
-R9
+R345
 !i10b 1
-R166
-R243
-R244
+R346
+R347
+R348
 !i113 1
 R13
 R14
@@ -2027,19 +3013,19 @@ R2
 R3
 R4
 R5
-Z245 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd
-Z246 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd
+Z349 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd
+Z350 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd
 l0
 L5
 V2mcnjTflPkPfmIeOeh;7D3
 !s100 J7ia4_XVKYO]Iz:o3hi?11
 R8
 32
-R165
+R345
 !i10b 1
-R166
-Z247 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd|
-Z248 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd|
+R346
+Z351 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd|
+Z352 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/slt.vhd|
 !i113 1
 R13
 R14
@@ -2054,11 +3040,11 @@ VoiBIa=[EN3U2Yi6`Vba_21
 !s100 XYC^R^60HnVJ]A<COj3Y33
 R8
 32
-R165
+R345
 !i10b 1
-R166
-R247
-R248
+R346
+R351
+R352
 !i113 1
 R13
 R14
@@ -2069,19 +3055,19 @@ R2
 R3
 R4
 R5
-Z249 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd
-Z250 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd
+Z353 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd
+Z354 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd
 l0
 L6
 Vk6^[BmzlWUa95QRYzFNhD3
 !s100 Ug0WG:3CVR9f3g=_m2?8F3
 R8
 32
-R9
+R345
 !i10b 1
-R10
-Z251 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd|
-Z252 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd|
+R346
+Z355 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd|
+Z356 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu32.vhd|
 !i113 1
 R13
 R14
@@ -2097,11 +3083,11 @@ VMDHjOQEUVV>=@O@?K3Ed>3
 !s100 3c7zEnC;ohz9P`39R^@e43
 R8
 32
-R9
+R345
 !i10b 1
-R10
-R251
-R252
+R346
+R355
+R356
 !i113 1
 R13
 R14
@@ -2111,19 +3097,19 @@ R2
 R3
 R4
 R5
-Z253 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd
-Z254 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd
+Z357 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd
+Z358 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd
 l0
 L5
 VeGcX:?2YcD5G@N0Nb?N7j0
 !s100 BzBmOoCbmT=m<zH[BQ3C51
 R8
 32
-R9
+R345
 !i10b 1
-R10
-Z255 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd|
-Z256 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd|
+R346
+Z359 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd|
+Z360 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sltu.vhd|
 !i113 1
 R13
 R14
@@ -2138,44 +3124,44 @@ VWnk:J`3hEAEL3;m8GmiVM3
 !s100 X8W_>Gm9]f20zZ`=kJkV80
 R8
 32
-R9
+R345
 !i10b 1
-R10
-R255
-R256
+R346
+R359
+R360
 !i113 1
 R13
 R14
 Esram
-R62
-R88
-Z257 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-R116
-R117
+R59
+R85
+Z361 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R122
+R123
 R3
 R4
 R5
-Z258 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd
-Z259 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd
+Z362 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd
+Z363 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd
 l0
 L12
 VJNIST:hmk8YT3APWhkjD61
 !s100 4U[]`8DWS[aYZMb6m^0<A1
 R8
 32
-R209
+Z364 !s110 1544569140
 !i10b 1
-R214
-Z260 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd|
-Z261 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd|
+R219
+Z365 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd|
+Z366 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/sram.vhd|
 !i113 1
 R13
 R14
 Abehavioral
-R88
-R257
-R116
-R117
+R85
+R361
+R122
+R123
 R3
 R4
 DEx4 work 4 sram 0 22 JNIST:hmk8YT3APWhkjD61
@@ -2185,11 +3171,11 @@ V66LJ[`;b1g@k0leH:0c9E0
 !s100 Y1T`HMh2EaPd[X0IQYG]P0
 R8
 32
-R209
+R364
 !i10b 1
-R214
-R260
-R261
+R219
+R365
+R366
 !i113 1
 R13
 R14
@@ -2200,19 +3186,19 @@ R2
 R3
 R4
 R5
-Z262 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd
-Z263 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd
+Z367 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd
+Z368 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd
 l0
 L6
 V1LU79bU8]d87>B8NVZ7?`3
 !s100 1<k<2m_WZUa?_GUc^Ho@m2
 R8
 32
-R9
+R345
 !i10b 1
-R10
-Z264 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd|
-Z265 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd|
+R346
+Z369 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd|
+Z370 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub.vhd|
 !i113 1
 R13
 R14
@@ -2228,11 +3214,11 @@ VEooTPYS;A;=KT8I9lNm1m1
 !s100 aO;5BaBQ32JJZM;C7ZRCC1
 R8
 32
-R9
+R345
 !i10b 1
-R10
-R264
-R265
+R346
+R369
+R370
 !i113 1
 R13
 R14
@@ -2243,19 +3229,19 @@ R2
 R3
 R4
 R5
-Z266 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd
-Z267 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd
+Z371 8W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd
+Z372 FW:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd
 l0
 L6
 VYD`;NaO]>Ia8:A4jH1NTN0
 !s100 T[P9?C3<TnGkc4QNlFmKJ0
 R8
 32
-R9
+R345
 !i10b 1
-R10
-Z268 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd|
-Z269 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd|
+R346
+Z373 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd|
+Z374 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/sub32.vhd|
 !i113 1
 R13
 R14
@@ -2271,44 +3257,44 @@ VQMKJJzzY=U:QU^fo3=Z5G2
 !s100 U6hk@GoVFFf7]KWa64hBV2
 R8
 32
-R9
+R345
 !i10b 1
-R10
-R268
-R269
+R346
+R373
+R374
 !i113 1
 R13
 R14
 Esyncram
-R62
-R88
-R257
-R116
-R117
+R59
+R85
+R361
+R122
+R123
 R3
 R4
 R5
-Z270 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd
-Z271 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd
+Z375 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd
+Z376 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd
 l0
 L12
 VD=e][Y8<;9NigS>`niT123
 !s100 aFnLlL1@m415d6em?MG^21
 R8
 32
-Z272 !s110 1544483990
+R364
 !i10b 1
-Z273 !s108 1544483990.000000
-Z274 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd|
-Z275 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd|
+Z377 !s108 1544569140.000000
+Z378 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd|
+Z379 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/syncram.vhd|
 !i113 1
 R13
 R14
 Abehavioral
-R88
-R257
-R116
-R117
+R85
+R361
+R122
+R123
 R3
 R4
 DEx4 work 7 syncram 0 22 D=e][Y8<;9NigS>`niT123
@@ -2318,22 +3304,22 @@ Vb4bLTLnQ<96RWXh<@96:U0
 !s100 W:<cVUTVPgIfz60fOOgQ20
 R8
 32
-R272
+R364
 !i10b 1
-R273
-R274
-R275
+R377
+R378
+R379
 !i113 1
 R13
 R14
 Ptestbench_functions
-R88
+R85
 R3
 R4
-Z276 w1543201280
+Z380 w1543201280
 R5
-Z277 8W:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd
-Z278 FW:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd
+Z381 8W:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd
+Z382 FW:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd
 l0
 L5
 V]P_=2fSS0H8YamHaS?4E62
@@ -2341,17 +3327,17 @@ V]P_=2fSS0H8YamHaS?4E62
 R8
 32
 b1
-Z279 !s110 1544484019
+R323
 !i10b 1
-Z280 !s108 1544484019.000000
-Z281 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd|
-Z282 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd|
+R336
+Z383 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd|
+Z384 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/testbench_functions.vhd|
 !i113 1
 R13
 R14
 Bbody
-R125
-R88
+R129
+R85
 R3
 R4
 l0
@@ -2360,32 +3346,73 @@ VaX24TbCAAC0OSPC7[z]gi2
 !s100 [3kN:`D_P73Z252b3MFIY1
 R8
 32
-R279
+R323
 !i10b 1
-R280
-R281
-R282
+R336
+R383
+R384
+!i113 1
+R13
+R14
+Eunsign_ext_32
+Z385 w1544406013
+R2
+R3
+R4
+R5
+Z386 8W:/Northwestern/Fall 2018/EECS 361/Final Project/unsign_ext_32.vhd
+Z387 FW:/Northwestern/Fall 2018/EECS 361/Final Project/unsign_ext_32.vhd
+l0
+L6
+VS8G^@cFQIDOEKSXCfo<Q_2
+!s100 EScMA7hW^STYChbn;eI?e2
+R8
+32
+R323
+!i10b 1
+R336
+Z388 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/unsign_ext_32.vhd|
+Z389 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/unsign_ext_32.vhd|
+!i113 1
+R13
+R14
+Astructural
+R2
+R3
+R4
+DEx4 work 13 unsign_ext_32 0 22 S8G^@cFQIDOEKSXCfo<Q_2
+l15
+L13
+Vm1FWdIh4lCdoZY?6ZGK>I1
+!s100 1Ea^?nTzTJJWjC]KIOP4P3
+R8
+32
+R323
+!i10b 1
+R336
+R388
+R389
 !i113 1
 R13
 R14
 Exnor_gate
-R62
+R59
 R3
 R4
 R5
-Z283 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd
-Z284 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd
+Z390 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd
+Z391 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd
 l0
 L5
 V0h2SEDJmYfE@NbVLih1891
 !s100 VMF9C>DP[5;VOiN5[aESd3
 R8
 32
-R272
+R364
 !i10b 1
-R273
-Z285 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd|
-Z286 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd|
+R377
+Z392 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd|
+Z393 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd|
 !i113 1
 R13
 R14
@@ -2399,32 +3426,32 @@ V7FVFb1NIF1?iJ4PQQ`S`<0
 !s100 ]_>oDFZN:PJ[HJie3IcK81
 R8
 32
-R272
+R364
 !i10b 1
-R273
-R285
-R286
+R377
+R392
+R393
 !i113 1
 R13
 R14
 Exnor_gate_32
-R62
+R59
 R3
 R4
 R5
-Z287 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd
-Z288 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd
+Z394 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd
+Z395 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd
 l0
 L5
 VI^Fo_SJbE0W]UUm=ZlX691
 !s100 7TK64^z14nVXPK]cWgS3=0
 R8
 32
-R272
+R364
 !i10b 1
-R273
-Z289 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd|
-Z290 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd|
+R377
+Z396 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd|
+Z397 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -2438,32 +3465,32 @@ VUZHHDf582f^BFOE?@V5cO3
 !s100 l]IKGhY:hL2aDUPV;>SB?0
 R8
 32
-R272
+R364
 !i10b 1
-R273
-R289
-R290
+R377
+R396
+R397
 !i113 1
 R13
 R14
 Exnor_gate_n
-R62
+R59
 R3
 R4
 R5
-Z291 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd
-Z292 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd
+Z398 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd
+Z399 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd
 l0
 L5
 VR_LmOEJa:d>5N49>W0ZA?3
 !s100 UCY45ZALOU6@I^4jz3eW33
 R8
 32
-R272
+R364
 !i10b 1
-R273
-Z293 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd|
-Z294 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd|
+R377
+Z400 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd|
+Z401 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -2477,32 +3504,32 @@ VKnfTaCK^6h<JR^FmC<>0m1
 !s100 dDail5hL?0zna@N:=D@8b2
 R8
 32
-R272
+R364
 !i10b 1
-R273
-R293
-R294
+R377
+R400
+R401
 !i113 1
 R13
 R14
 Exor_gate
-R62
+R59
 R3
 R4
 R5
-Z295 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd
-Z296 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd
+Z402 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd
+Z403 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd
 l0
 L5
 V[fBJY?oh1=l=lj];5ikcY1
 !s100 K_6H3f?zAK@4`dnkC2j[K2
 R8
 32
-R272
+R364
 !i10b 1
-R273
-Z297 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd|
-Z298 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd|
+R377
+Z404 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd|
+Z405 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate.vhd|
 !i113 1
 R13
 R14
@@ -2516,32 +3543,32 @@ VX2I>jC5Dl4K41ohhQ=lfz2
 !s100 e;mL^F4ENl;O2f_Ae@3MU2
 R8
 32
-R272
+R364
 !i10b 1
-R273
-R297
-R298
+R377
+R404
+R405
 !i113 1
 R13
 R14
 Exor_gate_32
-R62
+R59
 R3
 R4
 R5
-Z299 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd
-Z300 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd
+Z406 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd
+Z407 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd
 l0
 L5
 V:TDC7[J^<4Z0hN7K<U@nz0
 !s100 IY:zIdH0EdL@PUV4ISe5M0
 R8
 32
-R272
+R109
 !i10b 1
-R273
-Z301 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd|
-Z302 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd|
+R377
+Z408 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd|
+Z409 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_32.vhd|
 !i113 1
 R13
 R14
@@ -2555,32 +3582,32 @@ V3VRg<SB0Cd8ehW<H[PS>T1
 !s100 [@^nmEj?djZ;8jS41JD]@3
 R8
 32
-R272
+R109
 !i10b 1
-R273
-R301
-R302
+R377
+R408
+R409
 !i113 1
 R13
 R14
 Exor_gate_n
-R62
+R59
 R3
 R4
 R5
-Z303 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd
-Z304 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd
+Z410 8W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd
+Z411 FW:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd
 l0
 L5
 VoXcGmO7Td517G9;DAlGa]0
 !s100 LPoPXbzH8=CBB]^6S5Unf1
 R8
 32
-R65
+R109
 !i10b 1
-R66
-Z305 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd|
-Z306 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd|
+R110
+Z412 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd|
+Z413 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xor_gate_n.vhd|
 !i113 1
 R13
 R14
@@ -2594,34 +3621,34 @@ Vh:7hVmgL6jc9L=6foTP0N1
 !s100 29oXRe`]fm02Bce^Do[3m2
 R8
 32
-R65
+R109
 !i10b 1
-R66
-R305
-R306
+R110
+R412
+R413
 !i113 1
 R13
 R14
 Ezero_detect_6
-Z307 w1543385111
+Z414 w1543385111
 R1
 R2
 R3
 R4
 R5
-Z308 8W:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd
-Z309 FW:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd
+Z415 8W:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd
+Z416 FW:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd
 l0
 L6
 VNUTKe5gBzL[YA5>OJF2L@1
 !s100 ^oCFeNYoPXzimJi2Rh;hl0
 R8
 32
-Z310 !s110 1544486225
+R9
 !i10b 1
-Z311 !s108 1544486225.000000
-Z312 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd|
-Z313 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd|
+R10
+Z417 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|W:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd|
+Z418 !s107 W:/Northwestern/Fall 2018/EECS 361/Final Project/zero_detect_6.vhd|
 !i113 1
 R13
 R14
@@ -2637,11 +3664,11 @@ VfC?0:D?HA2Y_gLmUW[27f3
 !s100 QO_mJ365HS@_OY>aPS2>Q0
 R8
 32
-R310
+R9
 !i10b 1
-R311
-R312
-R313
+R10
+R417
+R418
 !i113 1
 R13
 R14

@@ -8,7 +8,7 @@ port (
 		);
 end shift_left_2;
 
-architecture struct of adder_32 is 
+architecture struct of shift_left_2 is 
 
 signal cout: std_logic_vector(31 downto 0);
 
