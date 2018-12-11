@@ -13,7 +13,7 @@ port (
   		--branch
 		MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
   	
-		PC_write, IF_ID_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic;
+		PC_write, IF_ID_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic
   		--mux_select : out std_logic now called ID_EX_control_enable
   		
 		);
@@ -96,12 +96,12 @@ begin
     or_resuts : or_1bit port map(same1, same2, result);
     and_results : and_1bit port map(result, id_ex_MemRd, mux_sel_3to1(0));
 --BR detect   
-	or3_branch : or3_gate port map (a => MEM_beq_flag, b =>MEM_bneq_flag, c =>MEM_bgtz, or3_out => mux_sel_3to1(1));
+	or3_branch : or3_gate port map (a => MEM_beq_flag, b =>MEM_bneq_flag, c =>MEM_bgtz_flag, or3_out => mux_sel_3to1(1));
 --MUX Select
 
 
 -- choosing either lw, branch, or else
-	hazard_select : mux_3_to_1 port map (sel => mux_sel_3to1, src00 => lw_control_const, src01 => br_control_const, src10 => else_control_const, z => control_output);
+	hazard_select : mux_3_to_1_5bits port map (sel => mux_sel_3to1, src00 => lw_control_const, src01 => br_control_const, src10 => else_control_const, z => control_output);
       
   	PC_write <= control_output(0);
     IF_ID_write <= control_output(1);
