@@ -61,7 +61,7 @@ begin
 	compare_5_map2 : compare_5 port map(id_ex_Rt_temp, if_id_Rt_temp, same2);
     or_resuts : or_1bit port map(same1, same2, result);
     and_results : and_1bit port map(result, id_ex_MemRd, stall);
-    not_results : not_gamte port map(stall, neg_stall);
+    not_results : not_gate port map(stall, neg_stall);
     
     PCWrite <= neg_stall;
     if_id_write <= neg_stall;
