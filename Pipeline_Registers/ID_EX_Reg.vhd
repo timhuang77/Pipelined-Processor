@@ -20,7 +20,7 @@ entity ID_EX_Reg is
 		control_ex	: in std_logic_vector(3 downto 0);
 		
 		pc_in, read_data1, read_data2, sign_ext, shamt_ext	: in std_logic_vector(31 downto 0);
-		instruct_1, instruct_2	: in std_logic_vector(4 downto 0);
+		instruct_1, instruct_2, Rs_in, Rt_in	: in std_logic_vector(4 downto 0);
 		
 		--outputs
 		control_wb_out	: out std_logic_vector(1 downto 0);
@@ -31,7 +31,7 @@ entity ID_EX_Reg is
 		
 		pc_out, bus_a, bus_b, out_sign_ext, out_shamt_ext	: out std_logic_vector(31 downto 0);
 		
-		out_instruct1, out_instruct2	: out std_logic_vector(4 downto 0)
+		out_instruct1, out_instruct2, Rs_out, Rt_out	: out std_logic_vector(4 downto 0)
 	);
 end entity ID_EX_Reg;
 
@@ -192,6 +192,31 @@ begin
 			d => instruct_2(i),
 			enable => '1',
 			q => out_instruct2(i)
+		);
+	end generate;
+-- Rs
+	gen_rs_reg : for i in 0 to 4 generate
+		dff_rs : dffr_a port map (
+			clk	=> clk,
+			arst => arst,
+			aload => aload,
+			adata => '0', --reset will initialize register with 0
+			d => Rs_in(i),
+			enable => '1',
+			q => Rs_out(i)
+		);
+	end generate;
+
+-- Rt
+	gen_rt_reg : for i in 0 to 4 generate
+		dff_rt : dffr_a port map (
+			clk	=> clk,
+			arst => arst,
+			aload => aload,
+			adata => '0', --reset will initialize register with 0
+			d => Rt_in(i),
+			enable => '1',
+			q => Rt_out(i)
 		);
 	end generate;
 
