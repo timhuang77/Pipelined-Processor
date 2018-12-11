@@ -10,6 +10,7 @@ package pipeline_reg_package is
 			--Inputs
 			clk : in std_logic;
 			arst, aload : in std_logic;
+			if_id_enable : in std_logic;
 				--async reset will initialize register with 0
 			instr_in : in std_logic_vector(31 downto 0);
 			pc_in : in std_logic_vector(31 downto 0);
@@ -18,7 +19,7 @@ package pipeline_reg_package is
 			instr_out : out std_logic_vector(31 downto 0); 
 			pc_out : out std_logic_vector(31 downto 0)
 		);
-	end component;
+	end component IF_ID_Reg;
 	
 	component ID_EX_Reg is 
 		port ( 
@@ -36,7 +37,7 @@ package pipeline_reg_package is
 			control_ex	: in std_logic_vector(3 downto 0);
 			
 			pc_in, read_data1, read_data2, sign_ext, shamt_ext	: in std_logic_vector(31 downto 0);
-			instruct_1, instruct_2	: in std_logic_vector(4 downto 0);
+			instruct_1, instruct_2, Rs_in, Rt_in	: in std_logic_vector(4 downto 0);
 			
 			--outputs
 			control_wb_out	: out std_logic_vector(1 downto 0);
@@ -47,13 +48,13 @@ package pipeline_reg_package is
 			
 			pc_out, bus_a, bus_b, out_sign_ext, out_shamt_ext	: out std_logic_vector(31 downto 0);
 			
-			out_instruct1, out_instruct2	: out std_logic_vector(4 downto 0)
+			out_instruct1, out_instruct2, Rs_out, Rt_out	: out std_logic_vector(4 downto 0)
 		);
-	end component;
+	end component ID_EX_Reg;
 	
 	component EX_MEM_Reg is 
 		port(
-			clk, rst, aload	: in std_logic; 
+			clk, arst, aload	: in std_logic; 
 	 
 			control_wb_in 	 	: in std_logic_vector (1 downto 0);
 				--control_wb(0) : MemToReg

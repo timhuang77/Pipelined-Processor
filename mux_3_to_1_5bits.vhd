@@ -17,7 +17,7 @@ architecture structural of mux_3_to_1_5bits is
 	
 	begin
 	
-		level_1_map : mux_32 port map (sel => sel(0), src0 => src00, src1 => src01, z => temp);
-		level_2_map : mux_32 port map (sel => sel(1), src0 => temp, src1 => src10, z => z);
+		level_1_map : mux_n generic map(5) port map (sel => sel(0), src0 => src00, src1 => src01, z => temp);
+		level_2_map : mux_n generic map(5) port map (sel => sel(1), src0 => temp, src1 => src10, z => z);
 		
 end architecture structural;

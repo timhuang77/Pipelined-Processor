@@ -4,16 +4,13 @@ use work.eecs361_gates.all;
 use work.eecs361.all;
 
 entity branch_detector is
-
-
-end entity branch_detector is 
 	port(
 		beq_flag, bneq_flag, bgtz_flag : in std_logic;
 		zero_flag, gtz_flag : in std_logic;
-		PC_Src_out : out std_logic;
+		PC_Src_out : out std_logic
 	);
 
-end entity;
+end entity branch_detector;
 
 architecture structural of branch_detector is
 	component or3_gate is

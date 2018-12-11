@@ -48,10 +48,8 @@ architecture structural of pipeline_CPU is
 		generic (mem_file: string);
 		port(
 			clk, rst	: in std_logic;
-
+			pc_enable	: in std_logic; 
 			pc_in		: in std_logic_vector(31 downto 0);
-
-
 			pc_out		: out std_logic_vector(31 downto 0);
 			instr_out	: out std_logic_vector(31 downto 0)
 		);
@@ -78,33 +76,81 @@ architecture structural of pipeline_CPU is
             );
     end component shift_left_2;
 
-   component unsign_ext_32 is
+   component unsign_ext_32_5 is
    port (
-            x	: in std_logic_vector(15 downto 0);
+            x	: in std_logic_vector(4 downto 0);
             z	: out std_logic_vector(31 downto 0)
         	);
-    end component unsign_ext_32;
-  
-  component hazard_unit is 
-  port (
-          clk : in std_logic; 
-          if_id_Rs, if_id_Rt, id_ex_Rt : in std_logic_vector(4 downto 0); 
-          id_ex_MemRd : in std_logic;
+    end component unsign_ext_32_5;
+	
+	component zero_detect_6 is
+		port(
+			x : in std_logic_vector(5 downto 0);
+			z : out std_logic
+		);
+	end component zero_detect_6;
+	
+	component mux_3_to_1 is
+		port (
+			sel	: in std_logic_vector(1 downto 0);
+			src00, src01, src10	: in std_logic_vector(31 downto 0);
+			z	: out std_logic_vector(31 downto 0)
+		);
+	end component mux_3_to_1;
+	
+	component hazard_unit is 
+		port (
+				--clk : in std_logic; 
+				--lw 
+				if_id_Rs, if_id_Rt, id_ex_Rt : in std_logic_vector(4 downto 0); 
+				id_ex_MemRd : in std_logic;
+				--branch
+				MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
+			
+				PC_write, IF_ID_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic
+				--mux_select : out std_logic now called ID_EX_control_enable
+				
+				);
+	end component hazard_unit;
 
-          PCWrite, if_id_write, mux_select : out std_logic
-          );
-  end component hazard_unit;
-  
-  component forwarding_unit is
-  port(
-      --inputs
-      ID_EX_Rs, ID_EX_Rt, EX_MEM_Rd, MEM_WB_Rd : in std_logic_vector(4 downto 0);
-      EX_MEM_RegWr, MEM_WB_RegWr : in std_logic;
-      --outputs
-      forwardA, forwardB : out std_logic_vector(1 downto 0)
-  );
-  end component forwarding_unit;
+	component forwarding_unit is
+	port(
+	  --inputs
+	  ID_EX_Rs, ID_EX_Rt, EX_MEM_Rd, MEM_WB_Rd : in std_logic_vector(4 downto 0);
+	  EX_MEM_RegWr, MEM_WB_RegWr : in std_logic;
+	  --outputs
+	  forwardA, forwardB : out std_logic_vector(1 downto 0)
+	);
+	end component forwarding_unit;
+	
+	component main_control is
+		port (
+			opcode	: in std_logic_vector(5 downto 0);
+			ALUop	: out std_logic_vector(1 downto 0);
+			RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, MemRead, beq, bneq, bgtz, ExtOp	: out std_logic
+		);
+	end component main_control;
+
+	component gtz_detector is
+		port(
+			x	: in std_logic_vector(31 downto 0);
+			z	: out std_logic
+		);
+	end component gtz_detector;
+
+	component branch_detector is
+		port(
+			beq_flag, bneq_flag, bgtz_flag : in std_logic;
+			zero_flag, gtz_flag : in std_logic;
+			PC_Src_out : out std_logic
+		);
+
+	end component branch_detector;
+
 --signals
+	
+	signal aload : std_logic := '0';
+
 	--IF stage
 	signal pc_Src_signal, pc_enable : std_logic;
 	signal pc_plus_4, pc_plus_4_plus_imm16, pc_in, IF_instr_out : std_logic_vector(31 downto 0);
@@ -119,7 +165,7 @@ architecture structural of pipeline_CPU is
     signal control_mux, control_mux_out : std_logic_vector (10 downto 0);
 
 	--EX stage
-	signal EX_bus_a_in,  EX_bus_b_in, EX_ALU_in : std_, EX_pc_in, EX_pc_out, EX_sign_extend, shamt_extendlogic_vector(31 downto 0);
+	signal EX_bus_a_in,  EX_bus_b_in, EX_ALU_in, EX_pc_in, EX_pc_out, EX_sign_extend, EX_shamt_extend : std_logic_vector(31 downto 0);
     signal sll_flag, ALU_zero_flag: std_logic;
     signal imm16_sll_2, shamt_32, ALU_result : std_logic_vector(31 downto 0);
     signal ALUctrl : std_logic_vector(5 downto 0);
@@ -133,8 +179,8 @@ architecture structural of pipeline_CPU is
 
 	--MEM stage
     signal MEM_control_wb : std_logic_vector(1 downto 0);
-    signal MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag, MEM_gtz_flag, MEM_zero_flag_in, MemRead, MemWrite : std_logic; 
-	signal MEM_pc_in, MEM_ALU_resuln, MEM_bus_b_in, MEM_dout : std_logic_vector(31 downto 0);
+    signal MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag, MEM_gtz_flag, MEM_zero_flag, MemRead, MemWrite : std_logic; 
+	signal MEM_pc_in, MEM_ALU_result, MEM_bus_b_in, MEM_dout : std_logic_vector(31 downto 0);
 	signal MEM_rw_in : std_logic_vector(4 downto 0);
 
 	--WB stage
@@ -149,7 +195,7 @@ architecture structural of pipeline_CPU is
     signal br_flag_temp : std_logic;
 	signal br_flag_mux : std_logic;
 	signal id_ex_vec, id_ex_vec_out : std_logic_vector(10 downto 0);
-	signal ex_mem_vec, id_ex_vec_out : std_logic_vector(6 downto 0);
+	signal ex_mem_vec, ex_mem_vec_out: std_logic_vector(6 downto 0);
 	signal ifid_instr_in : std_logic_vector(31 downto 0);
 	signal ifid_mux_sel, exmem_mux_sel, idex_mux_sel : std_logic;
 
@@ -206,7 +252,7 @@ begin
           	port map(
 			clk => clk,
             rst => arst,
-            pc_enable => pc_enable;
+            pc_enable => pc_enable,
 			pc_in => pc_in,
 			pc_out => pc_plus_4,
 			instr_out => IF_instr_out
@@ -231,7 +277,7 @@ begin
 			clk => clk,
 			arst => arst,
 			aload => '0',
-			RegWr => RegWr_signal
+			RegWr => RegWr_signal,
 			Ra => ID_instr(25 downto 21),
 			Rb => ID_instr(20 downto 16),
 			Rw => WB_rw,
@@ -241,7 +287,7 @@ begin
 		);
           
         sign_extend_imm16 : sign_ext_32 port map(x => IF_instr_out(15 downto 0), z => sign_extended_imm16);
-        extend_shamt : unsign_ext_32 port map(x => IF_instr_out(10 downto 6), z = > extended_shamt);
+        extend_shamt : unsign_ext_32_5 port map(x => IF_instr_out(10 downto 6), z => extended_shamt);
           
         hazard_unit_map : hazard_unit port map(
 
@@ -291,7 +337,7 @@ begin
 			out_sign_ext => EX_sign_extend,
           	out_shamt_ext => EX_shamt_extend,
 			out_instruct1 => EX_instruct_1, --Instr[20:16]
-			out_instruct2 => EX_instruct_2  --Instr[15:11]
+			out_instruct2 => EX_instruct_2,  --Instr[15:11]
           	Rs_out => fwd_unit_rs_in,
           	Rt_out => fwd_unit_rt_in
         );
@@ -309,7 +355,7 @@ begin
       		--00 : no forwarding
           	--10 : forward from prior ALU result
           	--01 : forward from data memory or an earlier ALU result (forward from Data Mem only occurs in load)
-        mux_forwardB	: mux_3_to_1 port map (sel => forwardB_signal, src00 => ALUSrc_mux_to_ALU, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardB)          
+        mux_forwardB	: mux_3_to_1 port map (sel => forwardB_signal, src00 => ALUSrc_mux_to_ALU, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardB);          
       		--00 : no forwarding
           	--10 : forward from prior ALU result
           	--01 : forward from data memory or an earlier ALU result (forward from Data Mem only occurs in load)

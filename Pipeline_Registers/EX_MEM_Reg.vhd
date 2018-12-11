@@ -5,7 +5,7 @@ use work.eecs361.all;
 
 entity EX_MEM_Reg is 
 	port(
-		clk, rst, aload	: in std_logic; 
+		clk, arst, aload	: in std_logic; 
  
 		control_wb_in 	 	: in std_logic_vector (1 downto 0);
 			--control_wb(0) : MemToReg
@@ -39,7 +39,7 @@ architecture structural of EX_MEM_Reg is
 	component dffr_a is
 	  port (
 		clk	   : in  std_logic;
-		arst   : in  std_logic;
+		aarst   : in  std_logic;
 		aload  : in  std_logic;
 		adata  : in  std_logic;
 		d	   : in  std_logic;
@@ -51,7 +51,7 @@ architecture structural of EX_MEM_Reg is
 	component dffr_a_32bit is
       port (
 	    clk	   : in  std_logic;
-        arst   : in  std_logic;
+        aarst   : in  std_logic;
         aload  : in  std_logic;
         adata  : in  std_logic_vector(31 downto 0);
 	    d	   : in  std_logic_vector(31 downto 0);
@@ -80,7 +80,7 @@ begin
 	generate_wb1 : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map(
 			clk => clk, 
-			arst => rst, 
+			aarst => arst, 
 			aload => aload, 
 			adata => '0',
 			d => control_wb_in(i), 
@@ -91,21 +91,21 @@ begin
 	
 	generate_mem_ctrl : for i in 0 to 4 generate 
 		mem_ctrl_sigs : dffr_a port map 
-			(clk, rst, aload, '0', control_mem_in(i), '1', control_mem_in_temp(i));
+			(clk, arst, aload, '0', control_mem_in(i), '1', control_mem_in_temp(i));
 	end generate;
 	
 	generate_wr : for i in 0 to 4 generate 
-		write_reg_sigs : dffr_a port map (clk, rst, aload, '0', rw_in(i), '1', rw_out(i));
+		write_reg_sigs : dffr_a port map (clk, arst, aload, '0', rw_in(i), '1', rw_out(i));
 	end generate;
 	
-	dffr_a_zero_flag : dffr_a port map(clk, rst, aload, '0', zero_flag_in, '1', zero_flag_out);
+	dffr_a_zero_flag : dffr_a port map(clk, arst, aload, '0', zero_flag_in, '1', zero_flag_out);
 	
 	dffr_a_32bit_1 : dffr_a_32bit port map
-		(clk, rst, aload, "00000000000000000000000000000000", pc_in, '1', pc_out);
+		(clk, arst, aload, "00000000000000000000000000000000", pc_in, '1', pc_out);
 
 	dffr_a_32bit_2 : dffr_a_32bit port map
-		(clk, rst, aload, "00000000000000000000000000000000", alu_result_in, '1', alu_result_out);
+		(clk, arst, aload, "00000000000000000000000000000000", alu_result_in, '1', alu_result_out);
 
 	dffr_a_32bit_3 : dffr_a_32bit port map
-		(clk, rst, aload, "00000000000000000000000000000000", bus_b_in, '1', bus_b_out);	
+		(clk, arst, aload, "00000000000000000000000000000000", bus_b_in, '1', bus_b_out);	
 end structural;
