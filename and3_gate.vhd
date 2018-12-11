@@ -3,14 +3,14 @@ use IEEE.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
 
-entity and_3_to_1 is
+entity and3_gate is
 	port(
 		x1, x2, x3 	: in std_logic;
 		z 			: out std_logic
 	);
-end entity and_3_to_1;
+end entity and3_gate;
 
-architecture structural of and_3_to_1 is
+architecture structural of and3_gate is
 
 	signal temp : std_logic;
 	

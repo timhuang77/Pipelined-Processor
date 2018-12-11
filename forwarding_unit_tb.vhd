@@ -36,20 +36,29 @@ begin
 	);
 	process is begin
 		wait for 20 ns;
+		--ForwardA(0) = 1
 		EX_MEM_RegWr <= '1';
 		EX_MEM_Rd <= "00100";
 		ID_EX_Rs <= "00100";
 		wait for 20 ns;
+		--ForwardA(0) = 0
 		ID_EX_Rs <= "00110";
 		wait for 20 ns;
+		--ForwardA(1) = 1
 		ID_EX_Rt <= "00100";
 		wait for 20 ns;
 		MEM_WB_RegWr <= '1';
 		MEM_WB_Rd <= "00010";
+		EX_MEM_Rd <= "00010";
 		ID_EX_Rs <= "00010";
 		wait for 20 ns;
 		ID_EX_Rs <= "00000";
 		ID_EX_Rt <= "00010";
+		wait for 20 ns;
+		EX_MEM_Rd <= "00101"; 
+		ID_EX_Rt <= "00101";
+		wait for 20 ns;
+		ID_EX_Rs <= "00101";
 		wait for 20 ns;
 		wait;
 	end process;
