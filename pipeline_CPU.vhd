@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
+use work.pipeline_reg_package.all;
 
 entity pipeline_CPU is
 	generic (
-		--loads Data Memory
-		mem_file : string
+		mem_file : string --loads Data Memory & Instr Memory
 		);
 	port (
 		clk 	: in std_logic;
@@ -15,9 +15,7 @@ entity pipeline_CPU is
 end entity pipeline_CPU;
   
 architecture structural of pipeline_CPU is
---types
---components
-  	--components
+
 	component alu is
 		port(
 				A 			: in std_logic_vector(31 downto 0);
@@ -58,107 +56,6 @@ architecture structural of pipeline_CPU is
 			instr_out	: out std_logic_vector(31 downto 0)
 		);
 	end component IFU_multicycle;
-	
-	component IF_ID_Reg is
-		port (
-			--Inputs
-			clk : in std_logic;
-			arst, aload : in std_logic;
-				--async reset will initialize register with 0
-			instr_in : in std_logic_vector(31 downto 0);
-			pc_in : in std_logic_vector(31 downto 0);
-			
-			--Outputs
-			instr_out : out std_logic_vector(31 downto 0); 
-			pc_out : out std_logic_vector(31 downto 0)
-		);
-	end component IF_ID_Reg;
-	
-	component ID_EX_Reg is 
-		port ( 
-			-- inputs
-			clk			: in std_logic;
-			arst, aload	: in std_logic;
-			
-			control_wb	: in std_logic_vector(1 downto 0);
-			control_mem	: in std_logic_vector(4 downto 0);
-			control_ex	: in std_logic_vector(3 downto 0);
-			
-			pc_in		: in std_logic_vector(31 downto 0);
-			
-			read_data1	: in std_logic_vector(31 downto 0);
-			read_data2	: in std_logic_vector(31 downto 0);
-			
-			sign_ext	: in std_logic_vector(31 downto 0);
-			
-			instruct_1	: in std_logic_vector(4 downto 0);
-			instruct_2	: in std_logic_vector(4 downto 0);
-			
-			--outputs
-			control_wb_out	: out std_logic_vector(1 downto 0);
-			control_mem_out	: out std_logic_vector(4 downto 0);
-			ALUSrc			: out std_logic;
-			ALUOp			: out std_logic_vector(1 downto 0);
-			RegDst			: out std_logic;
-			
-			pc_out 			: out std_logic_vector(31 downto 0);
-			bus_a			: out std_logic_vector(31 downto 0);
-			bus_b			: out std_logic_vector(31 downto 0);
-			out_sign_ext	: out std_logic_vector(31 downto 0);
-			
-			out_instruct1	: out std_logic_vector(4 downto 0);
-			out_instruct2	: out std_logic_vector(4 downto 0)
-		);
-	end component ID_EX_Reg;
-  
-    component EX_MEM_Reg is 
-        port(
-            clk, arst, aload, enable	: in std_logic; 
-
-            wb_in_sig 	 	: in std_logic_vector (1 downto 0);
-            control_mem_in	: in std_logic_vector (4 downto 0); 
-                --control_mem(0): beq
-                --control_mem(1): bneq
-                --control_mem(2): bgtz
-                --control_mem(3): MemRead
-                --control_mem(4): MemWrite
-            pc_in_sig		: in std_logic_vector (31 downto 0);
-            alu_zero_in		: in std_logic;
-            alu_result_in   : in std_logic_vector (31 downto 0);
-            bus_b_in		: in std_logic_vector (31 downto 0);
-            write_reg_in 	: in std_logic_vector (4 downto 0);
-
-            wb_out_sig	 	  : out std_logic_vector (1 downto 0);
-
-            --control_mem signals
-            beq_flag, bneq_flag, bgtz_flag, MemRead, MemWrite : out std_logic;
-            pc_out_sig		  : out std_logic_vector (31 downto 0); 
-            alu_zero_out	  : out std_logic;
-            alu_result_out    : out std_logic_vector (31 downto 0);	
-            bus_b_out		  : out std_logic_vector (31 downto 0);
-            write_reg_out 	  : out std_logic_vector (4 downto 0)
-        );
-    end component;
-  
-  	component MEM_WB is 
-	port(
-		clk 	: in std_logic;
-		rst		: in std_logic;
-		load	: in std_logic;
-		enable	: in std_logic; 
- 
-		data_mem_in  : in std_logic_vector (31 downto 0); 
-		wb_in_sig 	 : in std_logic_vector (1 downto 0);
-		alu_result_in: in std_logic_vector (31 downto 0);
-		write_reg_in : in std_logic_vector (4 downto 0);
-		
-		data_mem_out  : out std_logic_vector (31 downto 0); 
-		wb_out_sig1   : out std_logic;
-		wb_out_sig2   : out std_logic; 
-		alu_result_out: out std_logic_vector (31 downto 0);
-		write_reg_out : out std_logic_vector (4 downto 0)
-	);
-	end component MEM_WB;
   
     component sign_ext_32 is
         port (
@@ -176,73 +73,159 @@ architecture structural of pipeline_CPU is
   
     component shift_left_2 is
     port (
-            x: in std_logic_vector(31 downto 0);
+            x : in std_logic_vector(31 downto 0);
             z : out std_logic_vector(31 downto 0)
             );
     end component shift_left_2;
 
    component unsign_ext_32 is
-        port (
+   port (
             x	: in std_logic_vector(15 downto 0);
             z	: out std_logic_vector(31 downto 0)
-        );
+        	);
     end component unsign_ext_32;
+  
+  component hazard_unit is 
+  port (
+          clk : in std_logic; 
+          if_id_Rs, if_id_Rt, id_ex_Rt : in std_logic_vector(4 downto 0); 
+          id_ex_MemRd : in std_logic;
+
+          PCWrite, if_id_write, mux_select : out std_logic
+          );
+  end component hazard_unit;
+  
+  component forwarding_unit is
+  port(
+      --inputs
+      ID_EX_Rs, ID_EX_Rt, EX_MEM_Rd, MEM_WB_Rd : in std_logic_vector(4 downto 0);
+      EX_MEM_RegWr, MEM_WB_RegWr : in std_logic;
+      --outputs
+      forwardA, forwardB : out std_logic_vector(1 downto 0)
+  );
+  end component forwarding_unit;
 --signals
 	--IF stage
-	signal pc_Src_signal : std_logic;
+	signal pc_Src_signal, pc_enable : std_logic;
 	signal pc_plus_4, pc_plus_4_plus_imm16, pc_in, IF_instr_out : std_logic_vector(31 downto 0);
 	
 	--ID stage
-	signal RegWr_signal : std_logic;
+	signal RegWr_signal, if_id_enable, hazard_mux : std_logic;
 	signal ID_instr, ID_pc, read_data1, read_data2, busw_signal, sign_extended_imm16, extended_shamt: std_logic_vector(31 downto 0);
+	signal ID_control_ex : std_logic_vector(3 downto 0);
+	signal ID_control_wb : std_logic_vector(1 downto 0);
+	signal ID_control_mem : std_logic_vector(4 downto 0);
+	signal WB_rw : std_logic_vector(4 downto 0);
+    signal control_mux, control_mux_out : std_logic_vector (10 downto 0);
 
 	--EX stage
-	signal EX_bus_a_in,  EX_bus_b_in, EX_ALU_in : std_logic_vector(31 downto 0);
-    signal is_zero, ALU_zero: std_logic;
+	signal EX_bus_a_in,  EX_bus_b_in, EX_ALU_in : std_, EX_pc_in, EX_pc_out, EX_sign_extend, shamt_extendlogic_vector(31 downto 0);
+    signal sll_flag, ALU_zero_flag: std_logic;
     signal imm16_sll_2, shamt_32, ALU_result : std_logic_vector(31 downto 0);
     signal ALUctrl : std_logic_vector(5 downto 0);
     signal instruct_rw : std_logic_vector(4 downto 0);
+	signal EX_control_wb : std_logic_vector(1 downto 0);
+	signal EX_control_mem : std_logic_vector(4 downto 0);
+	signal ALUSrc, RegDst : std_logic;
+	signal ALUOp : std_logic_vector(1 downto 0);
+    signal EX_instruct_1, EX_instruct_2, fwd_unit_rs_in, fwd_unit_rt_in : std_logic_vector(4 downto 0);
+    signal EX_ALU_in1, ALUSrc_mux_to_ALU : std_logic_vector(31 downto 0);
+
+	--MEM stage
+    signal MEM_control_wb : std_logic_vector(1 downto 0);
+    signal MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag, MEM_gtz_flag, MEM_zero_flag_in, MemRead, MemWrite : std_logic; 
+	signal MEM_pc_in, MEM_ALU_resuln, MEM_bus_b_in, MEM_dout : std_logic_vector(31 downto 0);
+	signal MEM_rw_in : std_logic_vector(4 downto 0);
+
+	--WB stage
+	signal WB_data_mem_in, WB_alu_result_in : std_logic_vector (31 downto 0);                                   
+	signal MemtoReg, RegWrite : std_logic;
+
+	--forwarding signals
+	signal forwardA_signal, forwardB_signal : std_logic_vector(1 downto 0);
+	signal ALU_forwardA, ALU_forwardB : std_logic_vector(31 downto 0);
+
+	--branch detect
+    signal br_flag_temp : std_logic;
+	signal br_flag_mux : std_logic;
+	signal id_ex_vec, id_ex_vec_out : std_logic_vector(10 downto 0);
+	signal ex_mem_vec, id_ex_vec_out : std_logic_vector(6 downto 0);
+	signal ifid_instr_in : std_logic_vector(31 downto 0);
+	signal ifid_mux_sel, exmem_mux_sel, idex_mux_sel : std_logic;
 
 begin
 	--IF Stage
 		--Before IFU
 		pcSrc_Mux : mux_32 port map(sel => pc_Src_signal, src0 => pc_plus_4, src1 => pc_plus_4_plus_imm16, z => pc_in);
-	
-  	-- Controls  
+
+  	-- Control with MUX
         control : main_control port map(
         	opcode => ID_instr(31 downto 26),
-          	ALUSrc => ID_control_ex(0),
-            ALUop => ID_control_ex(2 downto 1),
-          	RegDst => ID_control_ex(3),
-          	MemtoReg => ID_control_wb(0),
-          	RegWrite => ID_control_wb(1),
-          	beq => ID_control_mem(0);
-          	bneq => ID_control_mem(1);
-          	bgtz => ID_control_mem(2);
-          	MemRead => ID_control_mem(3);
-          	MemWrite => ID_control_mem(4)
+          	
+          	--EX Ctrl
+          	ALUSrc => id_ex_vec(0),
+            ALUop => id_ex_vec(2 downto 1),
+          	RegDst => id_ex_vec(3),
+
+          	--WB Ctrl
+          	MemtoReg => id_ex_vec(4),
+          	RegWrite => id_ex_vec(5),
+
+          	--MEM Ctrl
+          	beq => id_ex_vec(6),
+          	bneq => id_ex_vec(7),
+          	bgtz => id_ex_vec(8),
+          	MemRead => id_ex_vec(9),
+          	MemWrite => id_ex_vec(10)  
           	--ExtOp not connected
         );
           
-	--IFU
-		IFU : IFU_multicycle port map(
+--        ctrl_mux_map : mux_n generic map(11) port map (hazard_mux, control_mux, "00000000000", control_mux_out);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+        
+		-- ID stage controls
+--        id_ex_vec(1 downto 0) <= ID_control_wb;
+--        id_ex_vec(6 downto 2) <= ID_control_mem;
+--        id_ex_vec(10 downto 7) <= ID_control_ex;
+        ID_EX_Ctrl_Mux : mux_n generic map(11) port map (sel => idex_mux_sel, src0 => id_ex_vec, src1 => "00000000000", z => id_ex_vec_out);
+        
+        -- EX stage controls
+        ex_mem_vec(1 downto 0) <= EX_control_wb;
+        ex_mem_vec(6 downto 2) <= EX_control_mem;
+        EX_MEM_Ctrl_Mux : mux_n generic map(7) port map (sel => exmem_mux_sel, src0 => ex_mem_vec, src1 => "0000000", z => ex_mem_vec_out);
+        
+        -- IF stage controls  
+        IF_ID_Zero_Mux : mux_n generic map(32) port map (sel => ifid_mux_sel, src0 => IF_instr_out, src1 =>"00000000000000000000000000000000", z => ifid_instr_in);
+
+    --IFU
+		IFU : IFU_multicycle 
+          	generic map(
+              	mem_file => mem_file
+            ) 
+          	port map(
 			clk => clk,
+            rst => arst,
+            pc_enable => pc_enable;
 			pc_in => pc_in,
 			pc_out => pc_plus_4,
 			instr_out => IF_instr_out
-		);
+			);
 	
 	--IF/ID
 		IF_ID_register : IF_ID_Reg port map(
+          	--inputs
 			clk => clk,
 			arst => arst,
 			aload => '0', --loads 0 on async reset
-			instr_in => IF_instr_out,
+            if_id_enable => if_id_enable,
+			instr_in => ifid_instr_in, -- used to be IF_instr_out --
 			pc_in => pc_plus_4,
+          	--outputs
 			instr_out => ID_instr,
 			pc_out => ID_pc
 		);
-		
+--------------------------------------------------------------------------------------------------------------------------------------
 	--ID Stage
 		register_file : register_32 port map(
 			clk => clk,
@@ -251,7 +234,7 @@ begin
 			RegWr => RegWr_signal
 			Ra => ID_instr(25 downto 21),
 			Rb => ID_instr(20 downto 16),
-			Rw => Rw_signal,
+			Rw => WB_rw,
 			busW => busw_signal,
 			busA => read_data1,
 			busB => read_data2
@@ -259,21 +242,43 @@ begin
           
         sign_extend_imm16 : sign_ext_32 port map(x => IF_instr_out(15 downto 0), z => sign_extended_imm16);
         extend_shamt : unsign_ext_32 port map(x => IF_instr_out(10 downto 6), z = > extended_shamt);
-	
+          
+        hazard_unit_map : hazard_unit port map(
+
+         	if_id_Rs => ID_instr(25 downto 21),
+         	if_id_Rt => ID_instr(20 downto 16),
+         	id_ex_Rt => EX_instruct_1,
+			id_ex_MemRd => ID_control_mem(3),
+  			--branch
+			MEM_beq_flag => MEM_beq_flag, 
+            MEM_bneq_flag => MEM_bneq_flag, 
+            MEM_bgtz_flag => MEM_bgtz_flag,
+  	
+			PC_write => pc_enable, 
+          	IF_ID_write => if_id_enable, 
+          	IF_ID_zeros_flag => ifid_mux_sel, 
+          	ID_EX_stall_flag => idex_mux_sel, 
+          	EX_MEM_stall_flag => exmem_mux_sel
+        );
+--------------------------------------------------------------------------------------------------------------------------------------
 	--ID/EX
 		ID_EX_register : ID_EX_Reg port map(
+          	--inputs
 			clk	=> clk,
 			arst => arst,
-			aload => aload, 
-			control_wb => ID_control_wb,
-			control_mem => ID_control_mem,
-			control_ex => ID_control_ex,
+			aload => aload,
+			control_ex => id_ex_vec_out(3 downto 0), -- used to be ID_control_ex -- 
+            control_wb => id_ex_vec_out(5 downto 4), -- used to be ID_control_wb --
+         	control_mem => id_ex_vec_out(10 downto 6), -- used to be ID_control_mem --
 			pc_in => ID_pc,
 			read_data1 => read_data1,
 			read_data2 => read_data2,
 			sign_ext => sign_extended_imm16,
+          	shamt_ext => extended_shamt,
 			instruct_1 => ID_instr(20 downto 16),
 			instruct_2 => ID_instr(15 downto 11),
+          	Rs_in => ID_instr(25 downto 21),
+          	Rt_in => ID_instr(20 downto 16),
 			--outputs
 			control_wb_out => EX_control_wb,
 			control_mem_out => EX_control_mem,
@@ -284,83 +289,76 @@ begin
 			bus_a => EX_bus_a_in,
 			bus_b => EX_bus_b_in,
 			out_sign_ext => EX_sign_extend,
-			out_instruct1 => EX_instruct_1,
-			out_instruct2 => EX_instruct_2
+          	out_shamt_ext => EX_shamt_extend,
+			out_instruct1 => EX_instruct_1, --Instr[20:16]
+			out_instruct2 => EX_instruct_2  --Instr[15:11]
+          	Rs_out => fwd_unit_rs_in,
+          	Rt_out => fwd_unit_rt_in
         );
-          
+--------------------------------------------------------------------------------------------------------------------------------------      
 	--EX Stage
         imm16_shifter 	: shift_left_2 port map (x => EX_sign_extend, z => imm16_sll_2);
         pc_add_imm16 	: adder_32 port map (a => EX_pc_in, b => imm16_sll_2, z => EX_pc_out); 
        
-        sll_detector 	: zero_detect_6 port map (x => ALUctrl, z => is_zero);
-        sll_alu_mux 	: mux_32 port map (sel => is_zero, src0 => EX_sign_extend, src1 => shamt_32, z => EX_ALU_in1);
-        alu_mux 		: mux_32 port map (sel => ALUSrc, src0 => EX_bus_b_in, src1 => EX_ALU_in1, z => EX_ALU_in2);
-        alu_map			: alu port map (A => EX_bus_a_in, B => EX_ALU_in2, sel => ALUctrl, result => ALU_result, zero => ALU_zero);
+        sll_detector 	: zero_detect_6 port map (x => ALUctrl, z => sll_flag); --when ALUCtrl == "000000", SLL operation is selected.
+        MUX_imm16_or_shamt : mux_32 port map (sel => sll_flag, src0 => EX_sign_extend, src1 => EX_shamt_extend, z => EX_ALU_in1);
+        MUX_ALUSrc 		: mux_32 port map (sel => ALUSrc, src0 => EX_bus_b_in, src1 => EX_ALU_in1, z => ALUSrc_mux_to_ALU);
+
+       
+        mux_forwardA	: mux_3_to_1 port map (sel => forwardA_signal, src00 => EX_bus_a_in, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardA);
+      		--00 : no forwarding
+          	--10 : forward from prior ALU result
+          	--01 : forward from data memory or an earlier ALU result (forward from Data Mem only occurs in load)
+        mux_forwardB	: mux_3_to_1 port map (sel => forwardB_signal, src00 => ALUSrc_mux_to_ALU, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardB)          
+      		--00 : no forwarding
+          	--10 : forward from prior ALU result
+          	--01 : forward from data memory or an earlier ALU result (forward from Data Mem only occurs in load)
+        ALU_map			: alu port map (A => ALU_forwardA, B => ALU_forwardB, sel => ALUctrl, result => ALU_result, zero => ALU_zero_flag);
         
         alu_control_map	: ALU_control port map (ALUop => ALUOp, funct => EX_sign_extend(5 downto 0), ALUctrl => ALUctrl);
         
-        RegDst_mux 	: mux_n generic map(n => 5) port map (sel => RegDst, src0 => EX_instruct_1, src1 => EX_instruct_2, z => instruct_rw);
-                                                        
+        MUX_RegDst 		: mux_n generic map(n => 5) port map (sel => RegDst, src0 => EX_instruct_1 , src1 => EX_instruct_2, z => instruct_rw);
+          	--src0 : EX_instruct_1 is Instr[20:16]
+          	--src1 : EX_instruct_2 is Instr[15:11]
+                                               
+        forwarding_map 	: forwarding_unit port map (
+          ID_EX_Rs => fwd_unit_rs_in, 
+          ID_EX_Rt => fwd_unit_rt_in,
+          EX_MEM_Rd => MEM_rw_in,
+          MEM_WB_Rd => WB_rw,
+          EX_MEM_RegWr => EX_control_wb(1),
+          MEM_WB_RegWr => MEM_control_wb(1),
+          forwardA => forwardA_signal, 
+          forwardB => forwardB_signal
+        );
+--------------------------------------------------------------------------------------------------------------------------------------                                                     
     --EX/MEM                                    
         EX_Mem_register : EX_MEM_Reg port map(
+          --inputs
           clk => clk,
           arst => arst,
           aload => aload,
-          control_wb_in => EX_control_wb,
-          control_mem_in => EX_control_mem,
-          
+          control_wb_in => ex_mem_vec_out(1 downto 0), -- used to be EX_control_wb --
+          control_mem_in => ex_mem_vec_out(6 downto 2), -- used to be EX_control_mem -- 
           pc_in => EX_pc_out,
-          zero_flag_in => ALU_zero,
+          zero_flag_in => ALU_zero_flag,
           alu_result_in => ALU_result,
-          bus_b_in => Ex_bus_b_in,
+          bus_b_in => EX_bus_b_in,
           rw_in => instruct_rw,
-          
+          --outputs
           control_wb_out => MEM_control_wb,
           beq_flag => MEM_beq_flag,
           bneq_flag => MEM_bneq_flag, 
           bgtz_flag => MEM_bgtz_flag, 
           MemRead => MemRead, 
           MemWrite => MemWrite,
-          
-          zero_flag_out => MEM_zero_flag_in,
+          zero_flag_out => MEM_zero_flag,
           pc_out => MEM_pc_in,
-          alu_result_out => MEM_ALU_result_in,
+          alu_result_out => MEM_ALU_result,
           bus_b_out => MEM_bus_b_in,
           rw_out => MEM_rw_in
         );
-          
-    --FOR REFERENCE
-entity EX_MEM_Reg is 
-	port(
-		clk, rst, aload	: in std_logic; 
- 
-		control_wb_in 	 	: in std_logic_vector (1 downto 0);
-			--control_wb(0) : MemToReg
-			--control_wb(1) : RegWrite
-		control_mem_in	: in std_logic_vector (4 downto 0); 
-      		--control_mem(0): beq
-      		--control_mem(1): bneq
-      		--control_mem(2): bgtz
-      		--control_mem(3): MemRead
-      		--control_mem(4): MemWrite
-		pc_in			: in std_logic_vector (31 downto 0);
-		zero_flag_in	: in std_logic;
-		alu_result_in   : in std_logic_vector (31 downto 0);
-		bus_b_in		: in std_logic_vector (31 downto 0);
-		rw_in 			: in std_logic_vector (4 downto 0);
-		
-		control_wb_out	: out std_logic_vector (1 downto 0);
-      	
-      	--control_mem signals
-		beq_flag, bneq_flag, bgtz_flag, MemRead, MemWrite, zero_flag_out : out std_logic;
-
-		pc_out		: out std_logic_vector (31 downto 0); 
-		alu_result_out  : out std_logic_vector (31 downto 0);	
-		bus_b_out		: out std_logic_vector (31 downto 0);
-		rw_out 	  		: out std_logic_vector (4 downto 0)
-	);
-end EX_MEM_Reg;
-                                                
+--------------------------------------------------------------------------------------------------------------------------------------                                            
     --MEM Stage
         --Data Memory component
         DataMemory : sram 
@@ -368,34 +366,34 @@ end EX_MEM_Reg;
             port map(cs => '1',
                      oe => MemRead,
                      we => MemWrite,
-                     addr => MEM_ALU_result_in,
+                     addr => MEM_ALU_result,
                      din => MEM_bus_b_in,
                      dout => MEM_dout);
                 --OE currently 1, but could be modified to output based on control logic
-          
-        gtz_detect : gtz_detector port map (x => MEM_ALU_result_in, z => MEM_gtz_flag);
+        gtz_detect : gtz_detector port map (x => MEM_ALU_result, z => MEM_gtz_flag);
         branch_detect : branch_detector port map(
             beq_flag => MEM_beq_flag, bneq_flag => MEM_bneq_flag, bgtz_flag => MEM_bgtz_flag,
             zero_flag => MEM_zero_flag, gtz_flag => MEM_gtz_flag, PC_Src_out => pc_Src_signal);
-
+--------------------------------------------------------------------------------------------------------------------------------------
     --MEM/WB                                    
 	MEM_WB_MAP : MEM_WB_Reg port map(
+      	--inputs
 		clk => clk,
 		arst => arst,
 		aload => aload,
 		data_mem_in => MEM_dout,
 		control_wb_in => MEM_control_wb,
-		alu_result_in => MEM_ALU_result_in,
+		alu_result_in => MEM_ALU_result,
 		rw_in => MEM_rw_in,
+      	--outputs
 		data_mem_out => WB_data_mem_in,
 		control_wb_out(0) => MemToReg,
       	control_wb_out(1) => RegWrite,
 		alu_result_out => WB_alu_result_in,
-		rw_out => Rw_signal
+		rw_out => WB_rw
 	);                             
-                                                
+--------------------------------------------------------------------------------------------------------------------------------------
     --WB Stage
-    wb_mux : mux_32 port map (sel => MemtoReg, src0 => WB_alu_result_in, src1 => WB_data_mem_in, z => busw_signal);		
+    wb_mux : mux_32 port map (sel => MemToReg, src0 => WB_alu_result_in, src1 => WB_data_mem_in, z => busw_signal);	
 
 end architecture structural;
-  
