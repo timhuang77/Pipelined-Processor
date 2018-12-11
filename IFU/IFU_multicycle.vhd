@@ -39,7 +39,7 @@ architecture structural of IFU_multicycle is
 constant start_PC_addr : std_logic_vector(31 downto 0) := "00000000010000000000000000100000";
 constant const_four : std_logic_vector(31 downto 0) := "00000000000000000000000000000100";
 
-signal pc_signal : std_logic_vector(31 downto 0);
+signal pc_signal, PC_in_or_rst : std_logic_vector(31 downto 0);
 
 begin
 	--RST Initializer (Mux)
