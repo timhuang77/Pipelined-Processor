@@ -1,5 +1,5 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
 
@@ -63,20 +63,19 @@ architecture structural of EX_MEM_Reg is
 	signal wb_out_sig_temp	 	: std_logic_vector (1 downto 0);
 	signal control_mem_in_temp : std_logic_vector (4 downto 0); 
 	signal pc_out_sig_temp		: std_logic_vector (31 downto 0); 
-	signal alu_zero_out_temp	: std_logic;
-	signal alu_result_out_temp  : std_logic_vector (31 downto 0);	
-	signal bus_b_out_temp		: std_logic_vector (31 downto 0);
-	signal write_reg_out_temp 	: std_logic_vector (4 downto 0);
+--	signal alu_zero_out_temp	: std_logic;
+--	signal alu_result_out_temp  : std_logic_vector (31 downto 0);	
+--	signal bus_b_out_temp		: std_logic_vector (31 downto 0);
+--	signal write_reg_out_temp 	: std_logic_vector (4 downto 0);
 	
 begin
 	--Splitting into separate MEM control signals
-	be_flag <= control_mem_in_temp(0);
-	bne_flag <= control_mem_in_temp(1);
+	beq_flag <= control_mem_in_temp(0);
+	bneq_flag <= control_mem_in_temp(1);
 	bgtz_flag <= control_mem_in_temp(2);
 	MemRead <= control_mem_in_temp(3);
 	MemWrite <= control_mem_in_temp(4);
-
-	alu_zero_out 	  <= alu_zero_out_temp;
+--	zero_flag_out <= alu_zero_out_temp;
 	
 	generate_wb1 : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map(
