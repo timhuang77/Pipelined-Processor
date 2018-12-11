@@ -50,7 +50,7 @@ begin
 		clk_tb <= not clk_tb;
 		wait for 100 ns;
 		
-		--hold reset high for 15 cycles
+		--hold reset high for 15 x 5 cycles
 		for i in 0 to 2000 loop
 			clk_tb <= not clk_tb;
 			wait for 100 ns;
