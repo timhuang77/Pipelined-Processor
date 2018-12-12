@@ -420,14 +420,17 @@ begin
 --------------------------------------------------------------------------------------------------------------------------------------                                            
     --MEM Stage
         --Data Memory component
-        DataMemory : sram 
+        DataMemory : syncram 
             generic map(mem_file => mem_file)
-            port map(cs => '1',
-                     oe => MemRead,
-                     we => MemWrite,
-                     addr => MEM_ALU_result,
-                     din => MEM_bus_b_in,
-                     dout => MEM_dout);
+            port map(
+				clk => clk_n,
+				cs => '1',
+				oe => MemRead,
+				we => MemWrite,
+				addr => MEM_ALU_result,
+				din => MEM_bus_b_in,
+				dout => MEM_dout
+				);
                 --OE currently 1, but could be modified to output based on control logic
         gtz_detect : gtz_detector port map (x => MEM_ALU_result, z => MEM_gtz_flag);
         branch_detect : branch_detector port map(

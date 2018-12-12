@@ -7,7 +7,7 @@ use WORK.pipeline_CPU;
 
 entity pipeline_tb is
 	generic(
-		mem_file : string := "unsigned_sum.dat"
+		mem_file : string := "bills_branch.dat"
 	);
 end entity pipeline_tb;
 
@@ -55,7 +55,7 @@ begin
 		wait for 100 ns;
 		
 		--hold reset high for 15 x 5 cycles
-		for i in 0 to 2000 loop
+		for i in 0 to 1000 loop
 			clk_tb <= not clk_tb;
 			wait for 100 ns;
 			clk_tb <= not clk_tb;
