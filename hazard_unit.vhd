@@ -11,8 +11,8 @@ port (
 		if_id_Rs, if_id_Rt, id_ex_Rt : in std_logic_vector(4 downto 0); 
 		id_ex_MemRd : in std_logic;
   		--branch
-		MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
-  	
+		-- MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
+		br_flag : in std_logic;
 		PC_write, IF_ID_write, ID_EX_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic
   		--mux_select : out std_logic now called ID_EX_control_enable
   		
@@ -61,13 +61,13 @@ architecture struct of hazard_unit is
       );
   end component or3_gate;
   
-  component mux_3_to_1_5bits is
+  component mux_3_to_1_6bits is
       port (
           sel	: in std_logic_vector(1 downto 0);
-          src00, src01, src10	: in std_logic_vector(4 downto 0);
-          z	: out std_logic_vector(4 downto 0)
+          src00, src01, src10	: in std_logic_vector(5 downto 0);
+          z	: out std_logic_vector(5 downto 0)
       );
-  end component mux_3_to_1_5bits;
+  end component mux_3_to_1_6bits;
 
 --PC Write : 1 to enable write, 0 to disable write i.e. stall
 --IF/ID Write : 1 to enable write, 0 to disable write i.e. stall
@@ -80,7 +80,7 @@ architecture struct of hazard_unit is
 -- constant br_control_const : std_logic_vector(5 downto 0) := "11111"; --old
 -- constant else_control_const : std_logic_vector(5 downto 0) := "11000"; --old
 
-constant lw_control_const : std_logic_vector(5 downto 0) := "000001"; 
+constant lw_control_const : std_logic_vector(5 downto 0) := "001010"; 
 constant br_control_const : std_logic_vector(5 downto 0) := "111111"; 
 constant else_control_const : std_logic_vector(5 downto 0) := "111000"; -- Continue instructions normally
 
@@ -101,10 +101,10 @@ begin
     or_resuts : or_gate port map(same1, same2, result);
     and_results : and_gate port map(result, id_ex_MemRd, mux_sel_3to1(0));
 --BR detect   
-	or3_branch : or3_gate port map (a => MEM_beq_flag, b =>MEM_bneq_flag, c =>MEM_bgtz_flag, or3_out => mux_sel_3to1(1));
-
+	-- or3_branch : or3_gate port map (a => MEM_beq_flag, b =>MEM_bneq_flag, c =>MEM_bgtz_flag, or3_out => mux_sel_3to1(1));
+	mux_sel_3to1(1) <= br_flag;
 -- choosing either lw, branch, or else
-	hazard_select : mux_3_to_1_5bits port map (sel => mux_sel_3to1, src00 => else_control_const, src01 => lw_control_const, src10 => br_control_const, z => control_output);
+	hazard_select : mux_3_to_1_6bits port map (sel => mux_sel_3to1, src00 => else_control_const, src01 => lw_control_const, src10 => br_control_const, z => control_output);
 	-- hazard_select : mux_3_to_1_5bits port map (sel => mux_sel_3to1, src00 => else_control_const, src01 => else_control_const, src10 => else_control_const, z => control_output);
 
 -- 00 : else

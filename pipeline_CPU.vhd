@@ -105,8 +105,8 @@ architecture structural of pipeline_CPU is
 				if_id_Rs, if_id_Rt, id_ex_Rt : in std_logic_vector(4 downto 0); 
 				id_ex_MemRd : in std_logic;
 				--branch
-				MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
-			
+				-- MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
+				br_flag : in std_logic;
 				PC_write, IF_ID_write, ID_EX_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic
 				--mux_select : out std_logic now called ID_EX_control_enable
 				
@@ -165,6 +165,7 @@ architecture structural of pipeline_CPU is
     signal control_mux, control_mux_out : std_logic_vector (10 downto 0);
 
 	--EX stage
+	signal ID_EX_write : std_logic;
 	signal EX_bus_a_in,  EX_bus_b_in, EX_ALU_in, EX_pc_in, EX_pc_out, EX_sign_extend, EX_shamt_extend : std_logic_vector(31 downto 0);
     signal sll_flag, ALU_zero_flag: std_logic;
     signal imm16_sll_2, shamt_32, ALU_result : std_logic_vector(31 downto 0);
@@ -180,7 +181,7 @@ architecture structural of pipeline_CPU is
 	--MEM stage
     signal MEM_control_wb : std_logic_vector(1 downto 0);
     signal MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag, MEM_gtz_flag, MEM_zero_flag, MemRead, MemWrite : std_logic; 
-	signal MEM_pc_in, MEM_ALU_result, MEM_bus_b_in, MEM_dout : std_logic_vector(31 downto 0);
+	signal MEM_pc, MEM_ALU_result, MEM_bus_b_in, MEM_dout : std_logic_vector(31 downto 0);
 	signal MEM_rw_in : std_logic_vector(4 downto 0);
 
 	--WB stage
@@ -202,7 +203,7 @@ architecture structural of pipeline_CPU is
 begin
 	--IF Stage
 		--Before IFU
-		pcSrc_Mux : mux_32 port map(sel => pc_Src_signal, src0 => pc_plus_4, src1 => pc_plus_4_plus_imm16, z => pc_in);
+		pcSrc_Mux : mux_32 port map(sel => pc_Src_signal, src0 => pc_plus_4, src1 => MEM_pc, z => pc_in);
 
   	-- Control with MUX
         control : main_control port map(
@@ -297,13 +298,14 @@ begin
          	id_ex_Rt => EX_instruct_1,
 			id_ex_MemRd => EX_control_mem(3),
   			--branch
-			MEM_beq_flag => MEM_beq_flag, 
-            MEM_bneq_flag => MEM_bneq_flag, 
-            MEM_bgtz_flag => MEM_bgtz_flag,
+			-- MEM_beq_flag => MEM_beq_flag, 
+            -- MEM_bneq_flag => MEM_bneq_flag, 
+            -- MEM_bgtz_flag => MEM_bgtz_flag,
+			br_flag => pc_Src_signal,
 			--outputs
 			PC_write => pc_enable, 
           	IF_ID_write => if_id_enable, 
-			ID_EX_write => 
+			ID_EX_write => ID_EX_write,
           	IF_ID_zeros_flag => ifid_mux_sel, 
           	ID_EX_stall_flag => idex_mux_sel, 
           	EX_MEM_stall_flag => exmem_mux_sel
@@ -315,6 +317,7 @@ begin
 			clk	=> clk,
 			arst => arst,
 			aload => aload,
+			id_ex_enable => ID_EX_write,
 			control_ex => id_ex_vec_out(3 downto 0), -- used to be ID_control_ex -- 
             control_wb => id_ex_vec_out(5 downto 4), -- used to be ID_control_wb --
          	control_mem => id_ex_vec_out(10 downto 6), -- used to be ID_control_mem --
@@ -375,8 +378,8 @@ begin
           ID_EX_Rt => fwd_unit_rt_in,
           EX_MEM_Rd => MEM_rw_in,
           MEM_WB_Rd => WB_rw,
-          EX_MEM_RegWr => EX_control_wb(1),
-          MEM_WB_RegWr => MEM_control_wb(1),
+          EX_MEM_RegWr => MEM_control_wb(1),
+          MEM_WB_RegWr => RegWrite,
 		  sll_flag => sll_flag,
           forwardA => forwardA_signal, 
           forwardB => forwardB_signal
@@ -403,7 +406,7 @@ begin
           MemRead => MemRead, 
           MemWrite => MemWrite,
           zero_flag_out => MEM_zero_flag,
-          pc_out => MEM_pc_in,
+          pc_out => MEM_pc,
           alu_result_out => MEM_ALU_result,
           bus_b_out => MEM_bus_b_in,
           rw_out => MEM_rw_in

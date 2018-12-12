@@ -26,7 +26,8 @@ package pipeline_reg_package is
 			-- inputs
 			clk			: in std_logic;
 			arst, aload	: in std_logic;
-			
+			id_ex_enable: in std_logic;
+
 			control_wb	: in std_logic_vector(1 downto 0);
 			control_mem	: in std_logic_vector(4 downto 0);
 				--control_mem(0): beq

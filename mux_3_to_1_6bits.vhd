@@ -3,15 +3,15 @@ use IEEE.std_logic_1164.all;
 use work.eecs361_gates.all;
 use work.eecs361.all;
 
-entity mux_3_to_1_5bits is
+entity mux_3_to_1_6bits is
 	port (
 		sel	: in std_logic_vector(1 downto 0);
 		src00, src01, src10	: in std_logic_vector(5 downto 0);
 		z	: out std_logic_vector(5 downto 0)
 	);
-end entity mux_3_to_1_5bits;
+end entity mux_3_to_1_6bits;
 
-architecture structural of mux_3_to_1_5bits is
+architecture structural of mux_3_to_1_6bits is
 
 	signal temp	: std_logic_vector(5 downto 0);
 	

@@ -59,9 +59,18 @@ begin
 			(clk, arst, aload, '0', rw_in(i), '1', rw_out(i));
 	end generate;
 	
-	dffr_a_32bit_1 : dffr_a_32bit port map
-		(clk, arst, aload, "00000000000000000000000000000000", data_mem_in, '1', data_mem_out);
-    dffr_a_32bit_2 : dffr_a_32bit port map
-		(clk, arst, aload, "00000000000000000000000000000000", alu_result_in, '1', alu_result_out);
+	generate_datamem : for i in 0 to 31 generate
+		data_mem_reg : dffr_a port map
+			(clk, arst, aload, '0', data_mem_in(i), '1', data_mem_out(i));
+	end generate;
+	
+	generate_aluresult : for i in 0 to 31 generate
+		alu_result_reg : dffr_a port map
+			(clk, arst, aload, '0', alu_result_in(i), '1', alu_result_out(i));
+	end generate;
+	-- dffr_a_32bit_1 : dffr_a_32bit port map
+		-- (clk, arst, aload, "00000000000000000000000000000000", data_mem_in, '1', data_mem_out);
+    -- dffr_a_32bit_2 : dffr_a_32bit port map
+		-- (clk, arst, aload, "00000000000000000000000000000000", alu_result_in, '1', alu_result_out);
 	
 end structural;

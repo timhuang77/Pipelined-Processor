@@ -1,14 +1,4 @@
-{W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_5bits.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_5bits.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package eecs361_gates
--- Loading package eecs361
--- Compiling entity mux_3_to_1_5bits
--- Compiling architecture structural of mux_3_to_1_5bits
-
-} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd}
+{W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/mux_32.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -17,6 +7,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package eecs361
 -- Compiling entity mux_32
 -- Compiling architecture structural of mux_32
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_6bits.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/mux_3_to_1_6bits.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_3_to_1_6bits
+-- Compiling architecture structural of mux_3_to_1_6bits
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -103,6 +103,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package eecs361
 -- Compiling entity sub32
 -- Compiling architecture structural of sub32
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/hazard_unit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/hazard_unit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package pipeline_reg_package
+-- Compiling entity hazard_unit
+-- Compiling architecture struct of hazard_unit
 
 } {} {}} {{W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd}} {1 {vcom -work work -2002 -explicit {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
