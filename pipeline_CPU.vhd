@@ -107,7 +107,7 @@ architecture structural of pipeline_CPU is
 				--branch
 				MEM_beq_flag, MEM_bneq_flag, MEM_bgtz_flag : in std_logic;
 			
-				PC_write, IF_ID_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic
+				PC_write, IF_ID_write, ID_EX_write, IF_ID_zeros_flag, ID_EX_stall_flag, EX_MEM_stall_flag : out std_logic
 				--mux_select : out std_logic now called ID_EX_control_enable
 				
 				);
@@ -303,6 +303,7 @@ begin
 			--outputs
 			PC_write => pc_enable, 
           	IF_ID_write => if_id_enable, 
+			ID_EX_write => 
           	IF_ID_zeros_flag => ifid_mux_sel, 
           	ID_EX_stall_flag => idex_mux_sel, 
           	EX_MEM_stall_flag => exmem_mux_sel
