@@ -39,7 +39,7 @@ architecture structural of EX_MEM_Reg is
 	component dffr_a is
 	  port (
 		clk	   : in  std_logic;
-		aarst   : in  std_logic;
+		arst   : in  std_logic;
 		aload  : in  std_logic;
 		adata  : in  std_logic;
 		d	   : in  std_logic;
@@ -51,7 +51,7 @@ architecture structural of EX_MEM_Reg is
 	component dffr_a_32bit is
       port (
 	    clk	   : in  std_logic;
-        aarst   : in  std_logic;
+        arst   : in  std_logic;
         aload  : in  std_logic;
         adata  : in  std_logic_vector(31 downto 0);
 	    d	   : in  std_logic_vector(31 downto 0);
@@ -80,7 +80,7 @@ begin
 	generate_wb1 : for i in 0 to 1 generate 
 		wb_out_sigs : dffr_a port map(
 			clk => clk, 
-			aarst => arst, 
+			arst => arst, 
 			aload => aload, 
 			adata => '0',
 			d => control_wb_in(i), 

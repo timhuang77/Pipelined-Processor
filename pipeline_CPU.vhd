@@ -186,7 +186,7 @@ architecture structural of pipeline_CPU is
 	--WB stage
 	signal WB_data_mem_in, WB_alu_result_in : std_logic_vector (31 downto 0);                                   
 	signal MemtoReg, RegWrite : std_logic;
-
+	signal WB_control : std_logic_vector(1 downto 0);
 	--forwarding signals
 	signal forwardA_signal, forwardB_signal : std_logic_vector(1 downto 0);
 	signal ALU_forwardA, ALU_forwardB : std_logic_vector(31 downto 0);
@@ -277,7 +277,7 @@ begin
 			clk => clk,
 			arst => arst,
 			aload => '0',
-			RegWr => RegWr_signal,
+			RegWr => RegWrite,
 			Ra => ID_instr(25 downto 21),
 			Rb => ID_instr(20 downto 16),
 			Rw => WB_rw,
@@ -290,16 +290,17 @@ begin
         extend_shamt : unsign_ext_32_5 port map(x => IF_instr_out(10 downto 6), z => extended_shamt);
           
         hazard_unit_map : hazard_unit port map(
-
+			--inputs
+			--lw
          	if_id_Rs => ID_instr(25 downto 21),
          	if_id_Rt => ID_instr(20 downto 16),
          	id_ex_Rt => EX_instruct_1,
-			id_ex_MemRd => ID_control_mem(3),
+			id_ex_MemRd => EX_control_mem(3),
   			--branch
 			MEM_beq_flag => MEM_beq_flag, 
             MEM_bneq_flag => MEM_bneq_flag, 
             MEM_bgtz_flag => MEM_bgtz_flag,
-  	
+			--outputs
 			PC_write => pc_enable, 
           	IF_ID_write => if_id_enable, 
           	IF_ID_zeros_flag => ifid_mux_sel, 
@@ -433,11 +434,14 @@ begin
 		rw_in => MEM_rw_in,
       	--outputs
 		data_mem_out => WB_data_mem_in,
+		-- control_wb_out => WB_control,
 		control_wb_out(0) => MemToReg,
       	control_wb_out(1) => RegWrite,
 		alu_result_out => WB_alu_result_in,
 		rw_out => WB_rw
 	);                             
+	-- MemToReg <= WB_control(0);
+	-- RegWrite <= WB_control(1);
 --------------------------------------------------------------------------------------------------------------------------------------
     --WB Stage
     wb_mux : mux_32 port map (sel => MemToReg, src0 => WB_alu_result_in, src1 => WB_data_mem_in, z => busw_signal);	

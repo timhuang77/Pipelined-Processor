@@ -7,7 +7,7 @@ use WORK.pipeline_CPU;
 
 entity pipeline_tb is
 	generic(
-		mem_file : string := "unsigned_sum.dat"
+		mem_file : string := "bills_branch.dat"
 	);
 end entity pipeline_tb;
 

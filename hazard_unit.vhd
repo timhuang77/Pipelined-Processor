@@ -81,7 +81,7 @@ constant else_control_const : std_logic_vector(4 downto 0) := "11000"; -- Contin
 
 -- 6 bits for zero detect --   
 signal if_id_Rs_temp, if_id_Rt_temp, id_ex_Rt_temp : std_logic_vector(4 downto 0);
-signal same1, same2, result, stall_lw, neg_stall : std_logic;
+signal same1, same2, result : std_logic;
 signal mux_sel_3to1 : std_logic_vector(1 downto 0);
 
 signal control_output : std_logic_vector(4 downto 0);
@@ -93,20 +93,22 @@ begin
     id_ex_Rt_temp <= id_ex_Rt;
 	compare_5_map1 : compare_5 port map(id_ex_Rt_temp, if_id_Rs_temp, same1);
 	compare_5_map2 : compare_5 port map(id_ex_Rt_temp, if_id_Rt_temp, same2);
-    or_resuts : or_1bit port map(same1, same2, result);
-    and_results : and_1bit port map(result, id_ex_MemRd, mux_sel_3to1(0));
+    or_resuts : or_gate port map(same1, same2, result);
+    and_results : and_gate port map(result, id_ex_MemRd, mux_sel_3to1(0));
 --BR detect   
 	or3_branch : or3_gate port map (a => MEM_beq_flag, b =>MEM_bneq_flag, c =>MEM_bgtz_flag, or3_out => mux_sel_3to1(1));
---MUX Select
-
 
 -- choosing either lw, branch, or else
-	hazard_select : mux_3_to_1_5bits port map (sel => mux_sel_3to1, src00 => lw_control_const, src01 => br_control_const, src10 => else_control_const, z => control_output);
-      
-  	PC_write <= control_output(0);
-    IF_ID_write <= control_output(1);
+	hazard_select : mux_3_to_1_5bits port map (sel => mux_sel_3to1, src00 => else_control_const, src01 => lw_control_const, src10 => br_control_const, z => control_output);
+	-- hazard_select : mux_3_to_1_5bits port map (sel => mux_sel_3to1, src00 => else_control_const, src01 => else_control_const, src10 => else_control_const, z => control_output);
+
+-- 00 : else
+-- 01 : LW
+-- 10 : branch
+  	PC_write <= control_output(4);
+    IF_ID_write <= control_output(3);
   	IF_ID_zeros_flag <= control_output(2);
-    ID_EX_stall_flag <= control_output(3);
-    EX_MEM_stall_flag <= control_output(4);
+    ID_EX_stall_flag <= control_output(1);
+    EX_MEM_stall_flag <= control_output(0);
 
 end architecture struct;

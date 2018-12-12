@@ -10,7 +10,7 @@ entity unsign_ext_32_5 is
 	);
 end entity unsign_ext_32_5;
 
-architecture structural of unsign_ext_32 is
+architecture structural of unsign_ext_32_5 is
 
 begin
 	lower_half : for i in 0 to 4 generate

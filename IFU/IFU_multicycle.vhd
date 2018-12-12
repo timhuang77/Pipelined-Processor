@@ -24,8 +24,8 @@ architecture structural of IFU_multicycle is
 	end component pc_32;
   
 	component adder_32 is
-		port(x,y : in std_logic_vector(31 downto 0); 
-			  sum : out std_logic_vector(31 downto 0)
+		port(a, b : in std_logic_vector(31 downto 0); 
+			 z : out std_logic_vector(31 downto 0)
 			  );
 	end component;
 	
@@ -43,13 +43,13 @@ signal pc_signal, PC_in_or_rst : std_logic_vector(31 downto 0);
 
 begin
 	--RST Initializer (Mux)
-	PC_in_or_init : mux_n generic map(30) port map(rst, pc_in, start_PC_addr, PC_in_or_rst);
+	PC_in_or_init : mux_n generic map(32) port map(rst, pc_in, start_PC_addr, PC_in_or_rst);
 	
 	--PC component
 	pc_map  : pc_32 port map(clk, pc_enable, PC_in_or_rst, pc_signal);
 	
 	--Adder 32-bit in IFU
-	add_4 : adder_32 port map(pc_signal, const_four, pc_out);
+	add_4 : adder_32 port map(a => pc_signal, b => const_four, z => pc_out);
 	
 	--Instruction Memory
 	instr_memory : sram

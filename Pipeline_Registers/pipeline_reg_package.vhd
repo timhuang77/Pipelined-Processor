@@ -90,12 +90,12 @@ package pipeline_reg_package is
 			aload	: in std_logic;
 	 
 			data_mem_in  : in std_logic_vector (31 downto 0); 
-			control_wb_in 	 : in std_logic_vector (1 downto 0);
+			control_wb_in : in std_logic_vector (1 downto 0);
 			alu_result_in: in std_logic_vector (31 downto 0);
 			rw_in : in std_logic_vector (4 downto 0);
 			
 			data_mem_out  : out std_logic_vector (31 downto 0); 
-			control_wb_out : in std_logic_vector(1 downto 0);
+			control_wb_out : out std_logic_vector(1 downto 0);
 			alu_result_out: out std_logic_vector (31 downto 0);
 			rw_out : out std_logic_vector (4 downto 0)
 		);

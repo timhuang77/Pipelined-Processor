@@ -18,6 +18,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mux_32
 -- Compiling architecture structural of mux_32
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/main_control.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package helper
+-- Compiling entity main_control
+-- Compiling architecture structural of main_control
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32we.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/register_32we.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -146,6 +157,18 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 End time: 16:51:15 on Dec 11,2018, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package pipeline_reg_package
+-- Loading entity pipeline_CPU
+-- Compiling entity pipeline_tb
+-- Compiling architecture behavioral of pipeline_tb
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/alu.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -193,6 +216,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity and_gate_n
 -- Compiling architecture dataflow of and_gate_n
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/final_control_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/final_control_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package helper
+-- Compiling entity final_control_tb
+-- Compiling architecture structural of final_control_tb
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/ALU/add32.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -209,22 +243,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package eecs361_gates
-<<<<<<< Updated upstream
 -- Compiling entity unsign_ext_32_5
--- Compiling architecture structural of unsign_ext_32
--- Loading entity unsign_ext_32
-=======
--- Compiling entity unsign_ext_32
--- Compiling architecture structural of unsign_ext_32
->>>>>>> Stashed changes
+-- Compiling architecture structural of unsign_ext_32_5
 
-} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd}
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/helper.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/helper.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity dffr_a
--- Compiling architecture behavioral of dffr_a
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling package helper
 
 } {} {}} {{W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd}} {1 {vcom -work work -2002 -explicit {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/dffr.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -274,6 +303,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity nor_gate_32
 -- Compiling architecture dataflow of nor_gate_32
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_6_to_1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity and_6_to_1
+-- Compiling architecture structural of and_6_to_1
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/forwarding_unit.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -295,6 +334,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package eecs361
 -- Compiling entity add
 -- Compiling architecture structural of add
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/mainctrl_opcode.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package helper
+-- Compiling entity mainctrl_opcode
+-- Compiling architecture structural of mainctrl_opcode
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/not_gate_32.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -432,6 +482,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mux
 -- Compiling architecture structural of mux
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/IFU/IFU_multicycle.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/IFU/IFU_multicycle.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity IFU_multicycle
+-- Compiling architecture structural of IFU_multicycle
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate_32.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -459,6 +519,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_1164
 -- Compiling entity and_gate
 -- Compiling architecture dataflow of and_gate
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/final_control.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/final_control.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package helper
+-- Compiling entity final_control
+-- Compiling architecture structural of final_control
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/ID_EX_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -634,6 +705,27 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity register_32
 -- Compiling architecture structural of register_32
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/IFU/pc_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/IFU/pc_32.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity pc_32
+-- Compiling architecture structural of pc_32
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/ALU_control.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/ALU_control.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package helper
+-- Compiling entity ALU_control
+-- Compiling architecture structural of ALU_control
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/nor_gate_n.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -664,6 +756,26 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 -- Compiling package eecs361_gates
 End time: 16:51:10 on Dec 11,2018, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/and_8_to_1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity and_8_to_1
+-- Compiling architecture structural of and_8_to_1
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/ALUopcode.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Control/ALUopcode.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package helper
+-- Compiling entity ALUopcode
+-- Compiling architecture structural of ALUopcode
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32_1bit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/or_32_1bit.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -962,10 +1074,7 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 End time: 16:51:15 on Dec 11,2018, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
-<<<<<<< Updated upstream
-} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd}
-=======
-} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd}
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -975,20 +1084,8 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package pipeline_reg_package
 -- Compiling entity pipeline_CPU
 -- Compiling architecture structural of pipeline_CPU
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(122): near "std_": Identifier may not end with an underline.
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(122): (vcom-1136) Unknown identifier "std_".
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(122): near ",": (vcom-1576) expecting ';'.
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(152): (vcom-1294) Declaration with designator "id_ex_vec_out" already exists in this region.
-** =====> Prior declaration of "id_ex_vec_out" is at W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(151).
-** Error (suppressible): W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(162): (vcom-1141) Identifier "main_control" does not identify a component declaration.
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(196): (vcom-1136) Unknown identifier "ex_mem_vec_out".
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(209): near ";": (vcom-1576) expecting ',' or ')'.
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(216): Statement cannot be labeled.
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(221): (vcom-1484) Unknown formal identifier "if_id_enable".
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(227): VHDL Compiler exiting
 
-} {11.0 15.0 17.0 22.0} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd}
->>>>>>> Stashed changes
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -1018,11 +1115,7 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 End time: 16:51:10 on Dec 11,2018, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
-<<<<<<< Updated upstream
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd}
-=======
-} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd}
->>>>>>> Stashed changes
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -1030,15 +1123,9 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package eecs361_gates
 -- Loading package eecs361
 -- Compiling entity branch_detector
-<<<<<<< Updated upstream
 -- Compiling architecture structural of branch_detector
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd}
-=======
-** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd(9): near "is": (vcom-1576) expecting ';'.
-
-} {9.0 10.0} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd}
->>>>>>> Stashed changes
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -1080,14 +1167,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity slt32
 -- Compiling architecture structural of slt32
 
-} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/adder_32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/adder_32.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity adder_32
--- Compiling architecture struct of adder_32
-
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/compare_5.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -1127,6 +1206,16 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 -- Compiling architecture dataflow of not_gate_32
 End time: 16:51:14 on Dec 11,2018, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
+
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/IFU/IFU_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/IFU/IFU_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package testbench_functions
+-- Compiling entity IFU_tb
+-- Compiling architecture behavioral of IFU_tb
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/EX_MEM_Reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Pipeline_Registers/EX_MEM_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
