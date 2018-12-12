@@ -80,8 +80,8 @@ add wave -noupdate /pipeline_tb/dut/EX_Mem_register/control_wb_in
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/control_mem_in
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/EX_Mem_register/pc_in
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/zero_flag_in
-add wave -noupdate /pipeline_tb/dut/EX_Mem_register/alu_result_in
-add wave -noupdate /pipeline_tb/dut/EX_Mem_register/bus_b_in
+add wave -noupdate -radix hexadecimal /pipeline_tb/dut/EX_Mem_register/alu_result_in
+add wave -noupdate -radix hexadecimal /pipeline_tb/dut/EX_Mem_register/bus_b_in
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/rw_in
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/control_wb_out
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/beq_flag
@@ -92,13 +92,13 @@ add wave -noupdate /pipeline_tb/dut/EX_Mem_register/MemWrite
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/zero_flag_out
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/EX_Mem_register/pc_out
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/EX_Mem_register/alu_result_out
-add wave -noupdate /pipeline_tb/dut/EX_Mem_register/bus_b_out
+add wave -noupdate -radix hexadecimal /pipeline_tb/dut/EX_Mem_register/bus_b_out
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/rw_out
 add wave -noupdate /pipeline_tb/dut/EX_Mem_register/control_mem_in_temp
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/DataMemory/addr
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/DataMemory/din
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/DataMemory/dout
-add wave -noupdate /pipeline_tb/dut/MEM_WB_MAP/data_mem_in
+add wave -noupdate -radix hexadecimal /pipeline_tb/dut/MEM_WB_MAP/data_mem_in
 add wave -noupdate /pipeline_tb/dut/MEM_WB_MAP/control_wb_in
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/MEM_WB_MAP/alu_result_in
 add wave -noupdate /pipeline_tb/dut/MEM_WB_MAP/rw_in
@@ -107,7 +107,7 @@ add wave -noupdate /pipeline_tb/dut/MEM_WB_MAP/control_wb_out
 add wave -noupdate -radix unsigned /pipeline_tb/dut/MEM_WB_MAP/rw_out
 add wave -noupdate -radix hexadecimal /pipeline_tb/dut/MEM_WB_MAP/alu_result_out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2013254 ps} 0}
+WaveRestoreCursors {{Cursor 1} {4200000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 358
 configure wave -valuecolwidth 208
@@ -123,4 +123,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {1964920 ps} {3443576 ps}
+WaveRestoreZoom {2721342 ps} {4199998 ps}

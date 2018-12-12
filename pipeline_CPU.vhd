@@ -150,7 +150,8 @@ architecture structural of pipeline_CPU is
 
 --signals
 	signal aload : std_logic := '0';
-
+	signal clk_n : std_logic;
+	
 	--IF stage
 	signal pc_Src_signal, pc_enable : std_logic;
 	signal pc_plus_4, pc_plus_4_plus_imm16, pc_in, IF_instr_out : std_logic_vector(31 downto 0);
@@ -201,6 +202,8 @@ architecture structural of pipeline_CPU is
 	signal ifid_mux_sel, exmem_mux_sel, idex_mux_sel : std_logic;
 
 begin
+	not_clk : not_gate port map(clk, clk_n);
+
 	--IF Stage
 		--Before IFU
 		pcSrc_Mux : mux_32 port map(sel => pc_Src_signal, src0 => pc_plus_4, src1 => MEM_pc, z => pc_in);
@@ -275,7 +278,7 @@ begin
 --------------------------------------------------------------------------------------------------------------------------------------
 	--ID Stage
 		register_file : register_32 port map(
-			clk => clk,
+			clk => clk_n,
 			arst => arst,
 			aload => '0',
 			RegWr => RegWrite,
@@ -354,18 +357,21 @@ begin
         sll_detector 	: zero_detect_6 port map (x => ALUctrl, z => sll_flag); --when ALUCtrl == "000000", SLL operation is selected.
         MUX_imm16_or_shamt : mux_32 port map (sel => sll_flag, src0 => EX_sign_extend, src1 => EX_shamt_extend, z => EX_ALU_in1);
 		or_ALUSrc_sll	: or_gate port map (sll_flag, ALUSrc, sll_or_ALUsrc);
-        MUX_ALUSrc 		: mux_32 port map (sel => sll_or_ALUsrc, src0 => EX_bus_b_in, src1 => EX_ALU_in1, z => ALUSrc_mux_to_ALU);
+        -- MUX_ALUSrc 		: mux_32 port map (sel => sll_or_ALUsrc, src0 => EX_bus_b_in, src1 => EX_ALU_in1, z => ALUSrc_mux_to_ALU);
 
        
         mux_forwardA	: mux_3_to_1 port map (sel => forwardA_signal, src00 => EX_bus_a_in, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardA);
       		--00 : no forwarding
           	--10 : forward from prior ALU result
           	--01 : forward from data memory or an earlier ALU result (forward from Data Mem only occurs in load)
-        mux_forwardB	: mux_3_to_1 port map (sel => forwardB_signal, src00 => ALUSrc_mux_to_ALU, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardB);          
+        -- mux_forwardB	: mux_3_to_1 port map (sel => forwardB_signal, src00 => ALUSrc_mux_to_ALU, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardB);          
+		mux_forwardB	: mux_3_to_1 port map (sel => forwardB_signal, src00 => EX_bus_b_in, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardB);          
       		--00 : no forwarding
           	--10 : forward from prior ALU result
           	--01 : forward from data memory or an earlier ALU result (forward from Data Mem only occurs in load)
-        ALU_map			: alu port map (A => ALU_forwardA, B => ALU_forwardB, sel => ALUctrl, result => ALU_result, zero => ALU_zero_flag);
+        MUX_ALUSrc 		: mux_32 port map (sel => sll_or_ALUsrc, src0 => ALU_forwardB, src1 => EX_ALU_in1, z => ALUSrc_mux_to_ALU);
+
+		ALU_map			: alu port map (A => ALU_forwardA, B => ALUSrc_mux_to_ALU, sel => ALUctrl, result => ALU_result, zero => ALU_zero_flag);
         
         alu_control_map	: ALU_control port map (ALUop => ALUOp, funct => EX_sign_extend(5 downto 0), ALUctrl => ALUctrl);
         
@@ -396,7 +402,7 @@ begin
           pc_in => EX_pc_out,
           zero_flag_in => ALU_zero_flag,
           alu_result_in => ALU_result,
-          bus_b_in => EX_bus_b_in,
+          bus_b_in => ALU_forwardB,
           rw_in => instruct_rw,
           --outputs
           control_wb_out => MEM_control_wb,
