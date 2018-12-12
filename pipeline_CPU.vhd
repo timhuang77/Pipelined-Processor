@@ -114,13 +114,13 @@ architecture structural of pipeline_CPU is
 	end component hazard_unit;
 
 	component forwarding_unit is
-	port(
-	  --inputs
-	  ID_EX_Rs, ID_EX_Rt, EX_MEM_Rd, MEM_WB_Rd : in std_logic_vector(4 downto 0);
-	  EX_MEM_RegWr, MEM_WB_RegWr : in std_logic;
-	  --outputs
-	  forwardA, forwardB : out std_logic_vector(1 downto 0)
-	);
+		port(
+			--inputs
+			ID_EX_Rs, ID_EX_Rt, EX_MEM_Rd, MEM_WB_Rd : in std_logic_vector(4 downto 0);
+			EX_MEM_RegWr, MEM_WB_RegWr, sll_flag : in std_logic;
+			--outputs
+			forwardA, forwardB : out std_logic_vector(1 downto 0)
+		);
 	end component forwarding_unit;
 	
 	component main_control is
@@ -172,7 +172,7 @@ architecture structural of pipeline_CPU is
     signal instruct_rw : std_logic_vector(4 downto 0);
 	signal EX_control_wb : std_logic_vector(1 downto 0);
 	signal EX_control_mem : std_logic_vector(4 downto 0);
-	signal ALUSrc, RegDst : std_logic;
+	signal ALUSrc, RegDst, sll_or_ALUsrc : std_logic;
 	signal ALUOp : std_logic_vector(1 downto 0);
     signal EX_instruct_1, EX_instruct_2, fwd_unit_rs_in, fwd_unit_rt_in : std_logic_vector(4 downto 0);
     signal EX_ALU_in1, ALUSrc_mux_to_ALU : std_logic_vector(31 downto 0);
@@ -286,8 +286,8 @@ begin
 			busB => read_data2
 		);
           
-        sign_extend_imm16 : sign_ext_32 port map(x => IF_instr_out(15 downto 0), z => sign_extended_imm16);
-        extend_shamt : unsign_ext_32_5 port map(x => IF_instr_out(10 downto 6), z => extended_shamt);
+        sign_extend_imm16 : sign_ext_32 port map(x => ID_instr(15 downto 0), z => sign_extended_imm16);
+        extend_shamt : unsign_ext_32_5 port map(x => ID_instr(10 downto 6), z => extended_shamt);
           
         hazard_unit_map : hazard_unit port map(
 			--inputs
@@ -349,7 +349,8 @@ begin
        
         sll_detector 	: zero_detect_6 port map (x => ALUctrl, z => sll_flag); --when ALUCtrl == "000000", SLL operation is selected.
         MUX_imm16_or_shamt : mux_32 port map (sel => sll_flag, src0 => EX_sign_extend, src1 => EX_shamt_extend, z => EX_ALU_in1);
-        MUX_ALUSrc 		: mux_32 port map (sel => ALUSrc, src0 => EX_bus_b_in, src1 => EX_ALU_in1, z => ALUSrc_mux_to_ALU);
+		or_ALUSrc_sll	: or_gate port map (sll_flag, ALUSrc, sll_or_ALUsrc);
+        MUX_ALUSrc 		: mux_32 port map (sel => sll_or_ALUsrc, src0 => EX_bus_b_in, src1 => EX_ALU_in1, z => ALUSrc_mux_to_ALU);
 
        
         mux_forwardA	: mux_3_to_1 port map (sel => forwardA_signal, src00 => EX_bus_a_in, src01 => busw_signal, src10 => MEM_ALU_result, z => ALU_forwardA);
@@ -375,6 +376,7 @@ begin
           MEM_WB_Rd => WB_rw,
           EX_MEM_RegWr => EX_control_wb(1),
           MEM_WB_RegWr => MEM_control_wb(1),
+		  sll_flag => sll_flag,
           forwardA => forwardA_signal, 
           forwardB => forwardB_signal
         );

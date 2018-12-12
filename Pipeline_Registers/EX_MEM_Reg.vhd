@@ -60,9 +60,9 @@ architecture structural of EX_MEM_Reg is
       );
     end component;
 
-	signal wb_out_sig_temp	 	: std_logic_vector (1 downto 0);
+	-- signal wb_out_sig_temp	 	: std_logic_vector (1 downto 0);
 	signal control_mem_in_temp : std_logic_vector (4 downto 0); 
-	signal pc_out_sig_temp		: std_logic_vector (31 downto 0); 
+	-- signal pc_out_sig_temp		: std_logic_vector (31 downto 0); 
 --	signal alu_zero_out_temp	: std_logic;
 --	signal alu_result_out_temp  : std_logic_vector (31 downto 0);	
 --	signal bus_b_out_temp		: std_logic_vector (31 downto 0);
