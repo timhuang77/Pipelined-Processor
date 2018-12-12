@@ -29,7 +29,7 @@ end component;
 begin
 	
 	generate_dffras : for i in 0 to 31 generate
-		dffras : dffr_a port map(clk, arst, '0', '0', d(i), pc_enable, q(i));
+		dffras : dffr_a port map(clk, '0', '0', '0', d(i), pc_enable, q(i));
 	end generate;
 	
 end structural;

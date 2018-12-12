@@ -209,9 +209,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package eecs361_gates
+<<<<<<< Updated upstream
 -- Compiling entity unsign_ext_32_5
 -- Compiling architecture structural of unsign_ext_32
 -- Loading entity unsign_ext_32
+=======
+-- Compiling entity unsign_ext_32
+-- Compiling architecture structural of unsign_ext_32
+>>>>>>> Stashed changes
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/Single_Cycle_lib/dffr_a.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -957,7 +962,33 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 End time: 16:51:15 on Dec 11,2018, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
+<<<<<<< Updated upstream
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd}
+=======
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package pipeline_reg_package
+-- Compiling entity pipeline_CPU
+-- Compiling architecture structural of pipeline_CPU
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(122): near "std_": Identifier may not end with an underline.
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(122): (vcom-1136) Unknown identifier "std_".
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(122): near ",": (vcom-1576) expecting ';'.
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(152): (vcom-1294) Declaration with designator "id_ex_vec_out" already exists in this region.
+** =====> Prior declaration of "id_ex_vec_out" is at W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(151).
+** Error (suppressible): W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(162): (vcom-1141) Identifier "main_control" does not identify a component declaration.
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(196): (vcom-1136) Unknown identifier "ex_mem_vec_out".
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(209): near ";": (vcom-1576) expecting ',' or ')'.
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(216): Statement cannot be labeled.
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(221): (vcom-1484) Unknown formal identifier "if_id_enable".
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd(227): VHDL Compiler exiting
+
+} {11.0 15.0 17.0 22.0} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd}
+>>>>>>> Stashed changes
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -987,7 +1018,11 @@ vcom -reportprogress 300 -work work -2002 -explicit W:/Northwestern/Fall 2018/EE
 End time: 16:51:10 on Dec 11,2018, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
+<<<<<<< Updated upstream
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd}
+=======
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd} {0 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd}
+>>>>>>> Stashed changes
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -995,9 +1030,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package eecs361_gates
 -- Loading package eecs361
 -- Compiling entity branch_detector
+<<<<<<< Updated upstream
 -- Compiling architecture structural of branch_detector
 
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd}
+=======
+** Error: W:/Northwestern/Fall 2018/EECS 361/Final Project/branch_detector.vhd(9): near "is": (vcom-1576) expecting ';'.
+
+} {9.0 10.0} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/processor.vhd}
+>>>>>>> Stashed changes
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO

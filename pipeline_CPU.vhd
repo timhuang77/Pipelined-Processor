@@ -76,12 +76,12 @@ architecture structural of pipeline_CPU is
             );
     end component shift_left_2;
 
-   component unsign_ext_32_5 is
-   port (
-            x	: in std_logic_vector(4 downto 0);
-            z	: out std_logic_vector(31 downto 0)
-        	);
-    end component unsign_ext_32_5;
+	component unsign_ext_32_5 is
+	port (
+			x	: in std_logic_vector(4 downto 0);
+			z	: out std_logic_vector(31 downto 0)
+			);
+	end component unsign_ext_32_5;
 	
 	component zero_detect_6 is
 		port(
@@ -147,8 +147,8 @@ architecture structural of pipeline_CPU is
 
 	end component branch_detector;
 
+
 --signals
-	
 	signal aload : std_logic := '0';
 
 	--IF stage
