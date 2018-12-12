@@ -9,6 +9,7 @@ entity ID_EX_Reg is
 		-- inputs
 		clk			: in std_logic;
 		arst, aload	: in std_logic;
+		id_ex_enable: in std_logic;
 		
 		control_wb	: in std_logic_vector(1 downto 0);
 		control_mem	: in std_logic_vector(4 downto 0);
@@ -46,7 +47,7 @@ begin
 			aload => aload,
 			adata => '0',
 			d => control_wb(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => control_wb_out(i)
 		);
 	end generate;
@@ -59,7 +60,7 @@ begin
 			aload => aload,
 			adata => '0',
 			d => control_mem(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => control_mem_out(i)
 		);
 	end generate;
@@ -71,7 +72,7 @@ begin
 			aload => aload,
 			adata => '0',
 			d => control_ex(0),
-			enable => '1',
+			enable => id_ex_enable,
 			q => ALUSrc
 	);
 	
@@ -81,7 +82,7 @@ begin
 			aload => aload,
 			adata => '0',
 			d => control_ex(1),
-			enable => '1',
+			enable => id_ex_enable,
 			q => ALUOp(0)
 	);
 
@@ -91,7 +92,7 @@ begin
 			aload => aload,
 			adata => '0',
 			d => control_ex(2),
-			enable => '1',
+			enable => id_ex_enable,
 			q => ALUOp(1)
 	);
 	
@@ -101,7 +102,7 @@ begin
 			aload => aload,
 			adata => '0',
 			d => control_ex(3),
-			enable => '1',
+			enable => id_ex_enable,
 			q => RegDst
 	);
 
@@ -113,7 +114,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => pc_in(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => pc_out(i)
 		);
 	end generate;
@@ -126,7 +127,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => read_data1(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => bus_a(i)
 		);
 	end generate;
@@ -139,7 +140,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => read_data2(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => bus_b(i)
 		);
 	end generate;
@@ -152,7 +153,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => sign_ext(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => out_sign_ext(i)
 		);
 	end generate;
@@ -164,7 +165,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => shamt_ext(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => out_shamt_ext(i)
 		);
 	end generate;
@@ -177,7 +178,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => instruct_1(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => out_instruct1(i)
 		);
 	end generate;
@@ -190,7 +191,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => instruct_2(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => out_instruct2(i)
 		);
 	end generate;
@@ -202,7 +203,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => Rs_in(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => Rs_out(i)
 		);
 	end generate;
@@ -215,7 +216,7 @@ begin
 			aload => aload,
 			adata => '0', --reset will initialize register with 0
 			d => Rt_in(i),
-			enable => '1',
+			enable => id_ex_enable,
 			q => Rt_out(i)
 		);
 	end generate;
