@@ -1070,6 +1070,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mux_8_to_1
 -- Compiling architecture structural of mux_8_to_1
 
+} {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/pipeline_CPU.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package pipeline_reg_package
+-- Compiling entity pipeline_CPU
+-- Compiling architecture structural of pipeline_CPU
+
 } {} {}} {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {W:/Northwestern/Fall 2018/EECS 361/Final Project/lib/xnor_gate.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
