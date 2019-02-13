@@ -1,1 +1,1 @@
-# Single-Cycle-Processor
+# Multi-Cycle Pipelined Processor
